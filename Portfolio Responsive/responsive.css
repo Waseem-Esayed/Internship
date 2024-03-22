@@ -1,0 +1,170 @@
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: #0f1219;
+    margin: 0px;
+    color: white;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 3.5rem;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+}
+
+.outer-box:nth-child(1) {
+    margin-bottom: -10px;
+}
+
+.container ul {
+    display: flex;
+    flex-direction: row;
+    padding: 0.1px;
+    gap: 10px;
+    background-color: #1e232f;
+    border-left: 1px solid #08f9ff;
+    border-right: 1px solid #08f9ff;
+}
+
+#nav_bar li {
+    list-style: none;
+    color: rgb(190, 190, 190);
+    padding: 20px;
+    border-bottom: 4px solid #1e232f;
+    transition: all 0.3s;
+}
+
+#nav_bar a {
+    text-decoration: none;
+    color: lightgray;
+}
+
+#nav_bar li:hover {
+    box-shadow: 0 0 10px #08f9ff;
+    cursor: pointer;
+    border-bottom: 4px solid #08f9ff;
+    color: lightblue;
+}
+
+.inner-box p:nth-child(1) {
+    line-height: 70px;
+}
+
+.inner-box p:nth-child(5) {
+    font-weight: 100;
+    font-size: small;
+    line-height: 50px;
+}
+
+.marked {
+    color: #08f9ff;
+    font-weight: bold;
+}
+
+.outer-box {
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+}
+
+.outer-box #img1 {
+    width: 170px;
+    height: 260px;
+    border-radius: 50%;
+    margin-top: 20px;
+}
+
+img {
+    border: 2px dashed #08f9ff;
+    border-radius: 50%;
+}
+
+.line {
+    width: 650px;
+    height: 2px;
+    background-color: #08f9ff;
+}
+
+#about-me-txt {
+    font-weight: normal;
+    font-size: small;
+    width: 300px;
+    line-height: 16px;
+}
+
+#about-me-hd {
+    line-height: -0px;
+}
+
+#hobbies-hd ul {
+    line-height: 20px;
+    padding-inline-start: 17px;
+}
+
+#youtube-hd {
+    letter-spacing: 0.3px;
+}
+
+#contact {
+    margin-top: -5px;
+}
+
+.contact-form {
+    margin-top: 0;
+    text-align: center;
+}
+
+.contact-form h2 {
+    margin-bottom: 30px;
+}
+
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contact-form label {
+    color: #08f9ff;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+    width: 300px;
+    margin-bottom: 10px;
+    padding: 5px;
+    border: 1px solid #08f9ff;
+    border-radius: 5px;
+}
+
+.contact-form textarea {
+    height: 100px;
+}
+
+.contact-form a {
+    font-family: "Roboto Mono", monospace;
+    text-decoration: none;
+    background-color: #a3fdff;
+    color: darkblue;
+    padding: 7px 14px;
+    border-radius: 30px;
+    transition: all 1s;
+    transition: color, background-color 0.2s;
+}
+
+.contact-form a:hover {
+    padding: 8.4px 14px;
+    color: white;
+    background-color: #0f1219;
+    box-shadow: 0 0 8px #08f9ff;
+}
+
+footer {
+    margin-bottom: 15px;
+}

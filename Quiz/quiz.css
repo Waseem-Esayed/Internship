@@ -1,0 +1,56 @@
+body {
+    background-color: blue;
+    color: blue;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+
+.quiz-container {
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.outer-box {
+    width: 470px;
+    height: 390px;
+    background-color: white;
+    border-radius: 10px;
+}
+
+#title,
+#question {
+    text-align: left;
+    margin-left: 30px;
+    font-weight: bold;
+}
+
+#title {
+    font-size: 25px;
+}
+
+.line {
+    width: 410px;
+    height: 1px;
+    margin-top: -10px;
+    margin-bottom: 20px;
+    margin-left: 30px;
+    background-color: blue;
+}
+
+.answers p {
+    border: 1px solid blue;
+    width: 390px;
+    margin-left: 30px;
+    padding: 10px;
+    font-size: 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: color, background-color 0.2s;
+}
+
+.answers p:hover {
+    color: white;
+    background-color: blue;
+}

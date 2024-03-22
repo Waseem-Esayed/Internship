@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="dice.css">
+    <title>Dice game</title>
+</head>
+
+<body>
+    <header>
+        <a href="https://www.flaticon.com/de/kostenlose-icons/wurfel" title="würfel Icons">Würfel Icons erstellt von
+            Dimi Kazak - Flaticon</a>
+    </header>
+    <main>
+        <div class="content">
+            <div class="header">
+                <p class="title">Draw!</p>
+                <img class="img-main" src="images/wurfel-main.png" alt="würfel main">
+            </div>
+            <div class="players">
+                <p class="points" id="points1">0</p>
+                <p id="player1">Player 1: </p>
+                <div class="stand">
+                    <p id="stand1"></p>
+                    <p id="stand2"></p>
+                </div>
+                <p id="player2">player 2: </p>
+                <p class="points" id="points2">0</p>
+            </div>
+            <div class="wurfel">
+                <img class="img1" src="images/wurfel-1.png">
+                <img class="img2" src="images/wurfel-2.png">
+            </div>
+            <button id="submit">Roll Dice</button>
+            <button type="reset" id="reset">Reset</button>
+        </div>
+    </main>
+    <footer>
+
+    </footer>
+
+    <script src="dice.js"></script>
+</body>
+
+</html>

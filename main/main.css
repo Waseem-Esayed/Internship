@@ -1,0 +1,47 @@
+@import url(https://fonts.googleapis.com/css?family=Lato:100,400);
+
+body {
+    font-family: lato, sans-serif;
+    background-color: #bad7e9;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+    background-color: #343e48;
+    justify-content: center;
+    margin-top: 1%;
+    height: 70px;
+    box-shadow: 0 5px 5px 1px #343e48;
+}
+
+.container a {
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #686f77;
+    text-decoration: none;
+    font-size: 130%;
+    letter-spacing: 2px;
+    transition: all 0.2s;
+}
+
+.container a:hover {
+    transform: translateY(-8px);
+    color: cyan;
+}
+
+#box_1 {
+    height: 300px;
+    width: 350px;
+    background-color: #343e48;
+    margin-top: 100px;
+    border-radius: 4%;
+    transition: transform 1s;
+}
+
+#box_1:active {
+    transform: translateX(500px);
+}

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="responsive.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap"
+        rel="stylesheet">
+
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <ul id="nav_bar">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#hobbies">Hobbies</a></li>
+                    <li><a href="#youtube">Youtube</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="outer-box">
+            <div class="inner-box">
+                <p>Hi, my name is <span id="home" class="marked">Waseem</span>.</p>
+                <p>I'm an intern at <span class="marked">AOE</span>,</p>
+                <p>Lately, I've been <span class="marked">developing</span> with</p>
+                <p><span class="marked">HTML</span>, <span class="marked">CSS</span> and <span
+                        class="marked">Javascript</span>.</p>
+                <p>based in Rüsselsheim, student of Neues Gymnasium Rüsselsheim</p>
+            </div>
+
+            <img id="img1"
+                src="https://th.bing.com/th/id/OIP.jcYYlFwb_mW3tFyMviB1RwHaLG?w=186&h=279&c=7&r=0&o=5&dpr=1.5&pid=1.7"
+                alt="man">
+        </div>
+        <div id="line1" class="line"></div>
+        <div class="outer-box">
+            <img id="img2"
+                src="https://th.bing.com/th/id/OIP.PnQEhMchw20xGLSncryOSAHaJQ?w=186&h=233&c=7&r=0&o=5&cb=11&pid=1.7"
+                alt="girl">
+
+            <div class="section-2">
+                <p id="about-me-hd">More <span id="about" class="marked">about</span> me</p>
+                <p id="about-me-txt">As a 15-year-old student just beginning to learn programming, I'm captivated by the
+                    world of software development. Writing code allows me to express my creativity and find solutions to
+                    intriguing problems. I enjoy exploring new programming languages and technologies, learning how to
+                    use them to create programs and applications. The prospect of working as a software developer
+                    inspires me to learn more about programming every day and improve my skills. I'm excited about the
+                    opportunities that exist in the world of software development and look forward to expanding my
+                    knowledge and abilities to bring my own projects to life.</p>
+            </div>
+
+        </div>
+        <div id="line1" class="line"></div>
+        <div class="outer-box">
+            <div id="hobbies-hd">
+                <p><span id="hobbies" class="marked">Hobbies</span></p>
+                <ul>
+                    <li>Football</li>
+                    <li>Basketball</li>
+                    <li>Table Tennis</li>
+                    <li>Chess</li>
+                    <li class="marked" style="font-weight: 100;">Web Development</li>
+                    <li>Gaming</li>
+                    <li>Swimming</li>
+                    <li>Surfing</li>
+                    <li>Learning</li>
+                </ul>
+            </div>
+            <img id="img3"
+                src="https://th.bing.com/th/id/OIP.qPNORh89okRtJ1YsgVmgiAHaHa?w=199&h=200&c=7&r=0&o=5&cb=11&pid=1.7"
+                alt="man">
+        </div>
+        <div id="line1" class="line"></div>
+        <div>
+            <p id="youtube-hd">My favourite <span id="youtube" class="marked">Youtube</span> video</p>
+
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/_wc8YkoHo0o?si=UaPQmZYb-xsA6539"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen></iframe>
+        </div>
+        <div id="line1" class="line"></div>
+        <div class="outer-box">
+            <div class="contact-form">
+                <h2 id="contact"><span class="marked">Contact</span> Me</h2>
+                <form>
+                    <label for="name">Name:</label><br>
+                    <input type="text" id="name" name="name" required><br>
+                    <label for="email">Email:</label><br>
+                    <input type="email" id="email" name="email" required><br>
+                    <label for="message">Message:</label><br>
+                    <textarea id="message" name="message" rows="4" required></textarea><br>
+                    <a id="email" href="mailto:waseem.esayed@aoe.com">Email me</a>
+                </form>
+            </div>
+            
+        </div>
+    </main>
+
+    <footer>
+        <script src="responsive.js"></script>
+    </footer>
+
+</body>

@@ -1,0 +1,58 @@
+@import url(https://fonts.googleapis.com/css?family=Lato:100,400);
+
+body {
+    font-family: lato, sans-serif;
+    background-color: #bad7e9;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+    background-color: #343e48;
+    justify-content: center;
+    margin-top: 1%;
+    height: 70px;
+    box-shadow: 0 5px 5px 1px #343e48;
+}
+
+.container a {
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #686f77;
+    text-decoration: none;
+    font-size: 130%;
+    letter-spacing: 2px;
+    transition: all 0.2s;
+}
+
+.container a:hover {
+    transform: translateY(-8px);
+    color: cyan;
+}
+
+/*
+a:nth-child(1):hover {
+    background-color: yellow;
+}
+a:nth-child(2):hover {
+    background-color: green;
+}
+a:nth-child(3):hover {
+    background-color: blue;
+}
+a:nth-child(4):hover {
+    background-color: darkorchid;
+}
+a:nth-child(5):hover {
+    background-color: pink;
+}
+
+.animation {
+
+}
+*/
+
+/*nav .start-contact, a:nth-child(5):hover~.animation*/
