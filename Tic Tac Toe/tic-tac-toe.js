@@ -80,6 +80,8 @@ function checkIfPlayerWon(selectedFields) {
 btnReset.onclick = function () {
     for (let i = 0; i < 9; i++) {
         contentImg[i].setAttribute("src", "");
+        contentBtn[i].onclick = null;
+        initField(contentBtn[i], contentImg[i]);
     }
     playerTurn = 1;
 
@@ -89,10 +91,6 @@ btnReset.onclick = function () {
     gameResult.textContent = "";
     playerTurn = Math.round(Math.random() * (1 + 10) - 10);
 };
-
-for (let i = 0; i < 9; i++) {
-    initField(contentBtn[i], contentImg[i]);
-}
 
 function noClick() {
     getBtn(btn1);
@@ -111,7 +109,3 @@ function getBtn(btn) {
         img.setAttribute("src", img.getAttribute("src"));
     };
 }
-
-// contentBtn.forEach((btn, index)=>{
-//     initField(btn,contentImg[index] )
-// })
