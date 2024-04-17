@@ -21,6 +21,7 @@ let img8 = document.getElementById("img8");
 let img9 = document.getElementById("img9");
 
 let gameResult = document.getElementById("gameResult");
+
 let btnReset = document.getElementById("reset");
 
 let contentBtn = [btn1, btn2, btn3, btn4, btn5, btn6, btn7, btn8, btn9];
@@ -62,7 +63,18 @@ function initField(btn, img) {
 }
 
 function noWin() {
-    function checkIfPlayerWon(selectedFields) {
+    return selectedFields1.length + selectedFields2.length < 9;
+}
+
+function checkIfPlayerWon(selectedFields) {
+    return (selectedFields.includes("img1") && selectedFields.includes("img2") && selectedFields.includes("img3"))
+        || (selectedFields.includes("img4") && selectedFields.includes("img5") && selectedFields.includes("img6"))
+        || (selectedFields.includes("img7") && selectedFields.includes("img8") && selectedFields.includes("img9"))
+        || (selectedFields.includes("img1") && selectedFields.includes("img4") && selectedFields.includes("img7"))
+        || (selectedFields.includes("img2") && selectedFields.includes("img5") && selectedFields.includes("img8"))
+        || (selectedFields.includes("img3") && selectedFields.includes("img6") && selectedFields.includes("img9"))
+        || (selectedFields.includes("img1") && selectedFields.includes("img5") && selectedFields.includes("img9"))
+        || (selectedFields.includes("img3") && selectedFields.includes("img5") && selectedFields.includes("img7"));
 }
 
 btnReset.onclick = function () {
@@ -70,7 +82,9 @@ btnReset.onclick = function () {
         contentImg[i].setAttribute("src", "");
     }
     playerTurn = 1;
-    btnReset.onclick = function () {
+
+    selectedFields1 = [];
+    selectedFields2 = [];
 
     gameResult.textContent = "";
     playerTurn = Math.round(Math.random() * (1 + 10) - 10);
@@ -97,7 +111,3 @@ function getBtn(btn) {
         img.setAttribute("src", img.getAttribute("src"));
     };
 }
-
-// contentBtn.forEach((btn, index)=>{
-//     initField(btn,contentImg[index] )
-// })
