@@ -108,7 +108,7 @@ function noClick() {
     getBtn(btn9);
 }
 
-function getBtn(btn) {
+function getBtn(btn, img) {
     btn.onclick = function () {
         img.setAttribute("src", img.getAttribute("src"));
     };
