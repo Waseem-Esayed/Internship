@@ -80,6 +80,8 @@ function checkIfPlayerWon(selectedFields) {
 btnReset.onclick = function () {
     for (let i = 0; i < 9; i++) {
         contentImg[i].setAttribute("src", "");
+        contentBtn[i].onclick = null;
+        initField(contentBtn[i], contentImg[i]);
     }
     playerTurn = 1;
 
