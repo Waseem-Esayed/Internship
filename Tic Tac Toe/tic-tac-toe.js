@@ -30,6 +30,8 @@ let contentImg = [img1, img2, img3, img4, img5, img6, img7, img8, img9];
 let selectedFields1 = [];
 let selectedFields2 = [];
 
+contentBtn[i].onclick = null;
+
 function initField(btn, img) {
     btn.onclick = function () {
         if (img.getAttribute("src") !== "images/X.png" && img.getAttribute("src") !== "images/O.png") {
