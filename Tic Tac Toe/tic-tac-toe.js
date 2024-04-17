@@ -1,5 +1,3 @@
-let playerTurn = Math.round(Math.random() * (1 + 10) - 10);
-
 let btn1 = document.getElementById("button1");
 let btn2 = document.getElementById("button2");
 let btn3 = document.getElementById("button3");
@@ -27,10 +25,19 @@ let btnReset = document.getElementById("reset");
 let contentBtn = [btn1, btn2, btn3, btn4, btn5, btn6, btn7, btn8, btn9];
 let contentImg = [img1, img2, img3, img4, img5, img6, img7, img8, img9];
 
-let selectedFields1 = [];
-let selectedFields2 = [];
+for (let i = 0; i < 9; i++) {
+        contentImg[i].setAttribute("src", "");
+        contentBtn[i].onclick = null;
+        initField(contentBtn[i], contentImg[i]);
+    }
+    playerTurn = 1;
 
-contentBtn[i].onclick = null;
+    selectedFields1 = [];
+    selectedFields2 = [];
+
+    gameResult.textContent = "";
+    playerTurn = Math.round(Math.random() * (1 + 10) - 10);
+};
 
 function initField(btn, img) {
     btn.onclick = function () {
