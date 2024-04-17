@@ -62,7 +62,7 @@ function initField(btn, img) {
 }
 
 function noWin() {
-	@@ -74,7 +78,7 @@ function checkIfPlayerWon(selectedFields) {
+    function checkIfPlayerWon(selectedFields) {
 }
 
 btnReset.onclick = function () {
@@ -70,7 +70,7 @@ btnReset.onclick = function () {
         contentImg[i].setAttribute("src", "");
     }
     playerTurn = 1;
-	@@ -84,12 +88,30 @@ btnReset.onclick = function () {
+    btnReset.onclick = function () {
 
     gameResult.textContent = "";
     playerTurn = Math.round(Math.random() * (1 + 10) - 10);
