@@ -7,21 +7,28 @@ body {
   background-color: cyan;
 }
 h1 {
-  align-items: center;
   text-decoration: underline;
+  margin-bottom: 50px;
 }
 div {
   width: auto;
   padding: 10px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }
 a {
   text-decoration: none;
   color: red;
   font-size: large;
   font-weight: bold;
-  transition: font-size 1s ease;
+  transition: font-size 0.15s ease;
+  margin: -5px;
+  padding: 5px;
+  border-radius: 5px;
+  box-shadow: 0 0 5px black;
 }
 
 a:hover {
-  font-size: 150%;
+  font-size: 125%;
 }
