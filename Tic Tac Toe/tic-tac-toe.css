@@ -32,20 +32,20 @@ body {
     font: 0/0 transparent;
 }
 
-#button1, #button2 {
-    border-top:none
+#button1, #button2, #button3 {
+    border-top: none;
 }
 
-#button1, #button7 {
-    border-left:none
+#button3, #button6, #button9 {
+    border-right: none;
 }
 
-#button3, #button9 {
-    border-right:none
+#button7, #button8, #button9 {
+    border-bottom: none;
 }
 
-#button7, #button9 {
-    border-bottom:none
+#button7, #button8, #button9 {
+    border-left: none;
 }
 
 .tic-tac-toe [aria-label="x"] {
