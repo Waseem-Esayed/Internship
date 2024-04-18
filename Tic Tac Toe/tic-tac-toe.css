@@ -23,11 +23,16 @@ body {
     gap: 0;
 }
 
+button {
+  border-radius: 100%;
+}
+
 .tic-tac-toe button {
     width: 20vmin;
     height: 20vmin;
     background: white;
-    border: 1px solid black;
+    border-color: blue;
+    border-style: solid;
     margin: 0;
     font: 0/0 transparent;
 }
@@ -74,6 +79,7 @@ img {
     height: 50px;
     width: 150px;
     border-radius: 20px;
+    border: 1px solid black;
     margin-top: 20px;
     font-family: 'Poppins', sans-serif;
     color: black;
