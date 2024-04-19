@@ -78,7 +78,7 @@ function checkIfPlayerWon(selectedFields) {
 }
 
 btnReset.onclick = function () {
-    if (checkIfPlayerWon(selectedFields2)) || (checkIfPlayerWon(selectedFields2)) {
+    if (checkIfPlayerWon(selectedFields1)) || (checkIfPlayerWon(selectedFields2)) {
         for (let i = 0; i < 9; i++) {
         contentImg[i].setAttribute("src", "");
         contentBtn[i].onclick = null;
