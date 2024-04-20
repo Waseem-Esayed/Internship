@@ -191,6 +191,7 @@ function initField() {
     showImage(btn15, img15);
     showImage(btn16, img16);
     showImage(btn17, img17);
+    showImage(btn18, img18);
     showImage(btn19, img19);
     showImage(btn20, img20);
     showImage(btn21, img21);
