@@ -9,14 +9,14 @@ body {
     color: white;
 }
 
-#board {
-    display: flex;
-    flex-direction: column;
-    height: 100vh;
+#title {
+    font-size: 300% ;
 }
 
-#second-row {
-    margin-right: 50px;
+#board {
+    display: flex;
+    flex-direction: row;
+    height: 100vh;
 }
 
 button {
@@ -46,6 +46,7 @@ img {
 
 div {
     width: auto;
+    flex-direction: row;
     flex-wrap: wrap;
 }
 
