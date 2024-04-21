@@ -251,10 +251,10 @@ function initField() {
                 img.setAttribute("src", "images/gaara.png")
                 break;
             case "12":
-                img.setAttribute("src", "images/icon2.jpg")
+                img.setAttribute("src", "images/icon1.jpg")
                 break;
             case "13":
-                img.setAttribute("src", "images/sasuke-naruto.png")
+                img.setAttribute("src", "images/icon2.png")
                 break;
             case "14":
                 img.setAttribute("src", "images/shake-naruto.png")
