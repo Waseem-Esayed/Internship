@@ -254,7 +254,7 @@ function initField() {
                 img.setAttribute("src", "images/icon1.jpg")
                 break;
             case "13":
-                img.setAttribute("src", "images/icon2.png")
+                img.setAttribute("src", "images/icon2.jpg")
                 break;
             case "14":
                 img.setAttribute("src", "images/shake-naruto.png")
