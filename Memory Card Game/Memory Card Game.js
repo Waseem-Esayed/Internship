@@ -1,5 +1,8 @@
 body = document.getElementById("body");
 
+title = document.getElementById("title");
+error = document.getElementById("error");
+
 btn1 = document.getElementById("button1");
 btn2 = document.getElementById("button2");
 btn3 = document.getElementById("button3");
@@ -65,6 +68,11 @@ img30 = document.getElementById("img30");
 initField();
 
 function initField() {
+
+    let count = 0;
+    let firstImage;
+    let secondImage;
+    let error;
 
     /*randomId = [1, 2, 3, 4, 5, 6, 7, 8, 9,
         10, 11, 12, 13, 14, 15, 16,];
@@ -204,7 +212,7 @@ function initField() {
     showImage(btn28, img28);
     showImage(btn29, img29);
     showImage(btn30, img30);
-    
+
 
     function setImage(img) {
         const alt = img.getAttribute("alt");
@@ -259,7 +267,29 @@ function initField() {
 
     function showImage(btn, img) {
         btn.onclick = function () {
-            img.style.display = "block";
+            if (img.style.display !== "block") {
+                if (count % 2 === 0) {
+                    firstImage = img;
+                    img.style.display = "block";
+                    count++;
+                    title.innerHTML = count;
+                } else {
+                    secondImage = img;
+                    img.style.display = "block";
+                    count++;
+                    title.innerHTML = count;
+                    if (firstImage.getAttribute("alt") === secondImage.getAttribute("alt")) {
+                        firstImage.setAttribute("test", "1");
+                        secondImage.setAttribute("test", "1");
+                    } else {
+                        setTimeout(function () {
+                            error++
+                            firstImage.style.display = "none";
+                            secondImage.style.display = "none";
+                        }, 1500);
+                    }
+                }
+            }
         }
     }
 }
