@@ -1,0 +1,40 @@
+body {
+    margin: 0;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    font-size: large;
+    font-weight: bold;
+    background-color: rgba(102, 0, 255, 0.485);
+}
+
+#quote {
+    color: green;
+    font-size: x-large;
+    justify-self: center;
+    align-self: center;
+}
+
+button {
+    padding: 5px 10px;
+    border: 1px solid black;
+    border-radius: 5px;
+    background-color: rgb(246, 228, 130);
+    font-size: x-large;
+    transition: all 0.1s;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+button:hover {
+    transform: scale(1.05);
+    background-color: rgb(246, 228, 196);
+}
+
+#reset {
+    background-color: rgb(149, 149, 149);
+    margin-top: 15px;
+    font-size: medium;
+    padding: 4px 6px;
+}
