@@ -79,7 +79,7 @@ function initProgram() {
                 reset.style.cursor = "pointer";
                 checkFirstUse = false;
                 reset.addEventListener("mouseover", function() {
-                    reset.style.transform = "scale(1.1)"; // Ändere die Hintergrundfarbe beim Hovern
+                    reset.style.transform = "scale(1.1)";
                   });
                   reset.addEventListener("mouseout", function() {
                     reset.style.transform = "scale(1)";
@@ -92,7 +92,7 @@ function initProgram() {
             checkFirstUse = false;
             window.alert("You have generated all quotes! Reset to play again!");
             reset.addEventListener("mouseover", function() {
-                reset.style.transform = "scale(1.1)"; // Ändere die Hintergrundfarbe beim Hovern
+                reset.style.transform = "scale(1.1)";
               });
               reset.addEventListener("mouseout", function() {
                 reset.style.transform = "scale(1)";
