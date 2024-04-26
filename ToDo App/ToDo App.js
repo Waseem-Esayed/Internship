@@ -3,7 +3,6 @@ let text = document.getElementById("text");
 let itemsContainer = document.querySelector(".items");
 let tasks = [];
 
-// Funktion zum Laden gespeicherter Aufgaben beim Laden der Seite
 window.onload = function() {
     if(localStorage.getItem('tasks')) {
         tasks = JSON.parse(localStorage.getItem('tasks'));
@@ -11,9 +10,8 @@ window.onload = function() {
     }
 };
 
-// Funktion zum Rendern von Aufgaben
 function renderTasks() {
-    itemsContainer.innerHTML = ""; // Clear existing tasks
+    itemsContainer.innerHTML = "";
     tasks.forEach(function(taskText) {
         let newItem = document.createElement("div");
         newItem.classList.add("content");
@@ -40,7 +38,7 @@ add.onclick = function () {
     }
 
     tasks.push(inputValue);
-    localStorage.setItem('tasks', JSON.stringify(tasks)); // Speichern der Aufgaben im lokalen Speicher
+    localStorage.setItem('tasks', JSON.stringify(tasks));
     renderTasks();
 
     text.value = "";
@@ -52,8 +50,8 @@ deleteButton.onclick = function () {
     let checkboxes = document.querySelectorAll('.regular-radio:checked');
     checkboxes.forEach(function (checkbox) {
         let index = Array.from(checkbox.closest('.items').children).indexOf(checkbox.closest('.content'));
-        tasks.splice(index, 1); // Entfernen der Aufgabe aus dem Array
-        localStorage.setItem('tasks', JSON.stringify(tasks)); // Aktualisieren des lokalen Speichers
+        tasks.splice(index, 1);
+        localStorage.setItem('tasks', JSON.stringify(tasks));
         checkbox.closest('.content').remove();
     });
 };
