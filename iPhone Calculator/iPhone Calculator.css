@@ -24,15 +24,13 @@ body {
     flex-direction: column;
     justify-content: flex-end;
     align-items: center;
-    border-radius: 50px;
-    width: 350px;
-    height: 700px;
+    width: 100%;
+    height: 100%;
     background-color: black;
-    border: 3.5px solid gray;
 }
 
 .display {
-    margin-right: 61px;
+    margin-right: 64px;
     display: flex;
     justify-content: flex-end;
     align-items: center;
@@ -40,7 +38,8 @@ body {
     width: 100%;
     height: 100px;
     color: white;
-    font-size: 4em;
+    font-size: 5em;
+    font-weight: 200;
     padding: 10px;
     box-sizing: border-box;
 }
@@ -49,8 +48,8 @@ button {
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 7px;
     border: none;
-    width: 65px;
-    height: 65px;
+    width: 75px;
+    height: 75px;
     border-radius: 50%;
     font-size: xx-large;
     font-weight: 500;
@@ -65,12 +64,40 @@ button:hover {
 }
 
 #btn-0 {
-    width: 144px;
-    border-radius: 50px;
+    width: 164px;
+    border-radius: 40px;
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    padding-left: 20px;
+    padding-left: 27px;
+    font-weight: 400;
+}
+
+#btn-percent {
+    font-weight: 600;
+}
+
+#btn-divide {
+    font-weight: 600;
+}
+
+.divider {
+    margin: -5px;
+}
+
+.plus {
+    font-size: 0.7em;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+.minus {
+    margin-top: 10px;
+    font-weight: 500;
+}
+
+#btn-multiply {
+    font-weight: 600;
 }
 
 .inner-content:nth-child(5) {
@@ -91,6 +118,7 @@ button:hover {
 .orange {
     background-color: rgb(255, 166, 0);
     color: white;
+    font-size: 2.5em;
     transition: background-color 0.1s, color 0.1s;
 }
 
@@ -102,5 +130,5 @@ button:hover {
 
 .gray {
     color: white;
-    background-color: rgb(85, 85, 85);
+    background-color: rgb(72, 72, 72);
 }
