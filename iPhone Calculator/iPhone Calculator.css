@@ -122,7 +122,7 @@ button:hover {
     transition: background-color 0.1s, color 0.1s;
 }
 
-.orange:active {
+.orange:hover {
     opacity: 1;
     background-color: white;
     color: orange;
