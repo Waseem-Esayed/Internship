@@ -28,11 +28,9 @@ document.addEventListener('DOMContentLoaded', function () {
         "Get ready to level up your project experience!",
         "Welcome aboard the project express!",
         "Embrace the power of projects with us!",
-        "Experience the thrill of accomplishment in our projects!",
         "Let the project adventures begin!",
         "Welcome to the land of project dreams!",
         "Unleash your project potential with us!",
-        "Your quest for the ultimate project experience ends here!",
         "Join us and create like a champion!",
         "Welcome to the heart of project excellence!",
         "Prepare for an epic project odyssey!",
@@ -83,23 +81,18 @@ document.addEventListener('DOMContentLoaded', function () {
         "Enter the world of project wonders and delights!",
         "Get ready to embark on a project adventure of a lifetime!",
         "Welcome to the project sanctuary where dreams come true!",
-        "Prepare to be mesmerized by our captivating project experiences!",
         "Join us for a project journey filled with excitement and joy!",
         "Experience the thrill of project excellence at its finest!",
         "Welcome to the project paradise where fun knows no bounds!",
-        "Get ready to immerse yourself in a world of endless project possibilities!",
         "Step into our realm of projects and let your imagination soar!",
         "Your quest for project excitement ends here!",
         "Welcome to the project haven where memories are made!",
         "Join us as we redefine the art of projects!",
         "Prepare to be enchanted by our enchanting array of projects!",
         "Experience the magic of projects with us by your side!",
-        "Welcome to the project sanctuary where every creator is valued!",
         "Get ready to experience projects like never before!",
         "Embark on a journey through the realm of project innovation!",
-        "Join us for a project experience that will leave you breathless!",
         "Welcome to the ultimate destination for project enthusiasts!",
-        "Prepare to be dazzled by our extraordinary collection of projects!"
     ];
 
 
@@ -121,7 +114,7 @@ document.addEventListener('DOMContentLoaded', function () {
             const gameName = link.textContent.toLowerCase();
 
             if (gameName.includes(searchTerm)) {
-                link.style.display = 'block';
+                link.style.display = 'flex';
             } else {
                 link.style.display = 'none';
             }
