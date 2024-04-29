@@ -29,6 +29,7 @@ header h1 {
     width: 100%;
     font-size: 36px;
     color: #fff;
+    margin: auto 20px;
     text-transform: uppercase;
     letter-spacing: 2px;
 }
