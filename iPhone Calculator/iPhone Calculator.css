@@ -30,9 +30,9 @@ body {
 }
 
 .display {
-    margin-right: 64px;
+    margin-bottom: 40px;
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
     align-items: center;
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     width: 100%;
