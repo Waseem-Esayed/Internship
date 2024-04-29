@@ -1,22 +1,24 @@
-/* Reset CSS */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Body Styles */
 body {
     font-family: 'Arial', sans-serif;
     background-color: #f9f9f9;
     color: #333;
     line-height: 1.6;
+    background: linear-gradient(135deg, #007bff, purple, red);
 }
 
-/* Header Styles */
 header {
     background-color: #007bff;
     padding: 20px 0;
+    border: none;
+    border-bottom: 5px solid black;
+    border-bottom-left-radius: 20%;
+    border-bottom-right-radius: 20%;
 }
 
 header h1 {
@@ -31,13 +33,11 @@ header h1 {
     letter-spacing: 2px;
 }
 
-/* Main Content Styles */
 main {
     margin: 0 auto;
     padding: 20px;
 }
 
-/* Navigation Styles */
 nav {
     display: grid;
     grid-template-columns: 1fr 2fr 1fr;
@@ -47,46 +47,67 @@ nav {
 
 nav .left-sidebar,
 nav .right-sidebar {
-    background-color: #f0f0f0;
+    color: black;
+    box-shadow: 0 0 15px 0px black;
     padding: 20px;
     border-radius: 8px;
     display: none;
+    margin-bottom: 20px;
+    user-select: none;
+}
+
+.side-information {
+    display: flex;
+    flex-direction: column;
+}
+
+.space-for-h2 {
+    margin-bottom: 10px;
 }
 
 #searchInput {
     width: 100%;
     padding: 10px;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
     font-size: 16px;
     border: 1px solid #ccc;
     border-radius: 5px;
 }
 
-/* Links Styles */
+a {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.latest-update {
+    font-size: 15px;
+}
+
 nav ul {
     list-style-type: none;
 }
 
-nav ul li a {
+nav ul li a, .sidebar-projects {
     margin-bottom: 15px;
-    display: block;
     padding: 15px;
     text-decoration: none;
     color: #333;
     font-size: 20px;
     font-weight: bold;
     background-color: #fff;
-    box-shadow: 0 0 15px -7px black;
+    box-shadow: 0 0 15px -10px black;
     border-radius: 8px;
-    transition: background-color 0.3s, color 0.3s;
+    transition: background-color 0.25s, color 0.25s;
 }
 
-nav ul li a:hover {
+nav ul li a:hover, .sidebar-projects:hover {
     background-color: #007bff;
     color: #fff;
 }
 
-/* Media Query für größere Geräte */
 @media screen and (min-width: 768px) {
     nav .left-sidebar,
     nav .right-sidebar {
@@ -96,6 +117,6 @@ nav ul li a:hover {
 
 @media screen and (max-width: 768px) {
     #searchInput {
-        width: 100vw; /* Vollständige Breite des Viewports */
+        width: 100vw;
     }
 }
