@@ -83,12 +83,21 @@ a {
     align-items: center;
 }
 
-.latest-update {
+.projects-info {
     font-size: 15px;
 }
 
 nav ul {
     list-style-type: none;
+}
+
+:root::-webkit-scrollbar{
+  display: none;
+}
+
+:root {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
 }
 
 nav ul li a, .sidebar-projects {
@@ -104,9 +113,17 @@ nav ul li a, .sidebar-projects {
     transition: background-color 0.25s, color 0.25s;
 }
 
-nav ul li a:hover, .sidebar-projects:hover {
+nav ul li .projects:hover, .sidebar-projects:hover {
     background-color: #007bff;
     color: #fff;
+}
+
+.fixing {
+  color: white;
+  background-color: red;
+  cursor: not-allowed;
+  user-select: none;
+  pointer-events: none;
 }
 
 @media screen and (min-width: 768px) {
