@@ -8,6 +8,15 @@
     scroll-behavior: smooth;
 }
 
+:root::-webkit-scrollbar{
+  display: none;
+}
+
+:root {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
 body {
     background-color: #434978;
 }
