@@ -1,5 +1,5 @@
 :root {
-    --footerElementSpace: 17%;
+    --footerElementSpace: 13%;
 }
 
 * {
@@ -50,7 +50,7 @@ nav {
 
 nav .left-sidebar,
 nav .right-sidebar {
-    display: none;
+    display: block;
     color: black;
     box-shadow: 0 0 15px 0px black;
     padding: 20px;
@@ -91,7 +91,9 @@ nav .right-sidebar {
 
 #searchInput::placeholder {
     color: white;
-    opacity: 0.6;
+    opacity: 0.7;
+    font-size: 14px;
+    font-style: oblique;
 }
 
 a {
@@ -172,20 +174,23 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
 }
 
 footer p {
-    margin-left: 0;
+    font-size: 20px;
+    margin-left: var(--footerElementSpace);
 }
 
 footer #container {
-    display: none;
+    display: flex;
     justify-content: center;
     gap: 20px;
     margin-left: var(--footerElementSpace);
     background-color: white;
     padding: 7px 10px;
-    border-radius: 10px;
+    border-radius: 100px;
 }
 
 footer #container div {
@@ -200,29 +205,21 @@ footer #container div:hover {
     transform: scale(1.11);
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (max-width: 768px) {
 
     nav .left-sidebar,
-    nav .right-sidebar {
-        display: block;
+    nav .right-sidebar,
+    footer #container,
+    span {
+        display: none;
     }
 
     footer p {
-        margin-left: var(--footerElementSpace);
+        margin-left: 0;
     }
 
-    footer #container {
-        display: flex;
-    }
-}
-
-@media screen and (max-width: 768px) {
     nav {
         grid-template-columns: 0 3fr 0;
-    }
-
-    span {
-        display: none;
     }
 
     #game-list a {
