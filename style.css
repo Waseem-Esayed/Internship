@@ -1,3 +1,7 @@
+:root {
+    --footerElementSpace: 17%;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -6,14 +10,12 @@
 
 body {
     font-family: 'Arial', sans-serif;
-    color: #333;
+    color: black;
     line-height: 1.6;
-    background: linear-gradient(135deg, #007bff, purple, red);
     background-repeat: no-repeat;
 }
 
 header {
-    background-color: #007bff;
     padding: 20px 0;
     border: none;
     border-bottom: 5px solid black;
@@ -22,7 +24,6 @@ header {
 }
 
 header h1 {
-    user-select: none;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -34,9 +35,10 @@ header h1 {
     letter-spacing: 2px;
 }
 
-main {
+#main {
     margin: 0 auto;
     padding: 20px;
+    transition: all 0.3s;
 }
 
 nav {
@@ -48,13 +50,20 @@ nav {
 
 nav .left-sidebar,
 nav .right-sidebar {
+    display: none;
     color: black;
     box-shadow: 0 0 15px 0px black;
     padding: 20px;
+    border: 2px dashed black;
     border-radius: 8px;
-    display: none;
     margin-bottom: 20px;
-    user-select: none;
+}
+
+.left-sidebar h2,
+.right-sidebar h2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .side-information {
@@ -62,17 +71,27 @@ nav .right-sidebar {
     flex-direction: column;
 }
 
-.space-for-h2 {
+.side-information-titles {
     margin-bottom: 10px;
 }
 
 #searchInput {
+    background: transparent;
+    color: white;
     width: 100%;
-    padding: 10px;
+    height: 40px;
+    padding: 0 10px;
     margin-bottom: 30px;
     font-size: 16px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+    border: none;
+    border-bottom: 1px solid white;
+    outline: none;
+    transition: all 0.3s, background-color 0.15s;
+}
+
+#searchInput::placeholder {
+    color: white;
+    opacity: 0.6;
 }
 
 a {
@@ -91,50 +110,123 @@ nav ul {
     list-style-type: none;
 }
 
-:root::-webkit-scrollbar{
-  display: none;
+:root::-webkit-scrollbar {
+    display: none;
 }
 
 :root {
-  scrollbar-width: none;
-  -ms-overflow-style: none;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
 }
 
-nav ul li a, .sidebar-projects {
+nav ul li a,
+.fixing,
+.sidebar-projects,
+.sidebar-fix-projects {
     margin-bottom: 15px;
     padding: 15px;
     text-decoration: none;
-    color: #333;
+    color: black;
     font-size: 20px;
     font-weight: bold;
     background-color: #fff;
-    box-shadow: 0 0 15px -10px black;
     border-radius: 8px;
-    transition: background-color 0.25s, color 0.25s;
+    transition: background-color 0.2s, color 0.2s;
 }
 
-nav ul li .projects:hover, .sidebar-projects:hover {
-    background-color: #007bff;
-    color: #fff;
+.projects,
+.sidebar-projects,
+.fixing,
+.sidebar-fix-projects {
+    border: 2px solid black;
+}
+
+.right-sidebar a {
+    justify-content: center;
+}
+
+.sidebar-projects {
+    cursor: pointer;
+}
+
+nav ul li a,
+li a {
+    user-select: none;
+    -webkit-user-drag: none;
 }
 
 .fixing {
-  color: white;
-  background-color: red;
-  cursor: not-allowed;
-  user-select: none;
-  pointer-events: none;
+    color: white;
+    background-color: red;
+    cursor: default;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer p {
+    margin-left: 0;
+}
+
+footer #container {
+    display: none;
+    justify-content: center;
+    gap: 20px;
+    margin-left: var(--footerElementSpace);
+    background-color: white;
+    padding: 7px 10px;
+    border-radius: 10px;
+}
+
+footer #container div {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+footer #container div:hover {
+    transform: scale(1.11);
 }
 
 @media screen and (min-width: 768px) {
+
     nav .left-sidebar,
     nav .right-sidebar {
         display: block;
     }
+
+    footer p {
+        margin-left: var(--footerElementSpace);
+    }
+
+    footer #container {
+        display: flex;
+    }
 }
 
 @media screen and (max-width: 768px) {
-    #searchInput {
-        width: 100vw;
+    nav {
+        grid-template-columns: 0 3fr 0;
+    }
+
+    span {
+        display: none;
+    }
+
+    #game-list a {
+        display: flex;
+        justify-content: center;
     }
 }
