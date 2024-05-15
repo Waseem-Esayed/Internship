@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
         element.removeAttribute("href");
 
-        const fixingLabel = document.createElement('span');
+        let fixingLabel = document.createElement('span');
         fixingLabel.textContent = 'Fixing';
 
         fixingLabel.classList.add("projects-info");
@@ -98,7 +98,7 @@ document.addEventListener('DOMContentLoaded', function () {
     combineProjects(activeProjects);
     combineProjects(sidebarProjects);
 
-    const greetings = [
+    let greetings = [
         "Welcome to our project showcase!",
         "Ready for endless project exploration!",
         "Explore the world of projects with us!",
@@ -181,25 +181,25 @@ document.addEventListener('DOMContentLoaded', function () {
         "Get ready to experience projects like never before!",
     ];
 
-    const randomIndex = Math.floor(Math.random() * greetings.length);
+    let randomIndex = Math.floor(Math.random() * greetings.length);
 
-    const greetingElement = document.querySelector('header h1');
+    let greetingElement = document.querySelector("header h1");
     greetingElement.textContent = greetings[randomIndex];
 
-    const searchInput = document.getElementById('searchInput');
+    let searchInput = document.getElementById("searchInput");
 
-    const gameLinks = document.querySelectorAll('nav ul li a');
+    let gameLinks = document.querySelectorAll("nav #game-list li a");
 
-    searchInput.addEventListener('input', function () {
-        const searchTerm = searchInput.value.toLowerCase().trim();
+    searchInput.addEventListener("input", function () {
+        let searchTerm = searchInput.value.toLowerCase().trim();
 
         gameLinks.forEach(function (link) {
-            const gameName = link.textContent.toLowerCase();
+            let gameName = link.textContent.toLowerCase();
 
             if (gameName.includes(searchTerm)) {
-                link.style.display = 'flex';
+                link.style.display = "flex";
             } else {
-                link.style.display = 'none';
+                link.style.display = "none";
             }
         });
     });
