@@ -1,4 +1,103 @@
 document.addEventListener('DOMContentLoaded', function () {
+    let fixingElements = document.querySelectorAll("#game-list .fixing");
+    fixingElements.forEach(function (element) {
+
+        element.removeAttribute("href");
+
+        const fixingLabel = document.createElement('span');
+        fixingLabel.textContent = 'Fixing';
+
+        fixingLabel.classList.add("projects-info");
+
+        element.insertBefore(fixingLabel, element.firstChild.nextSibling);
+    });
+
+    let green = document.getElementById("green");
+    let red = document.getElementById("red");
+    let blue = document.getElementById("blue");
+    let purple = document.getElementById("purple");
+    let orange = document.getElementById("orange");
+
+    clickColor(green, "rgb(29, 209, 161)");
+    clickColor(red, "rgb(255, 107, 107)");
+    clickColor(blue, "rgb(46, 134, 222)");
+    clickColor(purple, "rgb(243, 104, 224)");
+    clickColor(orange, "rgb(255, 159, 67)");
+
+    let colorList = ["rgb(29, 209, 161)", "rgb(19, 199, 189)"];
+
+    document.body.style.backgroundColor = colorList[0];
+    document.body.style.transition = "all 0.2s";
+
+    let header = document.getElementById("header");
+    leftSidebar = document.querySelectorAll(".left-sidebar");
+    rightSidebar = document.querySelectorAll(".right-sidebar");
+
+    function setSidebarBGC(sidebar) {
+        sidebar.forEach(function (element) {
+            colorList.length == 2 ? element.style.backgroundColor = colorList[1] : element.style.backgroundColor = colorList[0];
+        })
+    }
+
+    header.style.backgroundColor = colorList[1];
+    setSidebarBGC(leftSidebar);
+    setSidebarBGC(rightSidebar);
+
+    function clickColor(element, color) {
+        element.style.backgroundColor = color;
+        element.onclick = function () {
+            colorList.splice(0);
+            switch (element) {
+                case green:
+                    colorList.push("rgb(9, 189, 189)");
+                    break;
+                case red:
+                    colorList.push("rgb(235, 87, 127)");
+                    break;
+                case blue:
+                    colorList.push("rgb(26, 114, 242)");
+                    break;
+                case purple:
+                    colorList.push("rgb(223, 84, 244)");
+                    break;
+                case orange:
+                    colorList.push("rgb(235, 139, 87)");
+                    break;
+            };
+            header.style.backgroundColor = colorList[0];
+            setSidebarBGC(leftSidebar);
+            setSidebarBGC(rightSidebar);
+            document.body.style.backgroundColor = color;
+        }
+    }
+
+    let Projects = document.querySelectorAll("#game-list a");
+    let lastProject = Projects[Projects.length - 1];
+    lastProject.style.marginBottom = "80px";
+
+    let activeProjects = document.querySelectorAll(".projects");
+    let sidebarProjects = document.querySelectorAll(".sidebar-projects");
+
+    function combineProjects(element) {
+        element.forEach(function (item) {
+            item.onmouseenter = function () {
+                if (element == sidebarProjects) {
+                    item.style.backgroundColor = document.body.style.backgroundColor;
+                } else {
+                    colorList.length == 2 ? item.style.backgroundColor = colorList[1] : item.style.backgroundColor = colorList[0];
+                }
+                item.style.color = "white";
+            }
+            item.onmouseleave = function () {
+                item.style.backgroundColor = "white";
+                item.style.color = "black";
+            }
+        })
+    }
+
+    combineProjects(activeProjects);
+    combineProjects(sidebarProjects);
+
     const greetings = [
         "Welcome to our project showcase!",
         "Ready for endless project exploration!",
@@ -82,14 +181,11 @@ document.addEventListener('DOMContentLoaded', function () {
         "Get ready to experience projects like never before!",
     ];
 
-
     const randomIndex = Math.floor(Math.random() * greetings.length);
 
     const greetingElement = document.querySelector('header h1');
     greetingElement.textContent = greetings[randomIndex];
-});
 
-document.addEventListener('DOMContentLoaded', function () {
     const searchInput = document.getElementById('searchInput');
 
     const gameLinks = document.querySelectorAll('nav ul li a');
