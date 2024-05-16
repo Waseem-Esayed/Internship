@@ -18,12 +18,6 @@ document.addEventListener('DOMContentLoaded', function () {
     let purple = document.getElementById("purple");
     let orange = document.getElementById("orange");
 
-    clickColor(green, "rgb(29, 209, 161)");
-    clickColor(red, "rgb(255, 107, 107)");
-    clickColor(blue, "rgb(46, 134, 222)");
-    clickColor(purple, "rgb(243, 104, 224)");
-    clickColor(orange, "rgb(255, 159, 67)");
-
     let colorList = ["rgb(29, 209, 161)", "rgb(19, 199, 189)"];
 
     document.body.style.backgroundColor = colorList[0];
@@ -43,9 +37,67 @@ document.addEventListener('DOMContentLoaded', function () {
     setSidebarBGC(leftSidebar);
     setSidebarBGC(rightSidebar);
 
+    let colorBorder = document.getElementById("border");
+    colorBorder.style.left = 51.5 + "px";
+
+    clickColor(green, "rgb(29, 209, 161)");
+    clickColor(red, "rgb(255, 107, 107)");
+    clickColor(blue, "rgb(46, 134, 222)");
+    clickColor(purple, "rgb(243, 104, 224)");
+    clickColor(orange, "rgb(255, 159, 67)");
+
     function clickColor(element, color) {
+        function colorBorderOnEvent(size) {
+            function borderHover(item, position) {
+                if (element == item) {
+                    if (colorBorder.style.left == position + "px") {
+                        colorBorder.style.transform = `scale(${size})`;
+                    }
+                }
+            }
+            borderHover(green, 51.5);
+            borderHover(red, 101.5);
+            borderHover(blue, 151.5);
+            borderHover(purple, 201.5);
+            borderHover(orange, 251.5);
+        }
+
+        element.onmouseenter = function () {
+            if (element.style.transform !== "scale(1.21)") {
+                element.style.transform = "scale(1.12)";
+            }
+        }
+        element.onmouseleave = function () {
+            if (element.style.transform !== "scale(1.21)") {
+                element.style.transform = "scale(1)";
+            }
+        }
+
         element.style.backgroundColor = color;
+
+        green.style.transform = "scale(1.21)";
+        colorBorderOnEvent(1.21);
+
         element.onclick = function () {
+            let colors = document.querySelectorAll(".color");
+            colors.forEach(function (element) {
+                element.style.transform = "scale(1)";
+            })
+            element.style.transform = "scale(1.21)";
+
+            function setBorderPosition(item, after) {
+                if (element == item) {
+                    colorBorder.style.left = after + "px";
+                }
+            }
+            setBorderPosition(green, 51.5);
+            setBorderPosition(red, 101.5);
+            setBorderPosition(blue, 151.5);
+            setBorderPosition(purple, 201.5);
+            setBorderPosition(orange, 251.5);
+
+            colorBorderOnEvent(1.21);
+
             colorList.splice(0);
             switch (element) {
                 case green:
