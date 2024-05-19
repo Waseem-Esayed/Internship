@@ -255,4 +255,39 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         });
     });
+
+    let button = document.getElementsByClassName("button")[0];
+    let elements = document.querySelectorAll(".inner-toggle");
+    let buttonContainer = document.getElementsByClassName("container")[0];
+    let value = true;
+
+
+    button.onclick = function() {
+        if (button.style.transform == "" || button.style.transform == "translateX(0px)" || button.style.transform == "translateX(61px)") {
+            elements.forEach(function(item) {
+                button.style.transition = "0.3s all";
+                item.style.transition = "0.3s all";
+                item.style.transitionDelay = Math.random() * 0.4 + "s";
+
+                if (item.style.transform == "" || item.style.transform == "translateX(0px)") {
+                    button.disabled = true;
+                    button.style.transform = "translateX(61px)";
+                    button.style.zIndex = "100";
+                    item.style.zIndex = "0";
+                    item.style.transform = "translateX(61px)";
+                    item.style.backgroundColor = "red";
+                    buttonContainer.style.borderColor = "red";
+                    buttonContainer.style.boxShadow = "0 0 40px -10px red inset, 0 0 40px -10px red";
+                    value = true;
+                } else {
+                    button.style.transform = "translateX(0px)";
+                    item.style.transform = "translateX(0px)";
+                    item.style.backgroundColor = "rgb(0, 255, 8)";
+                    buttonContainer.style.borderColor = "rgb(0, 255, 8)";
+                    buttonContainer.style.boxShadow = "0 0 40px -10px rgb(0, 255, 8) inset, 0 0 40px -10px rgb(0, 255, 8)";
+                    value = false;
+                }
+            });
+        }
+    };
 });
