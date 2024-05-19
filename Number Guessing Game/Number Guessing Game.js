@@ -4,7 +4,8 @@ let DOMCheck = document.getElementById("check");
 let DOMChances = document.getElementById("chances");
 
 let chances = 5;
-let attempts = 20;
+let startAttempts = 10;
+let attempts = 10;
 DOMChances.innerHTML = attempts;
 
 let randomNumber = Math.floor(Math.random() * 100) + 1;
@@ -13,10 +14,12 @@ console.log(randomNumber);
 let userGuess;
 
 DOMCheck.onclick = function () {
-    if (attempts >= 1) {
+    if (attempts >= 1 && DOMNumber.value.length !== 0) {
         userGuess = Number(DOMNumber.value);
         if (userGuess == randomNumber) {
-            window.alert(`It took you ${attempts} to guess the number ${randomNumber}!`);
+            window.alert(`It took you ${startAttempts - attempts + 1} attempts to guess the number ${randomNumber}!`);
+            attempts--;
+            DOMChances.innerHTML = attempts;
             DOMNumber.disabled = true;
             DOMCheck.disabled = true;
             DOMNumber.style.cursor = "default";
