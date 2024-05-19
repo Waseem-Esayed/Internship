@@ -255,6 +255,33 @@ footer p {
     margin-left: var(--footerElementSpace);
 }
 
+.container {
+    min-width: 123.75px;
+    height: 60px;
+    background-color: transparent;
+    border: 3px solid rgb(0, 255, 8);
+    box-shadow: 0 0 40px -10px rgb(0, 255, 8) inset, 0 0 40px -10px rgb(0, 255, 8);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 5.5px;
+    transition: 0.3s all;
+}
+
+.inner-toggle {
+    height: 1.125px;
+    width: 45.01px;
+    background-color: rgb(0, 255, 8);
+}
+
+.button {
+    height: 45px;
+    width: 45.01px;
+    background: transparent;
+    position: absolute;
+    cursor: pointer;
+}
+
 footer #container {
     display: flex;
     justify-content: center;
@@ -296,7 +323,8 @@ footer #container #border {
     nav .left-sidebar,
     nav .right-sidebar,
     footer #container,
-    span {
+    span,
+    .container {
         display: none;
     }
 
