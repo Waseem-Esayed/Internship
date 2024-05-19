@@ -264,7 +264,7 @@ footer p {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding-left: 5.5px;
+    padding-left: 6px;
     transition: 0.3s all;
 }
 
