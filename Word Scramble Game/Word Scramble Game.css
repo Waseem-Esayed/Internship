@@ -1,0 +1,90 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    color: black;
+    line-height: 1.6;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(0, 115, 255);
+}
+
+.container {
+    width: 290px;
+    height: 290px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px -1px black;
+}
+
+#title {
+    margin: 8px 12px;
+    font-weight: 500;
+}
+
+#word {
+    margin-top: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    letter-spacing: 15px;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+#hint, #time-label, #input, .buttons {
+    margin-left: 12px;
+    margin-top: 25px;
+    font-size: 12px;
+}
+
+#time-label {
+    margin-top: 5px;
+}
+
+#input {
+    margin-top: 15px;
+    border: 1px solid gray;
+    border-radius: 2px;
+    height: 30px;
+    width: calc(100% - 24px);
+    padding-left: 10px;
+}
+
+#input::placeholder {
+    font-size: 10px;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#refresh, #check {
+    margin: 12px 6px;
+    width: 127px;
+    height: 30px;
+    margin-top: 0;
+    transform: translateY(-3px);
+    color: white;
+    border: none;
+    border-radius: 3px;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+#refresh {
+    margin-left: -5px;
+    background-color: gray;
+}
+
+#check {
+    background-color: rgba(0, 0, 255, 0.6);
+}
