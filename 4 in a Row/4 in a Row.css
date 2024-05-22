@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Open Sans', sans-serif;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+}
+
+.player {
+    color: rgb(71, 71, 255);
+    font-size: 30px;
+    font-weight: 500;
+    width: 400px;
+    height: 100px;
+    border-radius: 10px;
+    background-color: rgba(0, 191, 255, 0.3);
+    border: 6px solid rgb(71, 71, 255);
+    box-shadow: 5px 5px 10px -4.75px black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.board {
+    width: 400px;
+    max-height: 400px;
+    background-color: rgba(0, 191, 255, 0.3);
+    border: 6px solid rgb(71, 71, 255);
+    box-shadow: 5px 5px 10px -4.75px black;
+    border-radius: 5px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.play-again-btn {
+    height: 30px;
+    width: 120px;
+    color: blue;
+    border: 2px solid blue;
+    border-radius: 5px;
+    background: transparent;
+    cursor: pointer;
+    transition: background-color 0.1s;
+}
+
+.play-again-btn:hover {
+    background-color: rgba(0, 191, 255, 0.3);
+}
+
+:root {
+    --innerBoardSize: 55.48px;
+}
+
+.innerboard {
+    min-width: var(--innerBoardSize);
+    min-height: var(--innerBoardSize);
+    max-width: var(--innerBoardSize);
+    max-height: var(--innerBoardSize);
+    border: 3px solid rgb(71, 71, 255);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.circle {
+    min-width: 40px;
+    min-height: 40px;
+    background-color: green;
+    border-radius: 50%;
+}
+
+.line-senkrecht {
+    width: 10px;
+    height: 55.48px;
+    background-color: black;
+    position: absolute;
+}
+
+.line-waagerecht {
+    width: 55.48px;
+    height: 10px;
+    background-color: black;
+    position: absolute;
+}
+
+.line-unten-links-nach-oben-rechts {
+    width: 10px;
+    height: 79px;
+    transform: rotate(45deg);
+    background-color: black;
+    position: absolute;
+}
+
+.line-unten-rechts-nach-oben-links {
+    width: 10px;
+    height: 79px;
+    transform: rotate(-45deg);
+    background-color: black;
+    position: absolute;
+}
