@@ -107,7 +107,7 @@ document.addEventListener("DOMContentLoaded", function () {
             newInner.appendChild(circle);
         }
 
-        drawLines();
+        setTimeout(drawLines, 200);
 
         function drawLines() {
             /*Senkrecht*/
