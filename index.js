@@ -257,14 +257,23 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
     let button = document.getElementsByClassName("button")[0];
-    let elements = document.querySelectorAll(".inner-toggle");
     let buttonContainer = document.getElementsByClassName("container")[0];
+
+    for (let i = 1; i <= 40; i++) {
+        let footerButton = document.createElement("div");
+        footerButton.classList.add("inner-toggle");
+
+        buttonContainer.appendChild(footerButton);
+    }
+
+    let elements = document.querySelectorAll(".inner-toggle");
+
+    //value hasn't any functions or use yet
     let value = true;
 
-
-    button.onclick = function() {
+    button.onclick = function () {
         if (button.style.transform == "" || button.style.transform == "translateX(0px)" || button.style.transform == "translateX(61px)") {
-            elements.forEach(function(item) {
+            elements.forEach(function (item) {
                 button.style.transition = "0.3s all";
                 item.style.transition = "0.3s all";
                 item.style.transitionDelay = Math.random() * 0.4 + "s";
