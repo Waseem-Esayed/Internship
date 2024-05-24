@@ -315,7 +315,6 @@ footer #container #border {
     background-color: transparent;
     z-index: 10;
     position: relative;
-    left: 51.5px;
 }
 
 @media screen and (max-width: 768px) {
