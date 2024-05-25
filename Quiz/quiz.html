@@ -5,26 +5,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="quiz.css">
-    <title>Simple Quiz</title>
+    <title>Main Website</title>
 </head>
 
 <body>
-    <main class="quiz-container">
-        <div class="outer-box">
-            <p id="title">Simple Quiz</ß>
-            <div class="line"></div>
-            <p id="question">1. Which is the largest animal in the world?</p>
-            <div class="answers">
-                <p id="first">Shark</p>
-                <p id="second">Blue whale</p>
-                <p id="third">Elephant</p>
-                <p id="fourth">Giraffe</p>
-            </div>
-            <button id="submit">Submit</button>
+    <div class="container">
+        <p id="title">Simple Quiz</p>
+        <hr>
+        <p id="question"></p>
+        <div id="answers">
+            <button class="button" id="answer-1"></button>
+            <button class="button" id="answer-2"> </button>
+            <button class="button" id="answer-3"></button>
+            <button class="button" id="answer-4"></button>
         </div>
-    </main>
-    <script src="quiz.js"></script>
+        <button id="next">Next</button>
+        <p id="question-index"><span id="index"></span>from 10</p>
 
+    </div>
+
+    <script src="quiz.js"></script>
 </body>
 
 </html>
