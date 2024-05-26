@@ -1,3 +1,4 @@
+
 :root {
     --footerElementSpace: 13%;
 }
@@ -210,6 +211,7 @@ nav ul li a,
 
 .sidebar-fix-projects {
     cursor: default;
+}
 
 .projects,
 .sidebar-projects,
