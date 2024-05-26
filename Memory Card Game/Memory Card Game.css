@@ -9,8 +9,19 @@ body {
     color: white;
 }
 
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 70px;
+}
+
+.player-points{
+    font-size: 40px;
+}
+
 #title {
-    font-size: 300% ;
+    font-size: 40px ;
 }
 
 #board {
@@ -30,6 +41,7 @@ button {
     align-items: center;
     flex-direction: row;
     transition: background-color 0.1s;
+    cursor: pointer;
 }
 
 button:hover {
