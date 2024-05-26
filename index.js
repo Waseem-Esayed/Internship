@@ -12,6 +12,11 @@ document.addEventListener('DOMContentLoaded', function () {
         element.insertBefore(fixingLabel, element.firstChild.nextSibling);
     });
 
+    let sidebarFixingElements = document.querySelectorAll(".sidebar-fix-projects");
+    sidebarFixingElements.forEach(function (element) {
+        element.removeAttribute("href");
+    })
+
     let green = document.getElementById("green");
     let red = document.getElementById("red");
     let blue = document.getElementById("blue");
