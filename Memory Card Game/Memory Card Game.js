@@ -255,17 +255,21 @@ function initField() {
                     img.style.display = "block";
                     count++;
                     title.innerHTML = count;
+
                     if (firstImage.getAttribute("alt") !== secondImage.getAttribute("alt")) {
-                        for (let i=1; i<=30; i++) {
-                            window["btn" + i].setAttribute("disabled","");
+                        for (let i = 1; i <= 30; i++) {
+                            window["btn" + i].setAttribute("disabled", "");
                         }
                         setTimeout(function () {
-                            for (let i=1; i<=30; i++) {
+                            for (let i = 1; i <= 30; i++) {
                                 window["btn" + i].removeAttribute("disabled");
                             }
                             firstImage.style.display = "none";
                             secondImage.style.display = "none";
                         }, 1500);
+                    } else {
+                        firstImage.style.cursor = "default";
+                        secondImage.style.cursor = "default";
                     }
                 }
             }
