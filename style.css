@@ -208,6 +208,9 @@ nav ul li a,
     transition: background-color 0.2s, color 0.2s;
 }
 
+.sidebar-fix-projects {
+    cursor: default;
+
 .projects,
 .sidebar-projects,
 .fixing,
