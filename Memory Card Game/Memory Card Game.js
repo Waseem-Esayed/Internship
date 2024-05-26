@@ -1,5 +1,4 @@
 document.addEventListener("DOMContentLoaded", function() {
-    const body = document.getElementById("body");
     const title = document.getElementById("title");
 
     title.textContent = "Turn: Player 1";
