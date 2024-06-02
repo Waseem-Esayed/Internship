@@ -5,14 +5,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <link rel="stylesheet" href="Simon Says Game.css">
+    <link rel="stylesheet" href="style.css">
     <title>Simon Says Game</title>
 </head>
 
 <body>
     <div class="container">
-        <p id="timeLabel"></p>
-        <button id="startBtn">Start</button>
+        <div class="header">
+            <h1>Simon Says</h1>
+            <p id="timeLabel"></p>
+        </div>
+        <button id="startBtn">START</button>
         <hr>
         <div class="buttonContainer">
             <div id="button-1" class="button">1</div>
@@ -20,9 +23,10 @@
             <div id="button-3" class="button">3</div>
             <div id="button-4" class="button">4</div>
         </div>
+        <p id="inspiration">Inspired by <span id="name">Ceyda</span></p>
     </div>
 
-    <script src="Simon Says Game.js"></script>
+    <script src="index.js"></script>
 </body>
 
 </html>
