@@ -45,6 +45,10 @@ body {
     text-align: center;
 }
 
+h1 {
+    margin-bottom: 20px;
+}
+
 #timeLabel {
     margin-top: -10px;
     margin-bottom: 10px;
@@ -75,6 +79,10 @@ hr {
     margin-bottom: 10px;
 }
 
+hr#endHr {
+    margin-top: 10px;
+}
+
 .buttonContainer {
     display: flex;
     justify-content: center;
@@ -91,7 +99,7 @@ hr {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: var(--light);
+    background-color: var(--light-primary);
     margin: 10px;
     cursor: pointer;
     border: 3px solid var(--dark);
@@ -101,8 +109,7 @@ hr {
 }
 
 .button:hover {
-    background-color: var(--grey);
-    transform: scale(1.1);
+    transform: scale(1.05);
 }
 
 #inspiration {
@@ -111,7 +118,6 @@ hr {
     justify-content: flex-end;
     align-items: flex-end;
     color: var(--danger);
-    margin-top: 20px;
 }
 
 #name {
