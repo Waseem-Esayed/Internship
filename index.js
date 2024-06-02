@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
         fixingLabel.classList.add("projects-info");
 
-        element.insertBefore(fixingLabel, element.firstChild.nextSibling);
+        element.insertBefore(fixingLabel, element.firstChild.nextSibling.nextSibling);
     });
 
     let sidebarFixingElements = document.querySelectorAll(".sidebar-fix-projects");
@@ -134,6 +134,24 @@ document.addEventListener('DOMContentLoaded', function () {
 
     let activeProjects = document.querySelectorAll(".projects");
     let sidebarProjects = document.querySelectorAll(".sidebar-projects");
+
+    let projectsImages = document.querySelectorAll(".projects-img");
+
+    activeProjects.forEach(function (element) {
+        let href = element.getAttribute("href");
+        let hrefIndex = href.indexOf("/");
+        if (hrefIndex !== -1) {
+            let folderName = href.slice(0, hrefIndex);
+            let imgElement = element.querySelector(".projects-img");
+            if (imgElement) {
+                imgElement.setAttribute("src", `images/${folderName}.png`);
+            } else {
+                console.warn(`Kein Bild-Element gefunden für ${href}`);
+            }
+        } else {
+            console.warn(`Ungültiger href-Wert: ${href}`);
+        }
+    });
 
     function combineProjects(element) {
         element.forEach(function (item) {
