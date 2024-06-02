@@ -76,12 +76,12 @@ document.addEventListener("DOMContentLoaded", function () {
                     element.style.pointerEvents = "all";
                     element.style.cursor = "pointer";
                 });
-            }, 1000);
+            }, 750);
         }
 
         function genNewButton() {
-            let index = buttonListAll.length; // Aktuelle Länge der Liste
-            randIndex = Math.floor(Math.random() * 4) + 1; // Zufälliger Index
+            let index = buttonListAll.length;
+            randIndex = Math.floor(Math.random() * 4) + 1;
 
             let buttonToAdd = null;
 
@@ -112,6 +112,11 @@ document.addEventListener("DOMContentLoaded", function () {
                         setTimeout(function () {
                             enableUserInput();
                         }, 1000);
+                    } else {
+                        DOMButtons.forEach(function (element) {
+                            element.style.cursor = "default";
+                            element.style.pointerEvents = "none";
+                        });
                     }
                 }, 1500 * index);
             });
