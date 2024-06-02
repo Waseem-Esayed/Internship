@@ -95,6 +95,11 @@ nav .right-sidebar {
     width: 35px;
 }
 
+.projects-img {
+    width: 50px;
+    border-radius: 10px;
+}
+
 .skills-list li:nth-child(2) img,
 .skills-list li:nth-child(3) img,
 .skills-list li:nth-child(4) img {
@@ -215,6 +220,15 @@ nav ul li a,
 .fixing,
 .sidebar-fix-projects {
     border: 2px solid black;
+}
+
+.projects {
+    background-color: #f0f0f0;
+    /* Fallback color */
+    background-size: cover;
+    /* Anpassung der Bildgröße */
+    background-position: center;
+    /* Bildposition */
 }
 
 .right-sidebar a {
