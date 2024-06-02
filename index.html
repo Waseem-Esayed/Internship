@@ -1,33 +1,164 @@
-<!DOCTYPE html>
-<html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="style.css">
-    <title>Simon Says Game</title>
+    <title>Main Website</title>
 </head>
 
 <body>
-    <div class="container">
-        <div class="header">
-            <h1>Simon Says</h1>
-            <p id="timeLabel"></p>
+    <header id="header">
+        <h1></h1>
+    </header>
+
+    <main id="main">
+        <nav>
+            <aside>
+                <div class="side-information">
+                    <div class="left-sidebar">
+                        <h2>About Me</h2>
+                        <p>As a 15-year-old student just beginning to learn programming, I'm
+                            captivated by the
+                            world of software development. Writing code allows me to express my creativity and find
+                            solutions to
+                            intriguing problems. I enjoy exploring new programming languages and technologies, learning
+                            how
+                            to
+                            use them to create programs and applications. The prospect of working as a software
+                            developer
+                            inspires me to learn more about programming every day and improve my skills. I'm excited
+                            about
+                            the
+                            opportunities that exist in the world of software development and look forward to expanding
+                            my
+                            knowledge and abilities to bring my own projects to life.</p>
+                    </div>
+                    <div class="left-sidebar" id="social-links">
+                        <h2 class="side-information-titles">My Skills</h2>
+                        <ul class="skills-list">
+                            <li><img src="images/hmtl.png"><span class="html">HTML</span>
+                                <div class="arrow">&rightarrow;</div>
+                                <div class="color green"></div>
+                            </li>
+                            <li><img src="images/css.png"><span class="css">CSS</span>
+                                <div class="arrow">&rightarrow;</div>
+                                <div class="color green"></div>
+                            </li>
+                            <li><img src="images/javascript.png"><span class="javascript">JavaScript</span>
+                                <div class="arrow">&rightarrow;</div>
+                                <div class="color orange"></div>
+                            </li>
+                            <li><img src="images/react.png"><span class="react">React</span>
+                                <div class="arrow">&rightarrow;</div>
+                                <div class="color red"></div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </aside>
+
+            <ul id="game-list">
+                <input type="text" id="searchInput" placeholder="Search projects..." maxlength="50">
+
+                <li><a class="projects" href="Dice/dice.html">Dice Game<span class="projects-info"> Latest Update:
+                            04.05.2024</span></a>
+                    <a class="projects" href="My Experiences at AOE\myExperiencesAtAoe.html">My Experiences At
+                        AOE<span class="projects-info">Latest Update: 04.05.2024</span></a>
+                    <a class="projects" href="Number Guessing Game/Number Guessing Game.html">Number Guessing
+                        Game<span class="projects-info">Latest Update: 04.05.2024</span></a>
+                    <a class="projects" href="Quiz\quiz.html">Quiz<span class="projects-info">Latest Update:
+                            25.05.2024</span></a>
+                    <a class="projects" href="Temperature  conversion/tempCon.html">Temperature
+                        conversion<span class="projects-info">Latest Update: 04.05.2024</span></a>
+                    <a class="projects" href="Tic Tac Toe\tic-tac-toe.html">Tic Tac
+                        Toe<span class="projects-info">Latest Update: 04.05.2024</span></a>
+                    <a class="projects" href="Memory Card Game\Memory Card Game.html">Memory Card
+                        Game<span class="projects-info">Latest Update: 26.05.2024</span></a>
+                    <a class="projects" href="Color Flipper\Color Flipper.html">Color
+                        Flipper<span class="projects-info">Latest Update: 04.05.2024</span></a>
+                    <a class="projects" href="Palindrome Checker\Palindrome Checker.html">Palindrome
+                        Checker<span class="projects-info">Latest Update: 04.05.2024</span></a>
+                    <a class="projects" href="Random Quote Generator\Random Quote Generator.html">Random Quote
+                        Generator<span class="projects-info">Latest Update: 04.05.2024</span></a>
+                    <a class="projects" href="iPhone Calculator\iPhone Calculator.html">iPhone
+                        Calculator<span class="projects-info">Latest Update: 25.05.2024</span></a>
+                    <a class="projects" href="ToDo App\ToDo app Nr.2\ToDo app Nr.2.html">ToDo App
+                        <span class="projects-info">Latest Update: 04.05.2024</span></a>
+                    <a class="projects" href="Word Scramble Game/Word Scramble Game.html">Word Scramble Game
+                        <span class="projects-info">Latest Update: 19.05.2024</span></a>
+                    <a class="projects" href="Slide Puzzle Game/Slide Puzzle Game.html">Slide Puzzle Game
+                        <span class="projects-info">Latest Update: 21.05.2024</span></a>
+                    <a class="projects" href="4 in a Row/4 in a Row.html">4 in a Row
+                        <span class="projects-info">Latest Update: 24.05.2024</span></a>
+                    <a class="projects"
+                        href="Rock-Paper-Scissors Game/Rock-Paper-Scissors Game.html">Rock-Paper-Scissors
+                        <span class="projects-info">Latest Update: 24.05.2024</span></a>
+                    <a class="projects" href="Simon Says Game/Simon Says Game.html">Simon Says Game
+                        <span class="projects-info">Latest Update: 02.06.2024</span></a>
+                </li>
+            </ul>
+
+            <aside>
+                <div class="side-information">
+                    <div class="right-sidebar">
+                        <h2 class="side-information-titles">Latest News</h2>
+                        <ul>
+                            <li>
+                                <a class="sidebar-projects" href="Word Scramble Game/Word Scramble Game.html">Word
+                                    Scramble Game
+                                </a>
+                                <a class="sidebar-projects" href="Number Guessing Game/Number Guessing Game.html">Number
+                                    Guessing Game
+                                </a>
+                                <a class="sidebar-projects" href="Slide Puzzle Game/Slide Puzzle Game.html">Slide Puzzle
+                                    Game
+                                </a>
+                                <a class="sidebar-projects" href="4 in a Row/4 in a Row.html">4 in a Row
+                                </a>
+                                <a class="sidebar-projects"
+                                    href="Rock-Paper-Scissors Game/Rock-Paper-Scissors Game.html">Rock-Paper-Scissors
+                                </a>
+                                <a class="sidebar-projects" href="Quiz\quiz.html">Quiz
+                                </a>
+                                <a class="sidebar-projects" href="Simon Says Game\Simon Says Game.html">Simon Says Game
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="right-sidebar">
+                        <h2 class="side-information-titles">Currently Updating</h2>
+                        <ul>
+                            <li>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="right-sidebar">
+                        <h2 class="side-information-titles">Coming soon</h2>
+                        <ul>
+                            <li>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </aside>
+        </nav>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="button"></div>
         </div>
-        <button id="startBtn">START</button>
-        <hr>
-        <div class="buttonContainer">
-            <div id="button-1" class="button">1</div>
-            <div id="button-2" class="button">2</div>
-            <div id="button-3" class="button">3</div>
-            <div id="button-4" class="button">4</div>
+
+        <p>&copy; 2024 Waseem's Future. All rights reserved.</p>
+
+        <div id="container">
+            <div id="border"></div>
+            <div class="color" id="green"></div>
+            <div class="color" id="red"></div>
+            <div class="color" id="blue"></div>
+            <div class="color" id="purple"></div>
+            <div class="color" id="orange"></div>
         </div>
-        <hr id="endHr">
-        <p id="inspiration">Inspired by <span id="name">Ceyda</span></p>
-    </div>
+    </footer>
 
     <script src="index.js"></script>
 </body>
-
-</html>
