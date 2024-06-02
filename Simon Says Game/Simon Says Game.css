@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+:root {
+    --light: #f6f6f9;
+    --primary: #1976D2;
+    --light-primary: #CFE8FF;
+    --grey: #eee;
+    --dark-grey: #AAAAAA;
+    --dark: #363949;
+    --danger: #D32F2F;
+    --light-danger: #FECDD3;
+    --warning: #FBC02D;
+    --light-warning: #FFF2C6;
+    --success: #388E3C;
+    --light-success: #BBF7D0;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: var(--light-primary);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#timeLabel {
+    margin-top: -100px;
+    margin-bottom: 10px;
+    font-size: 100px;
+}
+
+#startBtn {
+    margin-bottom: 20px;
+    padding: 10px 60px;
+    border: none;
+    border-radius: 10px;
+    font-size: 25px;
+    letter-spacing: 6px;
+    background-color: var(--light-warning);
+}
+
+hr {
+    background-color: black;
+    height: 1.5px;
+    border: none;
+    width: 220px;
+    margin-bottom: 10px;
+}
+
+.buttonContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 300px;
+    flex-wrap: wrap;
+}
+
+.button {
+    width: 100px;
+    height: 100px;
+    color: var(--danger);
+    font-size: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--light);
+    margin: 10px;
+    cursor: pointer;
+    border: 3px solid var(--dark);
+    border-radius: 15px;
+    outline: none;
+}
