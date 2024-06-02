@@ -69,7 +69,7 @@ document.addEventListener("DOMContentLoaded", function () {
         function changeBackgroundColor(button) {
             button.style.backgroundColor = "#363949";
             setTimeout(function () {
-                button.style.backgroundColor = "#f6f6f9";
+                button.style.backgroundColor = "#CFE8FF";
             }, 750);
         }
 
@@ -133,7 +133,7 @@ document.addEventListener("DOMContentLoaded", function () {
                         element.style.backgroundColor = "lightgreen";
                         UserInput("disable");
                         setTimeout(function () {
-                            element.style.backgroundColor = "#f6f6f9";
+                            element.style.backgroundColor = "#CFE8FF";
                             UserInput("enable");
                         }, 750);
                         buttonListCurrent.push(element);
@@ -148,7 +148,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     } else {
                         element.style.backgroundColor = "red";
                         setTimeout(function () {
-                            element.style.backgroundColor = "#f6f6f9";
+                            element.style.backgroundColor = "#CFE8FF";
                             buttonListCurrent = [];
                             DOMButtons.forEach(function (element) {
                                 element.style.backgroundColor = "rgba(255, 0, 0, 0.529)";
