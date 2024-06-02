@@ -135,8 +135,6 @@ document.addEventListener('DOMContentLoaded', function () {
     let activeProjects = document.querySelectorAll(".projects");
     let sidebarProjects = document.querySelectorAll(".sidebar-projects");
 
-    let projectsImages = document.querySelectorAll(".projects-img");
-
     activeProjects.forEach(function (element) {
         let href = element.getAttribute("href");
         let hrefIndex = href.indexOf("/");
