@@ -5,8 +5,8 @@ document.addEventListener("DOMContentLoaded", function () {
     buttonContainer.style.maxWidth = "250px";
 
     DOMButtons.forEach(function (element) {
-        element.style.cursor = "default";
         element.style.pointerEvents = "none";
+        element.style.cursor = "default";
         element.style.height = "75px";
         element.style.width = "75px";
         element.innerHTML = "";
@@ -57,12 +57,10 @@ document.addEventListener("DOMContentLoaded", function () {
         let buttonListAll = [];
         let buttonListCurrent = [];
 
-        let randIndex;
-
         let points = 0;
 
         startBtn.textContent = points;
-        startBtn.style.fontSize = "35px";
+        startBtn.style.fontSize = "45px";
 
         setTimeout(function () {
             genNewButton();
@@ -72,16 +70,11 @@ document.addEventListener("DOMContentLoaded", function () {
             button.style.backgroundColor = "#363949";
             setTimeout(function () {
                 button.style.backgroundColor = "#f6f6f9";
-                DOMButtons.forEach(function (element) {
-                    element.style.pointerEvents = "all";
-                    element.style.cursor = "pointer";
-                });
             }, 750);
         }
 
         function genNewButton() {
-            let index = buttonListAll.length;
-            randIndex = Math.floor(Math.random() * 4) + 1;
+            let randIndex = Math.floor(Math.random() * 4) + 1;
 
             let buttonToAdd = null;
 
@@ -105,27 +98,32 @@ document.addEventListener("DOMContentLoaded", function () {
         }
 
         function showSequence() {
+            UserInput("disable");
+
             buttonListAll.forEach(function (button, index) {
                 setTimeout(function () {
                     changeBackgroundColor(button);
                     if (index === buttonListAll.length - 1) {
                         setTimeout(function () {
-                            enableUserInput();
+                            UserInput("enable");
                         }, 1000);
-                    } else {
-                        DOMButtons.forEach(function (element) {
-                            element.style.cursor = "default";
-                            element.style.pointerEvents = "none";
-                        });
                     }
                 }, 1500 * index);
             });
         }
 
-        function enableUserInput() {
-            DOMButtons.forEach(function (element) {
-                element.style.cursor = "pointer";
-            });
+        function UserInput(what) {
+            if (what == "enable") {
+                DOMButtons.forEach(function (element) {
+                    element.style.pointerEvents = "all";
+                    element.style.cursor = "pointer";
+                });
+            } else if (what == "disable") {
+                DOMButtons.forEach(function (element) {
+                    element.style.pointerEvents = "none";
+                    element.style.cursor = "default";
+                });
+            }
         }
 
         DOMButtons.forEach(function (element) {
@@ -133,16 +131,10 @@ document.addEventListener("DOMContentLoaded", function () {
                 if (element.style.cursor == "pointer") {
                     if (buttonListAll[buttonListCurrent.length] == element) {
                         element.style.backgroundColor = "lightgreen";
-                        DOMButtons.forEach(function (element) {
-                            element.style.cursor = "default";
-                            element.style.pointerEvents = "none";
-                        });
+                        UserInput("disable");
                         setTimeout(function () {
                             element.style.backgroundColor = "#f6f6f9";
-                            DOMButtons.forEach(function (element) {
-                                element.style.cursor = "pointer";
-                                element.style.pointerEvents = "all";
-                            });
+                            UserInput("enable");
                         }, 750);
                         buttonListCurrent.push(element);
                         if (buttonListCurrent.length === buttonListAll.length) {
@@ -151,19 +143,19 @@ document.addEventListener("DOMContentLoaded", function () {
                             setTimeout(function () {
                                 buttonListCurrent = [];
                                 genNewButton();
-                            }, 2000);
+                            }, 1000);
                         }
                     } else {
+                        element.style.backgroundColor = "red";
                         setTimeout(function () {
                             element.style.backgroundColor = "#f6f6f9";
                             buttonListCurrent = [];
                             DOMButtons.forEach(function (element) {
                                 element.style.backgroundColor = "rgba(255, 0, 0, 0.529)";
-                                element.style.cursor = "default";
-                                element.style.pointerEvents = "none";
+                                UserInput("disable");
                             });
                         }, 500);
-                        window.alert("Make a screenshot and send me ur score :)");
+                        window.alert("Make a screenshot and send me your score :)");
                     }
                 }
             };
