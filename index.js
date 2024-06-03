@@ -42,7 +42,7 @@ document.addEventListener("DOMContentLoaded", function () {
         element.style.display = "none";
         setTimeout(function () {
             element.style.display = "flex";
-        }, 2000);
+        }, 1500);
     });
 
     setTimeout(function () {
