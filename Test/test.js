@@ -1,4 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
+    /*
     let container = document.querySelector(".container");
 
     container.onclick = function () {
@@ -8,4 +9,5 @@ document.addEventListener("DOMContentLoaded", function () {
             window.close();
         }, 2000);
     };
+    */
 });
