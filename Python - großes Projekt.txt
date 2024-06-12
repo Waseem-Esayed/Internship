@@ -127,7 +127,7 @@ def apology_letter_generator():
         your_name = input("Your Name: ")
 
     # Checking for offensive words
-    insults = ["dog", "donkey", "whore", "bastard", "prick", "pussy", "dick", "vagina"]
+    insults = []
     while any(insult.lower() in your_name.lower() for insult in insults):
         time.sleep(0.5)
         print("Please enter an appropriate name.")
