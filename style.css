@@ -519,6 +519,10 @@ header .second-part #profile {
         margin: 10px !important;
     }
 
+    header .first-part {
+        margin: 0;
+    }
+
     header .first-part #name,
     header .first-part .fa-code,
     header .first-part .fa-grip-lines {
@@ -600,7 +604,7 @@ header .second-part #profile {
     }
 
     .main .dashboard .boxen .box {
-        flex: 0.91;
+        min-width: 90%;
     }
 
     .main .about .boxen .first-row .box {
@@ -609,5 +613,13 @@ header .second-part #profile {
 
     .main .about .boxen .first-row:nth-child(2) .box:nth-child(2) {
         margin-bottom: 20px;
+    }
+
+    .main .dashboard .boxen .second-row .box:nth-child(2) {
+        margin-bottom: 20px;
+    }
+
+    body {
+        overflow-x: hidden;
     }
 }
