@@ -415,6 +415,7 @@ header .first-part #search-box {
     outline: none;
     color: white;
     padding-left: 15px;
+    zoom: none;
 }
 
 header .first-part #search-box::placeholder {
