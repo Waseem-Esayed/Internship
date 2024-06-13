@@ -16,6 +16,7 @@ html {
 body {
     font-family: "Roboto", sans-serif;
     min-height: 100vh;
+    touch-action: pan-y;
 }
 
 ::-webkit-scrollbar {
