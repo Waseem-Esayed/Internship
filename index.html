@@ -4,203 +4,350 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <title>Workouts Zuhause</title>
+    <script src="https://kit.fontawesome.com/668ebba5a9.js" crossorigin="anonymous"></script>
+    <title>Main Website</title>
 </head>
 
 <body>
-    <div class="start-container">
-        <p id="start-title">GAMES<span id="first-dot"></span><span id="second-dot"></span><span id="third-dot"></span>
-        </p>
-        <p id="start-workout">WASEEM ESAYED</p>
-        <div class="leap-fitness-container">
-            <p id="start-leap">FUN</p>
-            <p id="start-fitness">GAMES</p>
+    <header class="header">
+        <div class="first-part">
+            <i class="fas fa-code"></i>
+            <p id="name">WASEEM</p>
+            <i class="fas fa-grip-lines"></i>
+            <input id="search-box" type="text" placeholder="Search...">
+            <i class="fas fa-search"></i>
         </div>
 
-        <div class="start-circles-container">
-            <div id="circle-1" class="start-circle"></div>
-            <div id="circle-2" class="start-circle"></div>
+        <div class="second-part">
+            <i class="far fa-bell"></i>
+            <div id="notification-count">3</div>
+            <img id="profile" src="images/profile.jpg" alt="Profile Image">
         </div>
-    </div>
+    </header>
 
-    <section id="main-content">
-        <header id="header">
-            <h1></h1>
-        </header>
-
-        <main id="main">
-            <nav>
-                <aside>
-                    <div class="side-information">
-                        <div class="left-sidebar">
-                            <h2>About Me</h2>
-                            <p>As a 15-year-old student just beginning to learn programming, I'm
-                                captivated by the
-                                world of software development. Writing code allows me to express my creativity and find
-                                solutions to
-                                intriguing problems. I enjoy exploring new programming languages and technologies,
-                                learning
-                                how
-                                to
-                                use them to create programs and applications. The prospect of working as a software
-                                developer
-                                inspires me to learn more about programming every day and improve my skills. I'm excited
-                                about
-                                the
-                                opportunities that exist in the world of software development and look forward to
-                                expanding
-                                my
-                                knowledge and abilities to bring my own projects to life.</p>
-                        </div>
-                        <div class="left-sidebar" id="social-links">
-                            <h2 class="side-information-titles">My Skills</h2>
-                            <ul class="skills-list">
-                                <li><img src="images/hmtl.png"><span class="html">HTML</span>
-                                    <div class="arrow">&rightarrow;</div>
-                                    <div class="color green"></div>
-                                </li>
-                                <li><img src="images/css.png"><span class="css">CSS</span>
-                                    <div class="arrow">&rightarrow;</div>
-                                    <div class="color green"></div>
-                                </li>
-                                <li><img src="images/javascript.png"><span class="javascript">JavaScript</span>
-                                    <div class="arrow">&rightarrow;</div>
-                                    <div class="color orange"></div>
-                                </li>
-                                <li><img src="images/react.png"><span class="react">React</span>
-                                    <div class="arrow">&rightarrow;</div>
-                                    <div class="color red"></div>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </aside>
-
-                <ul id="game-list">
-                    <input type="text" id="searchInput" placeholder="Search projects..." maxlength="50">
-
-                    <li><a class="projects" href="Dice/dice.html"><img class="projects-img">Dice
-                            Game<span class="projects-info"> Latest Update:
-                                04.05.2024</span></a>
-                        <a class="projects" href="My Experiences at AOE/myExperiencesAtAoe.html"><img
-                                class="projects-img">My Experiences At
-                            AOE<span class="projects-info">Latest Update: 04.05.2024</span></a>
-                        <a class="projects" href="Number Guessing Game/Number Guessing Game.html"><img
-                                class="projects-img">Number Guessing
-                            Game<span class="projects-info">Latest Update: 04.05.2024</span></a>
-                        <a class="projects" href="Quiz/quiz.html"><img class="projects-img">Quiz<span
-                                class="projects-info">Latest Update:
-                                25.05.2024</span></a>
-                        <a class="projects" href="Temperature  conversion/tempCon.html"><img
-                                class="projects-img">Temperature
-                            Conversion<span class="projects-info">Latest Update: 04.05.2024</span></a>
-                        <a class="projects" href="Tic Tac Toe/tic-tac-toe.html"><img class="projects-img">Tic Tac
-                            Toe<span class="projects-info">Latest Update: 04.05.2024</span></a>
-                        <a class="projects" href="Memory Card Game/Memory Card Game.html"><img
-                                class="projects-img">Memory
-                            Card
-                            Game<span class="projects-info">Latest Update: 26.05.2024</span></a>
-                        <a class="projects" href="Palindrome Checker/Palindrome Checker.html"><img
-                                class="projects-img">Palindrome
-                            Checker<span class="projects-info">Latest Update: 04.05.2024</span></a>
-                        <a class="projects" href="Random Quote Generator/Random Quote Generator.html"><img
-                                class="projects-img">Random Quote
-                            Generator<span class="projects-info">Latest Update: 04.05.2024</span></a>
-                        <a class="projects" href="iPhone Calculator/iPhone Calculator.html"><img
-                                class="projects-img">iPhone
-                            Calculator<span class="projects-info">Latest Update: 25.05.2024</span></a>
-                        <a class="projects" href="ToDo App/ToDo app Nr.2/ToDo app Nr.2.html"><img
-                                class="projects-img">ToDo
-                            App
-                            <span class="projects-info">Latest Update: 04.05.2024</span></a>
-                        <a class="projects" href="Word Scramble Game/Word Scramble Game.html"><img
-                                class="projects-img">Word
-                            Scramble Game
-                            <span class="projects-info">Latest Update: 19.05.2024</span></a>
-                        <a class="projects" href="Slide Puzzle Game/Slide Puzzle Game.html"><img
-                                class="projects-img">Slide
-                            Puzzle Game
-                            <span class="projects-info">Latest Update: 21.05.2024</span></a>
-                        <a class="projects" href="4 in a Row/4 in a Row.html"><img class="projects-img">4 in a Row
-                            <span class="projects-info">Latest Update: 24.05.2024</span></a>
-                        <a class="projects" href="Rock-Paper-Scissors Game/Rock-Paper-Scissors Game.html"><img
-                                class="projects-img">Rock-Paper-Scissors
-                            <span class="projects-info">Latest Update: 24.05.2024</span></a>
-                        <a class="projects" href="Simon Says Game/Simon Says Game.html"><img class="projects-img">Simon
-                            Says
-                            Game
-                            <span class="projects-info">Latest Update: 02.06.2024</span></a>
-                    </li>
-                </ul>
-
-                <aside>
-                    <div class="side-information">
-                        <div class="right-sidebar">
-                            <h2 class="side-information-titles">Latest News</h2>
-                            <ul>
-                                <li>
-                                    <a class="sidebar-projects" href="Word Scramble Game/Word Scramble Game.html">Word
-                                        Scramble Game
-                                    </a>
-                                    <a class="sidebar-projects"
-                                        href="Number Guessing Game/Number Guessing Game.html">Number
-                                        Guessing Game
-                                    </a>
-                                    <a class="sidebar-projects" href="Slide Puzzle Game/Slide Puzzle Game.html">Slide
-                                        Puzzle
-                                        Game
-                                    </a>
-                                    <a class="sidebar-projects" href="4 in a Row/4 in a Row.html">4 in a Row
-                                    </a>
-                                    <a class="sidebar-projects"
-                                        href="Rock-Paper-Scissors Game/Rock-Paper-Scissors Game.html">Rock-Paper-Scissors
-                                    </a>
-                                    <a class="sidebar-projects" href="Quiz/quiz.html">Quiz
-                                    </a>
-                                    <a class="sidebar-projects" href="Simon Says Game/Simon Says Game.html">Simon Says
-                                        Game
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="right-sidebar">
-                            <h2 class="side-information-titles">Currently Updating</h2>
-                            <ul>
-                                <li>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="right-sidebar">
-                            <h2 class="side-information-titles">Coming soon</h2>
-                            <ul>
-                                <li>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </aside>
-            </nav>
-        </main>
-
-        <footer>
-            <!--
-                <div class="container">
-                    <div class="button"></div>
+    <section class="left-sidebar">
+        <p class="title">MENU</p>
+        <ul class="list">
+            <li id="dashboard">
+                <div class="left">
+                    <i class="fas fa-tachometer-alt"></i>
+                    <p class="selector">Dashboard</p>
                 </div>
-            -->
+                <div class="right">
+                    <i class="fas fa-caret-right"></i>
+                </div>
+            </li>
+            <li id="email">
+                <div class="left">
+                    <i class="fas fa-envelope"></i>
+                    <p class="selector">Email</p>
+                </div>
+                <div class="right">
+                    <i class="fas fa-caret-right"></i>
+                </div>
+            </li>
+            <li id="calendar">
+                <div class="left">
+                    <i class="fas fa-calendar-alt"></i>
+                    <p class="selector">Calendar</p>
+                </div>
+                <div class="right">
+                    <i class="fas fa-caret-right"></i>
+                </div>
+            </li>
+            <li id="pages">
+                <div class="left">
+                    <i class="far fa-file-alt"></i>
+                    <p class="selector">Pages</p>
+                </div>
+                <div class="right">
+                    <i class="fas fa-caret-right"></i>
+                </div>
+            </li>
+            <li id="about">
+                <div class="left">
+                    <i class="fa-solid fa-address-card"></i>
+                    <p class="selector">About</p>
+                </div>
+                <div class="right">
+                    <i class="fas fa-caret-right"></i>
+                </div>
+            </li>
+        </ul>
 
-            <p>&copy; 2024 Waseem's Future. All rights reserved.</p>
+        <p class="title">...</p>
+        <ul class="list">
+            <li id="ui-elements">
+                <div class="left">
+                    <i class="fab fa-uikit"></i>
+                    <p class="selector">...</p>
+                </div>
+                <div class="right">
+                    <i class="fas fa-caret-right"></i>
+                </div>
+            </li>
+            <li id="advanced-ui">
+                <div class="left">
+                    <i class="fas fa-gem"></i>
+                    <p class="selector">...</p>
+                </div>
+                <div class="right">
+                    <i class="fas fa-caret-right"></i>
+                </div>
+            </li>
+            <li id="forms">
+                <div class="left">
+                    <i class="fab fa-wpforms"></i>
+                    <p class="selector">...</p>
+                </div>
+                <div class="right">
+                    <i class="fas fa-caret-right"></i>
+                </div>
+            </li>
+            <li id="charts">
+                <div class="left">
+                    <i class="fas fa-chart-line"></i>
+                    <p class="selector">...</p>
+                </div>
+                <div class="right">
+                    <i class="fas fa-caret-right"></i>
+                </div>
+            </li>
+            <li id="tables">
+                <div class="left">
+                    <i class="fas fa-table"></i>
+                    <p class="selector">...</p>
+                </div>
+                <div class="right">
+                    <i class="fas fa-caret-right"></i>
+                </div>
+            </li>
+            <li id="maps">
+                <div class="left">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <p class="selector">...</p>
+                </div>
+                <div class="right">
+                    <i class="fas fa-caret-right"></i>
+                </div>
+            </li>
+            <li id="multi-level">
+                <div class="left">
+                    <i class="fas fa-share-alt"></i>
+                    <p class="selector">...</p>
+                </div>
+                <div class="right">
+                    <i class="fas fa-caret-right"></i>
+                </div>
+            </li>
+        </ul>
+    </section>
 
-            <div id="container">
-                <div id="border"></div>
-                <div class="color" id="green"></div>
-                <div class="color" id="red"></div>
-                <div class="color" id="blue"></div>
-                <div class="color" id="purple"></div>
-                <div class="color" id="orange"></div>
+    <section class="main">
+        <!-- Dashboard Section -->
+        <div class="dashboard main-section">
+            <div class="header">
+                <div class="left">
+                    <p class="title">Dashboard</p>
+                </div>
+                <div class="right">
+                    <p class="name">Waseem</p>
+                    <i class="fas fa-caret-right"></i>
+                    <p id="title">Dashboard</p>
+                </div>
             </div>
-        </footer>
+
+            <div class="boxen">
+                <div class="first-row">
+
+                    <div class="box">
+                        <div class="row">
+                            <p id="title">Hours Studied</p>
+                            <div class="circle">
+                                <i class="fa-solid fa-hourglass-start"></i>
+                            </div>
+                        </div>
+                        <p class="number">100</p>
+                        <div class="line"></div>
+                        <div class="row-label">
+                            <p class="previous-label">Goal</p>
+                            <p class="previous-label">10%</p>
+                        </div>
+                    </div>
+
+                    <div class="box">
+                        <div class="row">
+                            <p id="title">Projects Completed</p>
+                            <div class="circle">
+                                <i class="fa-solid fa-diagram-project"></i>
+                            </div>
+                        </div>
+                        <p class="number">20</p>
+                        <div class="line"></div>
+                        <div class="row-label">
+                            <p class="previous-label">Goal</p>
+                            <p class="previous-label">88%</p>
+                        </div>
+                    </div>
+
+                    <div class="box">
+                        <div class="row">
+                            <p id="title">Lines of Code</p>
+                            <div class="circle">
+                                <i class="fa-solid fa-code"></i>
+                            </div>
+                        </div>
+                        <p class="number">...</p>
+                        <div class="line"></div>
+                        <div class="row-label">
+                            <p class="previous-label">Goal</p>
+                            <p class="previous-label">...</p>
+                        </div>
+                    </div>
+
+                    <div class="box">
+                        <div class="row">
+                            <p id="title">Challenges Solved</p>
+                            <div class="circle">
+                                <i class="fa-solid fa-mug-saucer"></i>
+                            </div>
+                        </div>
+                        <p class="number">...</p>
+                        <div class="line"></div>
+                        <div class="row-label">
+                            <p class="previous-label">Goal</p>
+                            <p class="previous-label">...</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="second-row">
+                    <div class="box"></div>
+                    <div class="box"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Pages Section -->
+        <div class="pages main-section">
+            <div class="header">
+                <div class="left">
+                    <p class="title">Pages</p>
+                </div>
+                <div class="right">
+                    <p class="name">Waseem</p>
+                    <i class="fas fa-caret-right"></i>
+                    <p id="title">Pages</p>
+                </div>
+            </div>
+
+            <div class="boxen">
+                <div class="first-row">
+                    <a href="Number Guessing Game/Number Guessing Game.html" target="_blank" class="box"></a>
+                    <a href="Memory Card Game/Memory Card Game.html" target="_blank" class="box"></a>
+                    <a href="Word Scramble Game/Word Scramble Game.html" target="_blank" class="box"></a>
+                    <a href="Simon Says Game/Simon Says Game.htmll" target="_blank" class="box"></a>
+                </div>
+                <div class="first-row">
+                    <a href="Quiz/quiz.html" target="_blank" class="box"></a>
+                    <a href="Palindrome Checker/Palindrome Checker.html" target="_blank" class="box"></a>
+                    <a href="Slide Puzzle Game/Slide Puzzle Game.html" target="_blank" class="box"></a>
+                </div>
+                <div class="first-row">
+                    <a href="Temperature  conversion/tempCon.html" target="_blank" class="box"></a>
+                    <a href="Random Quote Generator/Random Quote Generator.html" target="_blank" class="box"></a>
+                    <a href="4 in a Row/4 in a Row.html" target="_blank" class="box"></a>
+                </div>
+                <div class="first-row">
+                    <a href="Tic Tac Toe/tic-tac-toe.html" target="_blank" class="box"></a>
+                    <a href="ToDo App/ToDo app Nr.2/ToDo app Nr.2.html" target="_blank" class="box"></a>
+                    <a href="Rock-Paper-Scissors Game/Rock-Paper-Scissors Game.html" target="_blank" class="box"></a>
+                </div>
+            </div>
+        </div>
+
+        <!-- About Section -->
+        <div class="about main-section">
+            <div class="header">
+                <div class="left">
+                    <p class="title">About</p>
+                </div>
+                <div class="right">
+                    <p class="name">Waseem</p>
+                    <i class="fas fa-caret-right"></i>
+                    <p id="title">About</p>
+                </div>
+            </div>
+
+            <div class="boxen">
+                <div class="first-row">
+                    <div class="box">
+                        <p>My Journey into Software Development</p>
+                        As a 15-year-old student, I have begun to get excited about the world of software development.
+                        Writing code allows me to express my creativity and find innovative solutions to interesting
+                        problems. The opportunity to explore different programming languages and technologies, and
+                        learn how to use them to create programs and applications, fascinates me greatly. The prospect
+                        of
+                        working as a professional developer one day motivates me to improve my skills daily.
+                    </div>
+                    <div class="box">
+                        <p>Source of My Inspiration</p>
+                        My inspiration to learn programming comes from my passion for technology and the joy of
+                        problem-solving. I have always been interested in computers and how they work. Programming
+                        allows me not just to consume passively but to actively create. The idea that I can use my
+                        skills to solve real-world problems and develop useful applications inspires me greatly.
+                    </div>
+                    <div class="box">
+                        <p>Support and Community</p>
+                        A significant aspect of my journey into the world of software development is the support from my
+                        family and friends. They encourage me to pursue my interests and develop my skills.
+                        Additionally, I have found many resources through online courses and tutorials that help me in
+                        my learning process. The developer community, where knowledge and experiences are shared, is
+                        another source of motivation for me.
+                    </div>
+                </div>
+                <div class="first-row">
+                    <div class="box">
+                        <p>Balancing Hobbies and Interests</p>
+                        Apart from programming, I am also interested in other hobbies such as reading, sports, and
+                        music. These activities help me find balance and gain new perspectives. Especially when reading
+                        science fiction and technology magazines, I often find new ideas and inspirations that I can
+                        incorporate into my programming projects. Sports help me stay fit and clear my mind, while music
+                        is a source of relaxation and creativity for me.
+                    </div>
+                    <div class="box">
+                        <p>Future Aspirations</p>
+                        My future plans include studying computer science at a renowned university. I want to deepen my
+                        knowledge and develop specialized skills to be successful in the software industry later on. One
+                        of my dreams is to start my own startup one day and develop innovative solutions that improve
+                        people's lives. Until then, I am continuously working on improving my programming skills and
+                        learning new technologies.
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Not Available Section -->
+        <div class="not-available main-section">
+            <div class="header">
+                <div class="left">
+                    <p class="title"></p>
+                </div>
+                <div class="right">
+                    <p class="name">Waseem</p>
+                    <i class="fas fa-caret-right"></i>
+                    <p id="title"></p>
+                </div>
+            </div>
+            <div class="container">
+                <i class="fa-solid fa-xmark"></i>
+                <p>Not Available!<br />Waseem is already working on this :)</p>
+            </div>
+        </div>
+
     </section>
 
     <script src="index.js"></script>
