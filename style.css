@@ -509,18 +509,38 @@ header .second-part #profile {
 }
 
 @media screen and (max-width: 700px) {
+
+    body,
+    html {
+        overflow-x: hidden;
+    }
+
+    html {
+        min-height: 100%;
+        background: none;
+        margin-bottom: 50px;
+        background: rgb(26, 28, 42);
+    }
+
     header {
         width: 100%;
         display: flex;
-        justify-content: flex-start;
+        justify-content: center;
     }
 
     header * {
         margin: 10px !important;
     }
 
-    header .first-part {
-        margin: 0;
+    header .first-part,
+    header .second-part {
+        margin: 0 !important;
+    }
+
+    header .second-part,
+    header .second-part #profile {
+        margin: 0 !important;
+        margin-left: -20px !important;
     }
 
     header .first-part #name,
@@ -562,13 +582,6 @@ header .second-part #profile {
         flex-direction: column;
         justify-content: center;
         align-items: center;
-    }
-
-    html {
-        min-height: 100%;
-        background: none;
-        margin-bottom: 50px;
-        background: rgb(26, 28, 42);
     }
 
     .left-sidebar .menu-list,
@@ -617,9 +630,5 @@ header .second-part #profile {
 
     .main .dashboard .boxen .second-row .box:nth-child(2) {
         margin-bottom: 20px;
-    }
-
-    body {
-        overflow-x: hidden;
     }
 }
