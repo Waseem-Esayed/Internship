@@ -29,9 +29,7 @@ document.addEventListener("DOMContentLoaded", function () {
             loupe.style.display = "none";
         }
         SearchInput.onmouseleave = function () {
-            document.onmousedown = function () {
-                loupe.style.display = "block";
-            }
+            loupe.style.display = "block";
         }
     }
 
