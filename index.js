@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     main.style.transition = "all 0.3s";
 
-    let checkDevice = leftSidebar.style.maxHeight ? 0 : 1;
+    let checkDevice = leftSidebar.style.maxHeight != "0" ? 0 : 1;
 
     if (checkDevice == 1) {
         SearchInput.onclick = function () {
