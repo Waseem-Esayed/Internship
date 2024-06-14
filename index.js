@@ -15,14 +15,11 @@ document.addEventListener("DOMContentLoaded", function () {
     aboutSection.style.display = "none";
     notAvailableSection.style.display = "none";
 
-    let leftSidebarWidth = 250;
-
-    leftSidebar.style.width = `${leftSidebarWidth}px`;
     leftSidebar.style.transition = "all 0.3s";
 
     main.style.transition = "all 0.3s";
 
-    let checkDevice = leftSidebar.style.maxHeight != "0" ? 0 : 1;
+    let checkDevice = window.innerWidth >= 1000 ? 0 : 1;
 
     if (checkDevice == 1) {
         SearchInput.onclick = function () {
