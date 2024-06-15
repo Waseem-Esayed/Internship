@@ -471,6 +471,7 @@ header .second-part #profile {
     position: absolute;
     top: 70px;
     left: 0;
+    width: 250px;
     height: calc(100% - 90px);
     background-color: rgb(34, 36, 55);
     color: white;
