@@ -32,7 +32,7 @@ body {
     top: 70px;
     right: 0;
     width: calc(100% - 270px);
-    height: calc(120% - 20px);
+    height: calc(100% + 140px);
 }
 
 .main .header .left .title,
@@ -478,7 +478,7 @@ header .second-part #profile {
     top: 70px;
     left: 0;
     width: 250px;
-    height: calc(120% - 40px);
+    height: calc(100% + 120px);
     background-color: rgb(34, 36, 55);
     color: white;
     padding: 20px 0 0 20px;
@@ -539,13 +539,65 @@ header .second-part #profile {
 }
 
 .main .calender .container .calender .header {
-    width: 100%;
+    width: calc(100% - 80px);
     min-height: 70px;
     background-color: rgb(34, 36, 55);
     border-radius: 5px;
+    padding: 0 40px;
     display: flex;
     flex: 1;
+    align-items: center;
+}
+
+.main .calender .container .calender .header .left-side {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex: 0.7;
+}
+
+.main .calender .container .calender .header .right-side {
+    display: flex;
     justify-content: center;
+    align-items: center;
+    flex: 0.2;
+}
+
+.main .calender .container .calender .header .right-side p {
+    font-size: 20px;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+.main .calender .container .calender .header .right-side:hover,
+.main .calender .container .calender .header .left-side .fa-plus:hover,
+.main .calender .container .calender .header .left-side .fa-minus:hover {
+    color: wheat;
+}
+
+.main .calender .container .calender .header .left-side .fa-plus,
+.main .calender .container .calender .header .left-side .fa-minus {
+    font-size: 25px;
+    cursor: pointer;
+}
+
+.main .calender .container .calender .header .fa-pipe {
+    background-color: white;
+    width: 3px;
+    height: 60%;
+    border-radius: 100px;
+}
+
+.main .calender .container .calender .header .left-side .date {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+}
+
+.main .calender .container .calender .header .left-side .date p {
+    font-size: 25px;
 }
 
 .main .calender .container .calender .bottom {
@@ -749,5 +801,28 @@ header .second-part #profile {
     .main .calender .container {
         flex-direction: column;
         margin: 0 20px;
+    }
+
+    .main .calender .container .calender .header {
+        padding: 20px;
+        width: calc(100% - 40px);
+    }
+
+    .main .calender .container .calender .header .left-side p,
+    .main .calender .container .calender .header .left-side i {
+        font-size: 20px !important;
+        margin: 0 10px;
+    }
+
+    .main .calender .container .calender .header .left-side #date-seperator {
+        margin: 0;
+    }
+
+    .main .calender .container .calender .header .left-side .date {
+        gap: 0;
+    }
+
+    .main .calender .container .calender .header .fa-pipe {
+        height: 60px !important;
     }
 }
