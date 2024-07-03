@@ -9,14 +9,16 @@
 
 html {
     min-height: 100%;
-    background: linear-gradient(to right, rgb(34, 36, 55) 270px, rgb(26, 28, 42) 270px);
-    margin-bottom: 50px;
+    min-width: 100%;
 }
 
 body {
     font-family: "Roboto", sans-serif;
-    min-height: 100vh;
     touch-action: pan-y;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    min-height: 100%;
 }
 
 ::-webkit-scrollbar {
@@ -27,10 +29,10 @@ body {
     background-color: rgb(26, 28, 42);
     color: white;
     position: absolute;
-    bottom: 0;
+    top: 70px;
     right: 0;
     width: calc(100% - 270px);
-    height: calc(100% - 70px);
+    height: calc(120% - 20px);
 }
 
 .main .header .left .title,
@@ -302,7 +304,7 @@ body {
 }
 
 .main .dashboard .boxen .first-row .box:nth-child(3) .line {
-    background: rgb(46, 48, 74) 82%;
+    background: linear-gradient(to right, rgb(252, 190, 45) 65%, rgb(46, 48, 74) 65%)
 }
 
 .main .dashboard .boxen .first-row .box:nth-child(4) .line {
@@ -315,11 +317,15 @@ body {
     gap: 50px;
 }
 
-.main .about .boxen .first-row {
+.main .about .boxen .row {
     align-items: flex-start;
 }
 
-.main .about .boxen .first-row .box {
+.main .about .boxen .second-row {
+    margin-bottom: 23px;
+}
+
+.main .about .boxen .row .box {
     line-height: 25px;
     padding: 15px;
     height: auto;
@@ -332,7 +338,7 @@ body {
     cursor: auto;
 }
 
-.main .about .boxen .first-row .box p {
+.main .about .boxen .row .box p {
     text-align: center;
     margin-bottom: 10px;
     font-size: 20px;
@@ -343,13 +349,13 @@ body {
     transition: color 0.3s, opacity 0.3s;
 }
 
-.main .about .boxen .first-row .box:hover p {
+.main .about .boxen .row .box:hover p {
     color: white;
     opacity: 0.6;
 }
 
 .main .not-available {
-    height: 100%;
+    height: calc(100% - 75px);
 }
 
 .main .not-available .container {
@@ -405,7 +411,7 @@ header .first-part .fa-grip-lines {
     cursor: pointer;
 }
 
-header .first-part #search-box {
+header .first-part .search-box {
     background-color: rgb(69, 84, 165);
     margin-left: 20px;
     width: 200px;
@@ -418,7 +424,7 @@ header .first-part #search-box {
     zoom: none;
 }
 
-header .first-part #search-box::placeholder {
+header .first-part .search-box::placeholder {
     color: white;
     opacity: 0.7;
 }
@@ -472,7 +478,7 @@ header .second-part #profile {
     top: 70px;
     left: 0;
     width: 250px;
-    height: calc(100% - 90px);
+    height: calc(120% - 40px);
     background-color: rgb(34, 36, 55);
     color: white;
     padding: 20px 0 0 20px;
@@ -511,7 +517,107 @@ header .second-part #profile {
     margin-top: 30px;
 }
 
-@media screen and (max-width: 700px) {
+.main .calender .container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 50px;
+}
+
+.main .calender .container .calender {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: flex-start;
+    height: 600px;
+    flex: 0.65;
+    gap: 25px;
+}
+
+.main .calender .container .calender .rows {
+    width: 100%;
+}
+
+.main .calender .container .calender .header {
+    width: 100%;
+    min-height: 70px;
+    background-color: rgb(34, 36, 55);
+    border-radius: 5px;
+    display: flex;
+    flex: 1;
+    justify-content: center;
+}
+
+.main .calender .container .calender .bottom {
+    width: 100%;
+    min-height: 205px;
+    background-color: rgb(34, 36, 55);
+    border-radius: 5px;
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    margin-top: 25px;
+    margin-bottom: 23px;
+}
+
+.main .calender .container .calender .row {
+    width: 100%;
+    display: flex !important;
+    justify-content: flex-start;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    min-height: 100px;
+}
+
+.main .calender .container .calender .rows .calender-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex: 0.125;
+    background-color: rgba(69, 84, 165, 0.8);
+    border: 1px solid rgb(26, 28, 42);
+    padding: 10px;
+}
+
+
+.main .calender .container .calender .rows .first-row {
+    display: inline;
+}
+
+.main .calender .container .right {
+    display: flex;
+    flex-direction: column;
+    flex: 0.3;
+    gap: 50px;
+}
+
+.main .calender .container .right .add,
+.main .calender .right .information {
+    height: 350px;
+    background-color: rgb(34, 36, 55);
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+}
+
+.main .calender .container .right .add .search-box {
+    background-color: rgb(69, 84, 165);
+    height: 35px;
+    width: 200px;
+    border: none;
+    border-radius: 36px;
+    outline: none;
+    color: white;
+    padding-left: 15px;
+    zoom: none;
+}
+
+.main .calender .container .right .add .search-box::placeholder {
+    color: white;
+    opacity: 0.7;
+}
+
+@media screen and (max-width: 1000px) {
 
     body,
     html {
@@ -521,7 +627,6 @@ header .second-part #profile {
     html {
         min-height: 100%;
         background: none;
-        margin-bottom: 50px;
         background: rgb(26, 28, 42);
     }
 
@@ -556,11 +661,11 @@ header .second-part #profile {
         transform: translateX(-50px);
     }
 
-    header .first-part #search-box {
+    header .first-part .search-box {
         width: 50px;
     }
 
-    header .first-part #search-box::placeholder {
+    header .first-part .search-box::placeholder {
         color: transparent;
     }
 
@@ -569,12 +674,11 @@ header .second-part #profile {
     }
 
     .main {
-        /* display: none; */
         position: absolute;
         bottom: 0;
         right: 0;
         width: 100%;
-        height: calc(100% - 70px);
+        height: calc(120% - 70px);
     }
 
     .left-sidebar {
@@ -619,8 +723,15 @@ header .second-part #profile {
         flex-wrap: wrap;
     }
 
+    .main .dashboard .boxen .first-row,
+    .main .dashboard .boxen .second-row {
+        margin-left: 0;
+        display: flex;
+        justify-content: center;
+    }
+
     .main .dashboard .boxen .box {
-        min-width: 90%;
+        min-width: calc(100% - 60px);
     }
 
     .main .about .boxen .first-row .box {
@@ -633,5 +744,10 @@ header .second-part #profile {
 
     .main .dashboard .boxen .second-row .box:nth-child(2) {
         margin-bottom: 20px;
+    }
+
+    .main .calender .container {
+        flex-direction: column;
+        margin: 0 20px;
     }
 }
