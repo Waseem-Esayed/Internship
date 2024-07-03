@@ -45,13 +45,74 @@ document.addEventListener('DOMContentLoaded', function () {
             let fourthRow = document.querySelector('.calender .rows .fourth-row');
             fourthRow.appendChild(calenderItem);
             calenderItem.style.background = 'transparent';
-            calenderItem.style.borderColor = "transparent";
+            calenderItem.style.borderColor = 'transparent';
             calenderItem.innerHTML = '';
         }
 
     }
 
+    // Monat kriegen
+    let monthList = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November ', 'December'];
+    const d = new Date();
+    let month = monthList[d.getMonth()];
+
+    // console.log('index:', monthList.indexOf(month));
+    // console.log(month);
+
+    // Jahr kriegen
+    const y = new Date();
+    let year = y.getFullYear();
+
+    // console.log(year);
+
+    // Auf Datum DOMs zugreifen
+    let resetDate = document.getElementById('reset-date');
+    let currentMonth = document.getElementById('month');
+    let currentYear = document.getElementById('year');
+
+    currentMonth.innerHTML = month;
+    currentYear.innerHTML = year;
+
+    // Auf Datum + und - zugreifen
+    let dateMinus = document.getElementById('minus');
+    let datePlus = document.getElementById('plus');
+
+    resetDate.onclick = function () {
+        month = monthList[d.getMonth()];
+        year = y.getFullYear();
+        currentMonth.innerHTML = month;
+        currentYear.innerHTML = year;
+    }
+
+    dateMinus.onclick = function () {
+        if (monthList.indexOf(month) !== 0) {
+            currentMonth.innerHTML = monthList[monthList.indexOf(month) - 1];
+            month = currentMonth.innerHTML;
+        } else {
+            year -= 1;
+            currentYear.innerHTML = year;
+            month = 'December';
+            currentMonth.innerHTML = month;
+        }
+    }
+
+    datePlus.onclick = function () {
+        if (monthList.indexOf(month) !== 11) {
+            currentMonth.innerHTML = monthList[monthList.indexOf(month) + 1];
+            month = currentMonth.innerHTML;
+        } else {
+            year += 1;
+            currentYear.innerHTML = year;
+            month = 'January';
+            currentMonth.innerHTML = month;
+        }
+    }
+
     let twoDots = document.getElementsByClassName('fa-grip-lines')[0];
+
+    // Test Case: There is no internet connection
+    // let twoDots = document.getElementById('profile');
+
     let leftSidebar = document.getElementsByClassName('left-sidebar')[0];
 
     let main = document.getElementsByClassName('main')[0];
@@ -89,10 +150,10 @@ document.addEventListener('DOMContentLoaded', function () {
         if (checkDevice == 0) {
             if (main.style.width != '100%') {
                 main.style.width = '100%';
-                document.html.style.backgroundColor = "red";
+                document.html.style.backgroundColor = 'red';
             } else if (main.style.width != 'calc(100% - 270px)') {
                 main.style.width = 'calc(100% - 270px)';
-                document.html.style.backgroundColor = "red";
+                document.html.style.backgroundColor = 'red';
             }
         } else {
             if (leftSidebar.style.maxHeight == '250px') {
@@ -100,9 +161,11 @@ document.addEventListener('DOMContentLoaded', function () {
                 main.style.height = 'calc(100% - 70px)';
                 document.querySelector('.left-sidebar .title').style.display = 'none';
                 document.querySelector('.left-sidebar .list').style.display = 'none';
+                main.style.top = '70px';
             } else if (leftSidebar.style.maxHeight != '250px') {
                 leftSidebar.style.maxHeight = '250px';
                 main.style.height = 'calc(100% - 70px - 250px)';
+                main.style.top = 'calc(70px + 250px)';
                 setTimeout(function () {
                     document.querySelector('.left-sidebar .title').style.display = 'block';
                     document.querySelector('.left-sidebar .list').style.display = 'block';
@@ -134,7 +197,6 @@ document.addEventListener('DOMContentLoaded', function () {
                     document.querySelector('.main .not-available .header .left .title').textContent = textContent;
                     document.querySelector('.main .not-available .header .right #title').textContent = textContent;
                 }
-                // document.getElementsByTagName('html')[0].style.marginBottom = `${marginBottom}px`;
                 allSelectors.forEach(function (item) {
                     item.style.opacity = '0.6';
                 })
@@ -148,6 +210,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 if (checkDevice == 1) {
                     leftSidebar.style.maxHeight = '0';
                     main.style.height = 'calc(100% - 70px)';
+                    main.style.top = '70px';
                     document.querySelector('.left-sidebar .title').style.display = 'none';
                     document.querySelector('.left-sidebar .list').style.display = 'none';
                 }
