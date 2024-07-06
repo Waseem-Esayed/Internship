@@ -1,6 +1,7 @@
 document.addEventListener('DOMContentLoaded', function () {
     windowHeight = window.innerHeight;
     document.body.style.height = `${windowHeight}px`;
+    console.log(windowHeight);
 
     for (let i = 1; i <= 32; i++) {
         let calenderItem = document.createElement('div');
@@ -8,8 +9,6 @@ document.addEventListener('DOMContentLoaded', function () {
         calenderItem.classList.add('calender-item');
 
         calenderItem.innerHTML = i;
-
-        let CalenderSectionContentContainer = document.querySelector('.main .calender .container');
 
         if (i == 1) {
             calenderItem.style.borderTopLeftRadius = '5px';
@@ -52,18 +51,13 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     // Monat kriegen
-    let monthList = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November ', 'December'];
+    let monthList = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
     const d = new Date();
     let month = monthList[d.getMonth()];
-
-    // console.log('index:', monthList.indexOf(month));
-    // console.log(month);
 
     // Jahr kriegen
     const y = new Date();
     let year = y.getFullYear();
-
-    // console.log(year);
 
     // Auf Datum DOMs zugreifen
     let resetDate = document.getElementById('reset-date');
@@ -77,11 +71,40 @@ document.addEventListener('DOMContentLoaded', function () {
     let dateMinus = document.getElementById('minus');
     let datePlus = document.getElementById('plus');
 
+    function leapYear(year) {
+        return ((year % 4 == 0) && (year % 100 != 0)) || (year % 400 == 0);
+    }
+
+    function setCalender() {
+        for (let i = 1; i <= 31; i++) {
+            i % 2 == 0 ? document.getElementById(`calender-item-${i}`).style.background = 'rgba(69, 84, 165, 1)' : document.getElementById(`calender-item-${i}`).style.background = 'rgba(69, 84, 165, 0.8)';
+            document.getElementById(`calender-item-${i}`).style.borderColor = 'rgb(26, 28, 42)';
+            document.getElementById(`calender-item-${i}`).innerHTML = i;
+        }
+
+        if (month == 'April' || month == 'June' || month == 'September' || month == 'November') {
+            for (let i = 31; i <= 31; i++) {
+                document.getElementById(`calender-item-${i}`).style.background = 'transparent';
+                document.getElementById(`calender-item-${i}`).style.borderColor = 'transparent';
+                document.getElementById(`calender-item-${i}`).innerHTML = '';
+            }
+        } else if (month == 'February') {
+            for (let i = leapYear(2024) == true ? 30 : 29; i <= 31; i++) {
+                document.getElementById(`calender-item-${i}`).style.background = 'transparent';
+                document.getElementById(`calender-item-${i}`).style.borderColor = 'transparent';
+                document.getElementById(`calender-item-${i}`).innerHTML = '';
+            }
+        }
+    }
+
+    setCalender();
+
     resetDate.onclick = function () {
         month = monthList[d.getMonth()];
         year = y.getFullYear();
         currentMonth.innerHTML = month;
         currentYear.innerHTML = year;
+        setCalender();
     }
 
     dateMinus.onclick = function () {
@@ -94,6 +117,7 @@ document.addEventListener('DOMContentLoaded', function () {
             month = 'December';
             currentMonth.innerHTML = month;
         }
+        setCalender();
     }
 
     datePlus.onclick = function () {
@@ -106,6 +130,7 @@ document.addEventListener('DOMContentLoaded', function () {
             month = 'January';
             currentMonth.innerHTML = month;
         }
+        setCalender();
     }
 
     let twoDots = document.getElementsByClassName('fa-grip-lines')[0];
@@ -114,7 +139,6 @@ document.addEventListener('DOMContentLoaded', function () {
     // let twoDots = document.getElementById('profile');
 
     let leftSidebar = document.getElementsByClassName('left-sidebar')[0];
-
     let main = document.getElementsByClassName('main')[0];
 
     let calenderSection = document.getElementsByClassName('calender')[0];
@@ -150,10 +174,8 @@ document.addEventListener('DOMContentLoaded', function () {
         if (checkDevice == 0) {
             if (main.style.width != '100%') {
                 main.style.width = '100%';
-                document.html.style.backgroundColor = 'red';
             } else if (main.style.width != 'calc(100% - 270px)') {
                 main.style.width = 'calc(100% - 270px)';
-                document.html.style.backgroundColor = 'red';
             }
         } else {
             if (leftSidebar.style.maxHeight == '250px') {
@@ -184,19 +206,40 @@ document.addEventListener('DOMContentLoaded', function () {
 
     document.querySelectorAll('.selector')[0].style.opacity = '1';
 
-    clickedSelector(0, dashboardSection);
-    clickedSelector(1, notAvailableSection, 'Email');
-    clickedSelector(2, calenderSection, 'Calendar');
-    clickedSelector(3, pagesSection);
-    clickedSelector(4, aboutSection);
+    let difference = 926 - windowHeight - 70;
 
-    function clickedSelector(index, section, textContent) {
+    setSectionHeights(`calc(100% + ${difference - 115}px)`, `calc(100% + ${difference - 115}px)`)
+
+    function setSectionHeights(height, forLongSections) {
+        if (windowHeight <= 926) {
+            leftSidebar.style.minHeight = height;
+            leftSidebar.style.maxHeight = height;
+
+            main.style.minHeight = height;
+            main.style.maxHeight = height;
+        } else {
+            leftSidebar.style.minHeight = forLongSections;
+            leftSidebar.style.maxHeight = forLongSections;
+
+            main.style.minHeight = forLongSections;
+            main.style.maxHeight = forLongSections;
+        }
+    }
+
+    clickedSelector(0, dashboardSection, null, `calc(100% + ${difference - 115}px)`);
+    clickedSelector(1, notAvailableSection, 'Email', `calc(100% + ${difference - 115}px)`);
+    clickedSelector(2, calenderSection, 'Calendar', `calc(100% + ${difference}px)`);
+    clickedSelector(3, pagesSection, null, `calc(100% + ${difference - 115}px)`);
+    clickedSelector(4, aboutSection, null, `calc(100% + ${difference - 115}px)`);
+
+    function clickedSelector(index, section, textContent, height) {
         allSelectors[index].onclick = function () {
             if (allSelectors[index].style.opacity == '0.6') {
-                if (textContent) {
-                    document.querySelector('.main .not-available .header .left .title').textContent = textContent;
-                    document.querySelector('.main .not-available .header .right #title').textContent = textContent;
-                }
+                document.querySelector('.main .not-available .header .left .title').textContent = textContent;
+                document.querySelector('.main .not-available .header .right #title').textContent = textContent;
+
+                setSectionHeights(height, 'calc(100% - 70px)');
+
                 allSelectors.forEach(function (item) {
                     item.style.opacity = '0.6';
                 })
