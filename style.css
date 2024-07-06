@@ -1,6 +1,7 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 *::selection {
@@ -32,7 +33,6 @@ body {
     top: 70px;
     right: 0;
     width: calc(100% - 270px);
-    height: calc(100% + 140px);
 }
 
 .main .header .left .title,
@@ -330,12 +330,19 @@ body {
     padding: 15px;
     height: auto;
     background-color: rgb(34, 36, 55);
-    flex: 0.3;
     border-radius: 7.5px;
     display: flex;
     flex-direction: column;
     align-items: center;
     cursor: auto;
+}
+
+.main .about .boxen .first-row .box {
+    flex: calc(1 / 3 - 0.02 / 3);
+}
+
+.main .about .boxen .second-row .box {
+    flex: calc(1 / 2 - 0.02 / 2);
 }
 
 .main .about .boxen .row .box p {
@@ -355,7 +362,7 @@ body {
 }
 
 .main .not-available {
-    height: calc(100% - 75px);
+    min-height: 100%;
 }
 
 .main .not-available .container {
@@ -477,8 +484,7 @@ header .second-part #profile {
     position: absolute;
     top: 70px;
     left: 0;
-    width: 250px;
-    height: calc(100% + 120px);
+    width: 270px;
     background-color: rgb(34, 36, 55);
     color: white;
     padding: 20px 0 0 20px;
@@ -514,7 +520,7 @@ header .second-part #profile {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    margin-top: 30px;
+    margin-top: 12.5%;
 }
 
 .main .calender .container {
@@ -536,6 +542,7 @@ header .second-part #profile {
 
 .main .calender .container .calender .rows {
     width: 100%;
+    min-height: 400px;
 }
 
 .main .calender .container .calender .header {
