@@ -218,7 +218,7 @@ document.addEventListener('DOMContentLoaded', function () {
     console.log('Check Device:', checkDevice);
 
     if (checkDevice == 0) {
-        setSectionHeights(`calc(100% + ${difference - 70}px)`, `calc(100% + ${difference + 124}px)`);
+        setSectionHeights(`calc(100% + ${difference - 70}px)`, `calc(100% + ${difference + 19}px)`);
     }
 
     function setSectionHeights(height, forLongSections) {
