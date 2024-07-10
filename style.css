@@ -14,7 +14,7 @@ html {
 }
 
 body {
-    font-family: "Roboto", sans-serif;
+    font-family: 'Roboto', sans-serif;
     touch-action: pan-y;
     display: flex;
     justify-content: flex-start;
@@ -101,10 +101,11 @@ body {
 .main .dashboard .boxen .box {
     height: 180px;
     background-color: rgb(34, 36, 55);
-    flex: 0.244;
+    flex: 0.2445;
     border-radius: 7.5px;
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
 }
 
@@ -117,7 +118,7 @@ body {
 
 .main .pages .boxen .box {
     min-height: 70px;
-    width: calc(100% - 20px);
+    width: calc(100% - 28px);
     background-color: rgb(34, 36, 55);
     border-radius: 7.5px;
     display: flex;
@@ -136,89 +137,89 @@ body {
 }
 
 .main .pages .boxen .first-row:nth-child(1) .box:nth-child(1) {
-    background-image: url("images/number guessing game.jpeg");
+    background-image: url('images/number guessing game.jpeg');
     background-position: 50% 39%;
     background-color: rgb(82, 223, 249);
 }
 
 .main .pages .boxen .first-row:nth-child(2) .box:nth-child(1) {
-    background-image: url("images/quiz.jpeg");
+    background-image: url('images/quiz.jpeg');
     background-position: 50% 45%;
     background-color: white;
 }
 
 .main .pages .boxen .first-row:nth-child(3) .box:nth-child(1) {
-    background-image: url("images/temperatur.jpeg");
+    background-image: url('images/temperatur.jpeg');
     background-position: 50%;
     background-size: contain;
     background-color: rgb(246, 246, 246);
 }
 
 .main .pages .boxen .first-row:nth-child(4) .box:nth-child(1) {
-    background-image: url("images/tic tac toe.jpeg");
+    background-image: url('images/tic tac toe.jpeg');
     background-position: 0 49%;
     background-size: cover;
     background-color: rgb(60, 121, 212);
 }
 
 .main .pages .boxen .first-row:nth-child(1) .box:nth-child(2) {
-    background-image: url("images/memory card game.jpeg");
+    background-image: url('images/memory card game.jpeg');
     background-position: 0 49%;
     background-size: cover;
     background-color: rgb(57, 216, 152);
 }
 
 .main .pages .boxen .first-row:nth-child(2) .box:nth-child(2) {
-    background-image: url("images/palindrome checker.jpeg");
+    background-image: url('images/palindrome checker.jpeg');
     background-position: 0 53%;
     background-size: cover;
     background-color: rgb(253, 253, 253);
 }
 
 .main .pages .boxen .first-row:nth-child(3) .box:nth-child(2) {
-    background-image: url("images/quote.jpeg");
+    background-image: url('images/quote.jpeg');
     background-position: 0 31%;
     background-size: cover;
     background-color: rgb(0, 123, 193);
 }
 
 .main .pages .boxen .first-row:nth-child(4) .box:nth-child(2) {
-    background-image: url("images/todo list.jpeg");
+    background-image: url('images/todo list.jpeg');
     background-position: 0 45%;
     background-size: cover;
     background-color: rgb(1, 109, 158);
 }
 
 .main .pages .boxen .first-row:nth-child(1) .box:nth-child(3) {
-    background-image: url("images/word scramble.jpeg");
+    background-image: url('images/word scramble.jpeg');
     background-position: 0 47%;
     background-size: cover;
     background-color: rgb(79, 42, 119);
 }
 
 .main .pages .boxen .first-row:nth-child(2) .box:nth-child(3) {
-    background-image: url("images/slide puzzle.jpeg");
+    background-image: url('images/slide puzzle.jpeg');
     background-position: 0 50%;
     background-size: cover;
     background-color: rgb(242, 106, 4);
 }
 
 .main .pages .boxen .first-row:nth-child(3) .box:nth-child(3) {
-    background-image: url("images/4 in a row.jpeg");
+    background-image: url('images/4 in a row.jpeg');
     background-position: 50%;
     background-size: contain;
     background-color: white;
 }
 
 .main .pages .boxen .first-row:nth-child(4) .box:nth-child(3) {
-    background-image: url("images/rock paper scissors.jpeg");
+    background-image: url('images/rock paper scissors.jpeg');
     background-position: 0 36%;
     background-size: cover;
     background-color: rgb(28, 28, 30);
 }
 
 .main .pages .boxen .first-row:nth-child(1) .box:nth-child(4) {
-    background-image: url("images/simon says.jpeg");
+    background-image: url('images/simon says.jpeg');
     background-position: 0 7%;
     background-size: cover;
     background-color: rgb(24, 24, 24);
@@ -226,14 +227,15 @@ body {
 
 .main .dashboard .boxen .first-row .box .row {
     display: flex;
-    align-items: center;
+    justify-content: center;
+    align-items: flex-end;
     gap: 30px;
     padding: 0 20px;
 }
 
 .main .dashboard .boxen .first-row .box .row p {
     opacity: 0.65;
-    padding: 40px 0;
+    padding: 0 0 30px 0;
 }
 
 .main .dashboard .boxen .first-row .box .row .circle {
@@ -321,10 +323,6 @@ body {
     align-items: flex-start;
 }
 
-.main .about .boxen .second-row {
-    margin-bottom: 23px;
-}
-
 .main .about .boxen .row .box {
     line-height: 25px;
     padding: 15px;
@@ -338,11 +336,11 @@ body {
 }
 
 .main .about .boxen .first-row .box {
-    flex: calc(1 / 3 - 0.02 / 3);
+    flex: calc(1 / 3 - 0.02 / 2.8);
 }
 
 .main .about .boxen .second-row .box {
-    flex: calc(1 / 2 - 0.02 / 2);
+    flex: calc(1 / 2 - 0.02 / 1.8);
 }
 
 .main .about .boxen .row .box p {
@@ -526,8 +524,8 @@ header .second-part #profile {
 .main .calender .container {
     display: flex;
     flex-direction: row;
-    justify-content: center;
     gap: 50px;
+    margin-left: 32px;
 }
 
 .main .calender .container .calender {
@@ -546,7 +544,7 @@ header .second-part #profile {
 }
 
 .main .calender .container .calender .header {
-    width: calc(100% - 80px);
+    width: 100%;
     min-height: 70px;
     background-color: rgb(34, 36, 55);
     border-radius: 5px;
@@ -646,7 +644,7 @@ header .second-part #profile {
 .main .calender .container .right {
     display: flex;
     flex-direction: column;
-    flex: 0.3;
+    flex: 0.33;
     gap: 50px;
 }
 
@@ -750,7 +748,7 @@ header .second-part #profile {
         align-items: center;
     }
 
-    .left-sidebar .menu-list,
+    .left-sidebar .list,
     .left-sidebar .title {
         display: none;
     }
@@ -789,20 +787,31 @@ header .second-part #profile {
         justify-content: center;
     }
 
+    .main .about .boxen {
+        gap: 30px;
+    }
+
     .main .dashboard .boxen .box {
         min-width: calc(100% - 60px);
     }
 
+    .main .about .boxen .box {
+        min-width: calc(100% - 32px);
+    }
+
+    .main .dashboard .boxen .second-row .box:nth-child(2),
+    .main .about .boxen .second-row .box:nth-child(2),
+    .main .calender .container .right .add,
+    .main .calender .right .information {
+        margin-bottom: 20px;
+    }
+
     .main .about .boxen .first-row .box {
-        min-width: 85%;
+        flex: calc(1 / 3 - 0.02 / 2.8);
     }
 
-    .main .about .boxen .first-row:nth-child(2) .box:nth-child(2) {
-        margin-bottom: 20px;
-    }
-
-    .main .dashboard .boxen .second-row .box:nth-child(2) {
-        margin-bottom: 20px;
+    .main .about .boxen .second-row .box {
+        flex: calc(1 / 2 - 0.02 / 1.8);
     }
 
     .main .calender .container {
@@ -812,7 +821,6 @@ header .second-part #profile {
 
     .main .calender .container .calender .header {
         padding: 20px;
-        width: calc(100% - 40px);
     }
 
     .main .calender .container .calender .header .left-side p,
@@ -831,5 +839,10 @@ header .second-part #profile {
 
     .main .calender .container .calender .header .fa-pipe {
         height: 60px !important;
+    }
+
+    .main .calender .container .calender {
+        min-width: 100%;
+        max-width: 100%;
     }
 }
