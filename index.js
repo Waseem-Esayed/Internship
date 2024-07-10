@@ -1,7 +1,11 @@
 document.addEventListener('DOMContentLoaded', function () {
     windowHeight = window.innerHeight;
     document.body.style.height = `${windowHeight}px`;
-    console.log(windowHeight);
+
+    windowWidth = window.innerWidth;
+
+    console.log('Window Height:', windowHeight);
+    console.log('Window Width:', windowWidth);
 
     for (let i = 1; i <= 32; i++) {
         let calenderItem = document.createElement('div');
@@ -133,11 +137,6 @@ document.addEventListener('DOMContentLoaded', function () {
         setCalender();
     }
 
-    let twoDots = document.getElementsByClassName('fa-grip-lines')[0];
-
-    // Test Case: There is no internet connection
-    // let twoDots = document.getElementById('profile');
-
     let leftSidebar = document.getElementsByClassName('left-sidebar')[0];
     let main = document.getElementsByClassName('main')[0];
 
@@ -170,6 +169,11 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     }
 
+    let twoDots = document.getElementsByClassName('fa-grip-lines')[0];
+
+    // Test Case: There is no internet connection
+    // let twoDots = document.getElementById('profile');
+
     twoDots.onclick = function () {
         if (checkDevice == 0) {
             if (main.style.width != '100%') {
@@ -178,16 +182,19 @@ document.addEventListener('DOMContentLoaded', function () {
                 main.style.width = 'calc(100% - 270px)';
             }
         } else {
-            if (leftSidebar.style.maxHeight == '250px') {
+            if (leftSidebar.style.minHeight == '270px') {
+                leftSidebar.style.minHeight = '0';
                 leftSidebar.style.maxHeight = '0';
                 main.style.height = 'calc(100% - 70px)';
                 document.querySelector('.left-sidebar .title').style.display = 'none';
                 document.querySelector('.left-sidebar .list').style.display = 'none';
                 main.style.top = '70px';
-            } else if (leftSidebar.style.maxHeight != '250px') {
-                leftSidebar.style.maxHeight = '250px';
-                main.style.height = 'calc(100% - 70px - 250px)';
-                main.style.top = 'calc(70px + 250px)';
+                console.log('1');
+            } else if (leftSidebar.style.minHeight != '270px') {
+                leftSidebar.style.minHeight = '270px';
+                main.style.height = 'calc(100% - 70px - 270px)';
+                main.style.top = 'calc(70px + 270px)';
+                console.log('2');
                 setTimeout(function () {
                     document.querySelector('.left-sidebar .title').style.display = 'block';
                     document.querySelector('.left-sidebar .list').style.display = 'block';
@@ -208,7 +215,11 @@ document.addEventListener('DOMContentLoaded', function () {
 
     let difference = 926 - windowHeight - 70;
 
-    setSectionHeights(`calc(100% + ${difference - 115}px)`, `calc(100% + ${difference - 115}px)`)
+    console.log('Check Device:', checkDevice);
+
+    if (checkDevice == 0) {
+        setSectionHeights(`calc(100% + ${difference - 70}px)`, `calc(100% + ${difference + 124}px)`);
+    }
 
     function setSectionHeights(height, forLongSections) {
         if (windowHeight <= 926) {
@@ -226,11 +237,11 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     }
 
-    clickedSelector(0, dashboardSection, null, `calc(100% + ${difference - 115}px)`);
-    clickedSelector(1, notAvailableSection, 'Email', `calc(100% + ${difference - 115}px)`);
+    clickedSelector(0, dashboardSection, null, `calc(100% + ${difference - 70}px)`);
+    clickedSelector(1, notAvailableSection, 'Email', `calc(100% + ${difference - 70}px)`);
     clickedSelector(2, calenderSection, 'Calendar', `calc(100% + ${difference}px)`);
-    clickedSelector(3, pagesSection, null, `calc(100% + ${difference - 115}px)`);
-    clickedSelector(4, aboutSection, null, `calc(100% + ${difference - 115}px)`);
+    clickedSelector(3, pagesSection, null, `calc(100% + ${difference - 70}px)`);
+    clickedSelector(4, aboutSection, null, `calc(100% + ${difference - 70}px)`);
 
     function clickedSelector(index, section, textContent, height) {
         allSelectors[index].onclick = function () {
@@ -238,7 +249,9 @@ document.addEventListener('DOMContentLoaded', function () {
                 document.querySelector('.main .not-available .header .left .title').textContent = textContent;
                 document.querySelector('.main .not-available .header .right #title').textContent = textContent;
 
-                setSectionHeights(height, 'calc(100% - 70px)');
+                if (checkDevice == 0) {
+                    setSectionHeights(height, 'calc(100% - 70px) !important');
+                }
 
                 allSelectors.forEach(function (item) {
                     item.style.opacity = '0.6';
@@ -251,6 +264,8 @@ document.addEventListener('DOMContentLoaded', function () {
                 allSelectors[index].style.color = 'white';
 
                 if (checkDevice == 1) {
+                    console.log('3');
+                    leftSidebar.style.minHeight = '0';
                     leftSidebar.style.maxHeight = '0';
                     main.style.height = 'calc(100% - 70px)';
                     main.style.top = '70px';
