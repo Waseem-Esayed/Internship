@@ -4,405 +4,165 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap"
-        rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <script src="https://kit.fontawesome.com/668ebba5a9.js" crossorigin="anonymous"></script>
-    <title>Main Website</title>
+    <title>Portfolio Website</title>
+
+    <script src='https://kit.fontawesome.com/668ebba5a9.js' crossorigin='anonymous'></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sofadi+One&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Sofadi+One&display=swap"
+        rel="stylesheet">
 </head>
 
 <body>
-    <div>
-        <div class='header'>
-            <p>Hallo</p>
-            <p id='leave'>Waseem</p>
-        </div>
-    </div>
-
-    <header class='header'>
-        <div class='first-part'>
-            <i class='fas fa-code'></i>
-            <p id='name'>WASEEM</p>
-            <i class='fas fa-grip-lines'></i>
-            <input class='search-box' type='text' placeholder='Search...'>
-            <i class='fas fa-search'></i>
-        </div>
-
-        <div class='second-part'>
-            <i class='far fa-bell'></i>
-            <div id='notification-count'>3</div>
-            <img id='profile' src='images/profile.jpg' alt='Profile Image'>
+    <header>
+        <div class="navbar" id="navbar">
+            <div class="name_box">
+                <p id="page-name">WASEEM</p>
+            </div>
+            <div class="nav_elements_box">
+                <ul>
+                    <div class="box" id="home-box">
+                        <li><a href="#navbar">Home</a></li>
+                        <div id="home-line"></div>
+                    </div>
+                    <div class="box" id="about-box">
+                        <li><a href="#about-title">About</a></li>
+                    </div>
+                    <div class="box" id="services-box">
+                        <li><a href="#">Services</a></li>
+                    </div>
+                    <div class="box" id="portfolio-box">
+                        <li><a href="#">Portfolio</a></li>
+                    </div>
+                    <div class="box" id="testimanials-box">
+                        <li><a href="#">Testimonials</a></li>
+                    </div>
+                    <div class="box" id="contact-box">
+                        <li><a href="#">Contact</a></li>
+                    </div>
+                </ul>
+            </div>
         </div>
     </header>
 
-    <section class='left-sidebar'>
-        <p class='title menu-list-title'>MENU</p>
-        <ul class='list menu-list'>
-            <li id='dashboard'>
-                <div class='left'>
-                    <i class='fas fa-tachometer-alt'></i>
-                    <p class='selector'>Dashboard</p>
-                </div>
-                <div class='right'>
-                    <i class='fas fa-caret-right'></i>
-                </div>
-            </li>
-            <li id='email'>
-                <div class='left'>
-                    <i class='fas fa-envelope'></i>
-                    <p class='selector'>Email</p>
-                </div>
-                <div class='right'>
-                    <i class='fas fa-caret-right'></i>
-                </div>
-            </li>
-            <li id='calendar'>
-                <div class='left'>
-                    <i class='fas fa-calendar-alt'></i>
-                    <p class='selector'>Calendar</p>
-                </div>
-                <div class='right'>
-                    <i class='fas fa-caret-right'></i>
-                </div>
-            </li>
-            <li id='pages'>
-                <div class='left'>
-                    <i class='far fa-file-alt'></i>
-                    <p class='selector'>Pages</p>
-                </div>
-                <div class='right'>
-                    <i class='fas fa-caret-right'></i>
-                </div>
-            </li>
-            <li id='about'>
-                <div class='left'>
-                    <i class='fa-solid fa-address-card'></i>
-                    <p class='selector'>About</p>
-                </div>
-                <div class='right'>
-                    <i class='fas fa-caret-right'></i>
-                </div>
-            </li>
-        </ul>
-
-        <p class='title x-list-title'>...</p>
-        <ul class='list x-list'>
-            <li id='ui-elements'>
-                <div class='left'>
-                    <i class='fab fa-uikit'></i>
-                    <p class='selector'>...</p>
-                </div>
-                <div class='right'>
-                    <i class='fas fa-caret-right'></i>
-                </div>
-            </li>
-            <li id='advanced-ui'>
-                <div class='left'>
-                    <i class='fas fa-gem'></i>
-                    <p class='selector'>...</p>
-                </div>
-                <div class='right'>
-                    <i class='fas fa-caret-right'></i>
-                </div>
-            </li>
-            <li id='forms'>
-                <div class='left'>
-                    <i class='fab fa-wpforms'></i>
-                    <p class='selector'>...</p>
-                </div>
-                <div class='right'>
-                    <i class='fas fa-caret-right'></i>
-                </div>
-            </li>
-            <li id='charts'>
-                <div class='left'>
-                    <i class='fas fa-chart-line'></i>
-                    <p class='selector'>...</p>
-                </div>
-                <div class='right'>
-                    <i class='fas fa-caret-right'></i>
-                </div>
-            </li>
-            <li id='tables'>
-                <div class='left'>
-                    <i class='fas fa-table'></i>
-                    <p class='selector'>...</p>
-                </div>
-                <div class='right'>
-                    <i class='fas fa-caret-right'></i>
-                </div>
-            </li>
-            <li id='maps'>
-                <div class='left'>
-                    <i class='fas fa-map-marker-alt'></i>
-                    <p class='selector'>...</p>
-                </div>
-                <div class='right'>
-                    <i class='fas fa-caret-right'></i>
-                </div>
-            </li>
-            <li id='multi-level'>
-                <div class='left'>
-                    <i class='fas fa-share-alt'></i>
-                    <p class='selector'>...</p>
-                </div>
-                <div class='right'>
-                    <i class='fas fa-caret-right'></i>
-                </div>
-            </li>
-        </ul>
-    </section>
-
-    <section class='main'>
-        <!-- Dashboard Section -->
-        <div class='dashboard main-section'>
-            <div class='header'>
-                <div class='left'>
-                    <p class='title'>Dashboard</p>
-                </div>
-                <div class='right'>
-                    <p class='name'>Waseem</p>
-                    <i class='fas fa-caret-right'></i>
-                    <p id='title'>Dashboard</p>
-                </div>
-            </div>
-
-            <div class='boxen'>
-                <div class='first-row'>
-                    <div class='box'>
-                        <div class='row'>
-                            <p id='title'>Hours Studied</p>
-                            <div class='circle'>
-                                <i class='fa-solid fa-hourglass-start'></i>
-                            </div>
-                        </div>
-                        <p class='number'>100</p>
-                        <div class='line'></div>
-                        <div class='row-label'>
-                            <p class='previous-label'>Goal</p>
-                            <p class='previous-label'>10%</p>
-                        </div>
+    <main>
+        <div class="first-page">
+            <div class="container">
+                <div class="circle-container">
+                    <div class="row">
+                        <div class="circle"></div>
+                        <div class="circle"></div>
+                        <div class="circle"></div>
                     </div>
-
-                    <div class='box'>
-                        <div class='row'>
-                            <p id='title'>Projects Completed</p>
-                            <div class='circle'>
-                                <i class='fa-solid fa-diagram-project'></i>
-                            </div>
-                        </div>
-                        <p class='number'>20</p>
-                        <div class='line'></div>
-                        <div class='row-label'>
-                            <p class='previous-label'>Goal</p>
-                            <p class='previous-label'>88%</p>
-                        </div>
+                    <div class="row">
+                        <div class="circle"></div>
+                        <div class="circle"></div>
                     </div>
-
-                    <div class='box'>
-                        <div class='row'>
-                            <p id='title'>Lines of Code</p>
-                            <div class='circle'>
-                                <i class='fa-solid fa-code'></i>
-                            </div>
-                        </div>
-                        <p class='number'>6500+</p>
-                        <div class='line'></div>
-                        <div class='row-label'>
-                            <p class='previous-label'>Goal</p>
-                            <p class='previous-label'>65%</p>
-                        </div>
+                    <div class="row">
+                        <div class="circle"></div>
+                        <div class="circle"></div>
                     </div>
-
-                    <div class='box'>
-                        <div class='row'>
-                            <p id='title'>Challenges Solved</p>
-                            <div class='circle'>
-                                <i class='fa-solid fa-mug-saucer'></i>
-                            </div>
-                        </div>
-                        <p class='number'>...</p>
-                        <div class='line'></div>
-                        <div class='row-label'>
-                            <p class='previous-label'>Goal</p>
-                            <p class='previous-label'>...</p>
-                        </div>
+                    <div class="row">
+                        <div class="circle"></div>
+                        <div class="circle"></div>
+                        <div class="circle"></div>
                     </div>
                 </div>
-
-                <div class='second-row'>
-                    <div class='box'></div>
-                    <div class='box'></div>
+                <div class="content-box">
+                    <div class="sites">
+                        <i class="fa-brands fa-facebook"></i>
+                        <i class="fa-brands fa-twitter"></i>
+                        <i class="fa-brands fa-instagram"></i>
+                        <i class="fa-brands fa-linkedin-in"></i>
+                        <i class="fa-brands fa-github"></i>
+                        <i class="fa-solid fa-globe"></i>
+                    </div>
+                    <p id="designer-title">I'm a Designer</p>
+                    <p id="description">I am a student passionate about programming, always eager to learn and work on
+                        exciting projects.<br>My goal is to continuously develop my skills and explore new technologies.
+                    </p>
+                    <div class="btn-box">
+                        <button id="btn-work">MY WORK</button>
+                        <button id="btn-hire">HIRE ME</button>
+                    </div>
                 </div>
+                <img id="cap-image" src="images/my-image-1.png">
             </div>
         </div>
-
-        <!-- Pages Section -->
-        <div class='pages main-section'>
-            <div class='header'>
-                <div class='left'>
-                    <p class='title'>Pages</p>
-                </div>
-                <div class='right'>
-                    <p class='name'>Waseem</p>
-                    <i class='fas fa-caret-right'></i>
-                    <p id='title'>Pages</p>
+        <div class="second-page">
+            <div class="left-side">
+                <img src="images/my-image-2.png">
+                <div class="skills-box">
+                    <p id="title">MY SKILLS</p>
+                    <div class="html-content">
+                        <div class="row">
+                            <p class="skill-name" id="hmtl">HTML</p>
+                            <div class="percent-box" id="box-1">80%</div>
+                        </div>
+                        <div class="percent-line" id="html-line"></div>
+                    </div>
+                    <div class="css-content">
+                        <div class="row">
+                            <p class="skill-name" id="css">CSS</p>
+                            <div class="percent-box" id="box-2">60%</div>
+                        </div>
+                        <div class="percent-line" id="css-line"></div>
+                    </div>
+                    <div class="javascript-content">
+                        <div class="row">
+                            <p class="skill-name" id="javascript">JAVASCRIPT</p>
+                            <div class="percent-box" id="box-3">10%</div>
+                        </div>
+                        <div class="percent-line" id="javascript-line"></div>
+                    </div>
                 </div>
             </div>
-
-            <div class='boxen'>
-                <div class='first-row'>
-                    <a href='Number Guessing Game/Number Guessing Game.html' target='_blank' class='box'></a>
-                    <a href='Memory Card Game/Memory Card Game.html' target='_blank' class='box'></a>
-                    <a href='Word Scramble Game/Word Scramble Game.html' target='_blank' class='box'></a>
-                    <a href='Simon Says Game/Simon Says Game.html' target='_blank' class='box'></a>
-                </div>
-                <div class='first-row'>
-                    <a href='Quiz/quiz.html' target='_blank' class='box'></a>
-                    <a href='Palindrome Checker/Palindrome Checker.html' target='_blank' class='box'></a>
-                    <a href='Slide Puzzle Game/Slide Puzzle Game.html' target='_blank' class='box'></a>
-                </div>
-                <div class='first-row'>
-                    <a href='Temperature  conversion/tempCon.html' target='_blank' class='box'></a>
-                    <a href='Random Quote Generator/Random Quote Generator.html' target='_blank' class='box'></a>
-                    <a href='4 in a Row/4 in a Row.html' target='_blank' class='box'></a>
-                </div>
-                <div class='first-row'>
-                    <a href='Tic Tac Toe/tic-tac-toe.html' target='_blank' class='box'></a>
-                    <a href='ToDo App/ToDo app Nr.2/ToDo app Nr.2.html' target='_blank' class='box'></a>
-                    <a href='Rock-Paper-Scissors Game/Rock-Paper-Scissors Game.html' target='_blank' class='box'></a>
-                </div>
-            </div>
-        </div>
-
-        <!-- About Section -->
-        <div class='about main-section'>
-            <div class='header'>
-                <div class='left'>
-                    <p class='title'>About</p>
-                </div>
-                <div class='right'>
-                    <p class='name'>Waseem</p>
-                    <i class='fas fa-caret-right'></i>
-                    <p id='title'>About</p>
-                </div>
-            </div>
-
-            <div class='boxen'>
-                <div class='first-row row'>
-                    <div class='box'>
-                        <p>My Journey into Software Development</p>
-                        As a 15-year-old student, I have begun to get excited about the world of software development.
-                        Writing code allows me to express my creativity and find innovative solutions to interesting
-                        problems. The opportunity to explore different programming languages and technologies, and
-                        learn how to use them to create programs and applications, fascinates me greatly. The prospect
-                        of
-                        working as a professional developer one day motivates me to improve my skills daily.
+            <div class="right-side">
+                <div id="about-title">ABOUT ME</div>
+                <p id="about-paragraph">As a 16-year-old student, I have begun to get excited about<br>
+                    the world of software development. Writing code allows me to<br>
+                    express my creativity and find innovative solutions to interesting<br>
+                    problems. The opportunity to explore different programming<br>
+                    languages and technologies, and learn how to use them to create<br>
+                    programs and applications, fascinates me greatly. The prospect<br>
+                    of working as a professional developer one day motivates me to<br>
+                    improve my skills daily.</p>
+                <div class="contact-container">
+                    <div class="column">
+                        <div class="inner-column">
+                            <p class="label" id="name-label">Name:</p>
+                            <p id="name">Waseem Esayed</p>
+                        </div>
+                        <div class="inner-column">
+                            <p class="label" id="phone-label">Phone:</p>
+                            <p id="phone">+49 1234 5678 999</p>
+                        </div>
                     </div>
-                    <div class='box'>
-                        <p>Source of My Inspiration</p>
-                        My inspiration to learn programming comes from my passion for technology and the joy of
-                        problem-solving. I have always been interested in computers and how they work. Programming
-                        allows me not just to consume passively but to actively create. The idea that I can use my
-                        skills to solve real-world problems and develop useful applications inspires me greatly.
-                    </div>
-                    <div class='box'>
-                        <p>Support and Community</p>
-                        A significant aspect of my journey into the world of software development is the support from my
-                        family and friends. They encourage me to pursue my interests and develop my skills.
-                        Additionally, I have found many resources through online courses and tutorials that help me in
-                        my learning process. The developer community, where knowledge and experiences are shared, is
-                        another source of motivation for me.
-                    </div>
-                </div>
-                <div class='second-row row'>
-                    <div class='box'>
-                        <p>Balancing Hobbies and Interests</p>
-                        Apart from programming, I am also interested in other hobbies such as reading, sports, and
-                        music. These activities help me find balance and gain new perspectives. Especially when reading
-                        science fiction and technology magazines, I often find new ideas and inspirations that I can
-                        incorporate into my programming projects. Sports help me stay fit and clear my mind, while music
-                        is a source of relaxation and creativity for me.
-                    </div>
-                    <div class='box'>
-                        <p>Future Aspirations</p>
-                        My future plans include studying computer science at a renowned university. I want to deepen my
-                        knowledge and develop specialized skills to be successful in the software industry later on. One
-                        of my dreams is to start my own startup one day and develop innovative solutions that improve
-                        people's lives. Until then, I am continuously working on improving my programming skills and
-                        learning new technologies.
+                    <div class="column">
+                        <div class="inner-column">
+                            <p class="label" id="email-label">Email:</p>
+                            <p id="email">testwaseemtest@gmail.com</p>
+                        </div>
+                        <div class="inner-column">
+                            <p class="label" id="twitter-label">Twitter:</p>
+                            <p id="twitter">testwaseem</p>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
+    </main>
 
-        <!-- Calender Section -->
-        <div class='calender main-section'>
-            <div class='header'>
-                <div class='left'>
-                    <p class='title'>Calender</p>
-                </div>
-                <div class='right'>
-                    <p class='name'>Waseem</p>
-                    <i class='fas fa-caret-right'></i>
-                    <p id='title'>Calender</p>
-                </div>
-            </div>
-            <div class='container'>
-                <div class='calender'>
-                    <div class='header'>
-                        <div class='left-side'>
-                            <i class='fa-solid fa-minus' id='minus'></i>
-                            <div class='date'>
-                                <p id='month'>August</p>
-                                <p id='date-seperator'>-</p>
-                                <p id='year'>2024</p>
-                            </div>
-                            <i class='fa-regular fa-plus' id='plus'></i>
-                        </div>
+    <footer>
 
-                        <i class='fa-solid fa-pipe'></i>
-
-                        <div class='right-side'>
-                            <p id='reset-date'>Reset Date</p>
-                        </div>
-                    </div>
-
-                    <div class='rows'>
-                        <div class='first-row row'></div>
-                        <div class='second-row row'></div>
-                        <div class='third-row row'></div>
-                        <div class='fourth-row row'></div>
-                    </div>
-
-                    <div class='bottom'></div>
-                </div>
-                <div class='right'>
-                    <div class='add'></div>
-                    <div class='information'></div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Not Available Section -->
-        <div class='not-available main-section'>
-            <div class='header'>
-                <div class='left'>
-                    <p class='title'></p>
-                </div>
-                <div class='right'>
-                    <p class='name'>Waseem</p>
-                    <i class='fas fa-caret-right'></i>
-                    <p id='title'></p>
-                </div>
-            </div>
-            <div class='container'>
-                <i class='fa-solid fa-xmark'></i>
-                <p>Not Available!<br />Waseem is already working on this :)</p>
-            </div>
-        </div>
-
-    </section>
+    </footer>
 
     <script src="index.js"></script>
 </body>
