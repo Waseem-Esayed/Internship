@@ -2,847 +2,494 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: Roboto;
+    -webkit-user-drag: none;
+
+    --light_blue: rgb(209, 209, 255);
+    --blue: rgb(16,124,243);
+    --darker_blue: rgb(16,100,255);
+    --dark_blue: rgb(1,3,18);
+    --load-transition-speed: 0.8s;
 }
 
-*::selection {
-    background-color: rgba(255, 0, 0, 0.5);
+html, body {
+    overflow-x: hidden;
 }
 
 html {
-    min-height: 100%;
-    min-width: 100%;
+    scroll-behavior: smooth;
 }
 
 body {
-    font-family: 'Roboto', sans-serif;
-    touch-action: pan-y;
-    display: flex;
-    justify-content: flex-start;
-    align-items: flex-start;
-    min-height: 100%;
+    height: 200vh;
 }
 
-::-webkit-scrollbar {
-    width: 0;
-}
+/* Header */
 
-.main {
-    background-color: rgb(26, 28, 42);
-    color: white;
-    position: absolute;
-    top: 70px;
-    right: 0;
-    width: calc(100% - 270px);
-}
-
-.main .header .left .title,
-.main .header .right {
-    opacity: 0.65;
-    margin: 25px 30px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
-    font-size: 20px;
-}
-
-.main .header .right .name {
-    font-size: 15px;
-    cursor: text;
-}
-
-.main .header .right #title {
-    font-size: 13px;
-    opacity: 0.9;
-}
-
-.main .header {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.main .boxen .first-row,
-.main .boxen .second-row {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: center;
-    gap: 30px;
-    margin-left: 32px;
-}
-
-.main .pages .boxen .first-row,
-.main .pages .boxen .second-row {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
-    flex: 1;
-    gap: 30px;
-    margin-left: 32px;
-}
-
-.main .dashboard .boxen .second-row {
-    margin-top: 40px;
-}
-
-.main .dashboard .boxen .second-row div:nth-child(1) {
-    flex: 0.70;
-    height: 300px;
-}
-
-.main .dashboard .boxen .second-row div:nth-child(2) {
-    flex: 0.28;
-    height: 300px;
-}
-
-.main .dashboard .boxen .box {
-    height: 180px;
-    background-color: rgb(34, 36, 55);
-    flex: 0.2445;
-    border-radius: 7.5px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.main .pages .boxen {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap: 0;
-}
-
-.main .pages .boxen .box {
-    min-height: 70px;
-    width: calc(100% - 28px);
-    background-color: rgb(34, 36, 55);
-    border-radius: 7.5px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    font-size: 20px;
-    font-weight: 600;
-    text-decoration: none;
-    color: white;
-    letter-spacing: 1px;
-    align-items: center;
-    cursor: pointer;
-    overflow: hidden;
-    opacity: 0.6;
-    background-repeat: no-repeat;
-}
-
-.main .pages .boxen .first-row:nth-child(1) .box:nth-child(1) {
-    background-image: url('images/number guessing game.jpeg');
-    background-position: 50% 39%;
-    background-color: rgb(82, 223, 249);
-}
-
-.main .pages .boxen .first-row:nth-child(2) .box:nth-child(1) {
-    background-image: url('images/quiz.jpeg');
-    background-position: 50% 45%;
-    background-color: white;
-}
-
-.main .pages .boxen .first-row:nth-child(3) .box:nth-child(1) {
-    background-image: url('images/temperatur.jpeg');
-    background-position: 50%;
-    background-size: contain;
-    background-color: rgb(246, 246, 246);
-}
-
-.main .pages .boxen .first-row:nth-child(4) .box:nth-child(1) {
-    background-image: url('images/tic tac toe.jpeg');
-    background-position: 0 49%;
-    background-size: cover;
-    background-color: rgb(60, 121, 212);
-}
-
-.main .pages .boxen .first-row:nth-child(1) .box:nth-child(2) {
-    background-image: url('images/memory card game.jpeg');
-    background-position: 0 49%;
-    background-size: cover;
-    background-color: rgb(57, 216, 152);
-}
-
-.main .pages .boxen .first-row:nth-child(2) .box:nth-child(2) {
-    background-image: url('images/palindrome checker.jpeg');
-    background-position: 0 53%;
-    background-size: cover;
-    background-color: rgb(253, 253, 253);
-}
-
-.main .pages .boxen .first-row:nth-child(3) .box:nth-child(2) {
-    background-image: url('images/quote.jpeg');
-    background-position: 0 31%;
-    background-size: cover;
-    background-color: rgb(0, 123, 193);
-}
-
-.main .pages .boxen .first-row:nth-child(4) .box:nth-child(2) {
-    background-image: url('images/todo list.jpeg');
-    background-position: 0 45%;
-    background-size: cover;
-    background-color: rgb(1, 109, 158);
-}
-
-.main .pages .boxen .first-row:nth-child(1) .box:nth-child(3) {
-    background-image: url('images/word scramble.jpeg');
-    background-position: 0 47%;
-    background-size: cover;
-    background-color: rgb(79, 42, 119);
-}
-
-.main .pages .boxen .first-row:nth-child(2) .box:nth-child(3) {
-    background-image: url('images/slide puzzle.jpeg');
-    background-position: 0 50%;
-    background-size: cover;
-    background-color: rgb(242, 106, 4);
-}
-
-.main .pages .boxen .first-row:nth-child(3) .box:nth-child(3) {
-    background-image: url('images/4 in a row.jpeg');
-    background-position: 50%;
-    background-size: contain;
-    background-color: white;
-}
-
-.main .pages .boxen .first-row:nth-child(4) .box:nth-child(3) {
-    background-image: url('images/rock paper scissors.jpeg');
-    background-position: 0 36%;
-    background-size: cover;
-    background-color: rgb(28, 28, 30);
-}
-
-.main .pages .boxen .first-row:nth-child(1) .box:nth-child(4) {
-    background-image: url('images/simon says.jpeg');
-    background-position: 0 7%;
-    background-size: cover;
-    background-color: rgb(24, 24, 24);
-}
-
-.main .dashboard .boxen .first-row .box .row {
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
-    gap: 30px;
-    padding: 0 20px;
-}
-
-.main .dashboard .boxen .first-row .box .row p {
-    opacity: 0.65;
-    padding: 0 0 30px 0;
-}
-
-.main .dashboard .boxen .first-row .box .row .circle {
-    min-width: 60px;
-    min-height: 60px;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.main .dashboard .boxen .first-row .box .row .circle i {
-    font-size: 20px;
-}
-
-
-.main .dashboard .boxen .first-row .box:nth-child(1) .row .circle {
-    background-color: rgb(48, 65, 155);
-}
-
-.main .dashboard .boxen .first-row .box:nth-child(2) .row .circle {
-    background-color: rgb(2, 197, 141);
-}
-
-.main .dashboard .boxen .first-row .box:nth-child(3) .row .circle {
-    background-color: rgb(252, 190, 45);
-}
-
-.main .dashboard .boxen .first-row .box:nth-child(4) .row .circle {
-    background-color: rgb(252, 84, 84);
-}
-
-.main .dashboard .boxen .first-row .box .number {
-    opacity: 0.7;
-    font-size: 27.5px;
-    margin-left: 40px;
-    margin-top: -20px;
-    transform: translateX(-80px);
-}
-
-.main .dashboard .boxen .first-row .box .row-label {
-    width: 70%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.main .dashboard .boxen .first-row .box .row-label .previous-label {
-    opacity: 0.3;
-    font-size: 12px;
-    margin-top: 10px;
-}
-
-.main .dashboard .boxen .first-row .box .line {
-    margin-top: 20px;
-    width: 70%;
-    height: 5px;
-    border-radius: 36px;
-}
-
-.main .dashboard .boxen .first-row .box:nth-child(1) .line {
-    background: linear-gradient(to right, rgb(48, 65, 155) 10%, rgb(46, 48, 74) 10%);
-}
-
-.main .dashboard .boxen .first-row .box:nth-child(2) .line {
-    background: linear-gradient(to right, rgb(2, 197, 141) 20%, rgb(46, 48, 74) 20%);
-}
-
-.main .dashboard .boxen .first-row .box:nth-child(3) .line {
-    background: linear-gradient(to right, rgb(252, 190, 45) 65%, rgb(46, 48, 74) 65%)
-}
-
-.main .dashboard .boxen .first-row .box:nth-child(4) .line {
-    background: rgb(46, 48, 74) 82%;
-}
-
-.main .about .boxen {
-    display: flex;
-    flex-direction: column;
-    gap: 50px;
-}
-
-.main .about .boxen .row {
-    align-items: flex-start;
-}
-
-.main .about .boxen .row .box {
-    line-height: 25px;
-    padding: 15px;
-    height: auto;
-    background-color: rgb(34, 36, 55);
-    border-radius: 7.5px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    cursor: auto;
-}
-
-.main .about .boxen .first-row .box {
-    flex: calc(1 / 3 - 0.02 / 2.8);
-}
-
-.main .about .boxen .second-row .box {
-    flex: calc(1 / 2 - 0.02 / 1.8);
-}
-
-.main .about .boxen .row .box p {
-    text-align: center;
-    margin-bottom: 10px;
-    font-size: 20px;
-    color: white;
-    font-weight: bold;
-    border-bottom: 2px solid rgba(255, 255, 255, 0.6);
-    padding-bottom: 5px;
-    transition: color 0.3s, opacity 0.3s;
-}
-
-.main .about .boxen .row .box:hover p {
-    color: white;
-    opacity: 0.6;
-}
-
-.main .not-available {
-    min-height: 100%;
-}
-
-.main .not-available .container {
-    min-height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
-    color: red;
-    text-align: center;
-    line-height: 35px;
-    font-size: 20px;
-}
-
-.main .not-available .container i {
-    font-size: 100px;
-}
-
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: absolute;
-    top: 0;
-    height: 70px;
+header .navbar {
     width: 100%;
-    background-color: rgb(48, 65, 155);
+    height: 70px;
+    background-color: rgb(12,14,29);
     color: white;
-}
-
-header .first-part {
     display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-header .first-part .fa-code {
-    color: white;
-    margin-left: 80px;
-    font-size: 20px;
-}
-
-header .first-part #name {
-    letter-spacing: 2px;
-    margin-left: 10px;
-    font-size: 20px;
-}
-
-header .first-part .fa-grip-lines {
-    font-size: 17.5px;
-    margin-left: 100px;
-    cursor: pointer;
-}
-
-header .first-part .search-box {
-    background-color: rgb(69, 84, 165);
-    margin-left: 20px;
-    width: 200px;
-    height: 35px;
-    border: none;
-    border-radius: 36px;
-    outline: none;
-    color: white;
-    padding-left: 15px;
-    zoom: none;
-}
-
-header .first-part .search-box::placeholder {
-    color: white;
-    opacity: 0.7;
-}
-
-header .first-part .fa-search {
-    transform: translateX(-30px);
-    opacity: 0.7;
-    font-size: 14px;
-    cursor: pointer;
-}
-
-header .second-part {
-    margin-right: 80px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-header .second-part .fa-bell {
-    font-size: 18px;
-    cursor: pointer;
-}
-
-header .second-part #notification-count {
-    width: 15px;
-    height: 12px;
-    border-radius: 50%;
-    background-color: rgb(252, 84, 84);
-    margin-right: 30px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 10px;
-    transform: translate(-8px, -7px);
-    cursor: pointer;
-}
-
-header .second-part #profile {
-    width: 30px;
-    height: 30px;
-    object-position: top;
-    object-fit: cover;
-    border-radius: 50%;
-    cursor: pointer;
-    object-fit: cover;
-    object-position: 0 -10px;
-}
-
-.left-sidebar {
-    position: absolute;
-    top: 70px;
+    flex-direction: row;
+    position: relative;
     left: 0;
-    width: 270px;
-    background-color: rgb(34, 36, 55);
-    color: white;
-    padding: 20px 0 0 20px;
+    top: 0;
 }
 
-.left-sidebar .title {
-    padding-top: 10px;
-    font-size: 12px;
-    letter-spacing: 2px;
+header .navbar .name_box {
+    width: 45%;
 }
 
-.left-sidebar .list {
-    list-style: none;
-    margin: 23px 0;
-    font-size: 16px;
+header .navbar .name_box #page-name {
+    color: var(--blue);
+    letter-spacing: 1.75px;
+    font-size: 22px;
+    font-family: Sofadi One;
 }
 
-.left-sidebar .list div {
+header .navbar .nav_elements_box {
+    width: 55%;
+}
+
+header .navbar .name_box {
     display: flex;
-    flex-direction: row;
     justify-content: center;
     align-items: center;
-    gap: 15px;
-    cursor: pointer;
 }
 
-.left-sidebar .list .right {
-    margin-right: 20px;
-}
-
-.left-sidebar .list li {
+header .navbar .nav_elements_box {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: center;
-    margin-top: 12.5%;
 }
 
-.main .calender .container {
+header .navbar .nav_elements_box ul {
+    list-style: none;
     display: flex;
     flex-direction: row;
-    gap: 50px;
-    margin-left: 32px;
-}
-
-.main .calender .container .calender {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: nowrap;
-    align-items: flex-start;
-    height: 600px;
-    flex: 0.65;
+    justify-content: flex-start;
+    align-items: center;
     gap: 25px;
 }
 
-.main .calender .container .calender .rows {
-    width: 100%;
-    min-height: 400px;
+header .navbar .nav_elements_box ul li {
+    cursor: pointer;
+    font-size: 17px;
 }
 
-.main .calender .container .calender .header {
-    width: 100%;
-    min-height: 70px;
-    background-color: rgb(34, 36, 55);
-    border-radius: 5px;
-    padding: 0 40px;
-    display: flex;
-    flex: 1;
-    align-items: center;
+header .navbar .nav_elements_box ul li a {
+    text-decoration: none;
 }
 
-.main .calender .container .calender .header .left-side {
+header .navbar .nav_elements_box ul .box {
+    height: 40px;
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    flex: 0.7;
-}
-
-.main .calender .container .calender .header .right-side {
-    display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    flex: 0.2;
 }
 
-.main .calender .container .calender .header .right-side p {
-    font-size: 20px;
-    cursor: pointer;
-    transition: color 0.2s;
-}
-
-.main .calender .container .calender .header .right-side:hover,
-.main .calender .container .calender .header .left-side .fa-plus:hover,
-.main .calender .container .calender .header .left-side .fa-minus:hover {
-    color: wheat;
-}
-
-.main .calender .container .calender .header .left-side .fa-plus,
-.main .calender .container .calender .header .left-side .fa-minus {
-    font-size: 25px;
-    cursor: pointer;
-}
-
-.main .calender .container .calender .header .fa-pipe {
-    background-color: white;
-    width: 3px;
-    height: 60%;
+header .navbar .nav_elements_box ul .box #home-line {
+    width: 100%;
+    height: 5px;
+    background-color: var(--blue);
+    position: relative;
+    bottom: -25%;
     border-radius: 100px;
 }
 
-.main .calender .container .calender .header .left-side .date {
+/* Main */
+
+main {
+    width: 100%;
+    height: calc(200vh - 70px);
+}
+
+/* First Page */
+
+main .first-page {
+    height: calc(100vh - 70px);
+    background-image: url('images/background-1.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+
+main .first-page .container {
+    min-width: 100%;
+    height: 100%;
     display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+main .first-page .container .content-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    transition: var(--load-transition-speed) ease;
+    opacity: 0;
+    position: relative;
+}
+
+main .first-page .container .content-box .sites {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+}
+
+main .first-page .container .content-box .sites i {
+    color: var(--blue);
+    font-size: 22px;
+    cursor: pointer;
+}
+
+main .first-page .container .content-box #designer-title {
+    color: white;
+    font-size: 400%;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+main .first-page .container .content-box #description {
+    color: white;
+    font-size: 100%;
+    text-align: center;
+    line-height: 25px;
+}
+
+main .first-page .container .content-box .btn-box {
+    display: flex;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
     gap: 40px;
 }
 
-.main .calender .container .calender .header .left-side .date p {
-    font-size: 25px;
+main .first-page .container .content-box .btn-box button {
+    padding: 12px 37.5px;
+    border-radius: 100px;
+    font-size: 12px;
+    letter-spacing: 1px;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    transition: 0.2s ease;
 }
 
-.main .calender .container .calender .bottom {
-    width: 100%;
-    min-height: 205px;
-    background-color: rgb(34, 36, 55);
-    border-radius: 5px;
-    display: flex;
-    flex: 1;
-    justify-content: center;
-    margin-top: 25px;
-    margin-bottom: 23px;
+main .first-page .container .content-box .btn-box #btn-work {
+    color: white;
+    background-color: var(--blue);
 }
 
-.main .calender .container .calender .row {
-    width: 100%;
-    display: flex !important;
-    justify-content: flex-start;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    min-height: 100px;
+main .first-page .container .content-box .btn-box #btn-work:hover {
+    color: white;
+    background-color: var(--darker_blue);
 }
 
-.main .calender .container .calender .rows .calender-item {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    flex: 0.125;
-    background-color: rgba(69, 84, 165, 0.8);
-    border: 1px solid rgb(26, 28, 42);
-    padding: 10px;
+main .first-page .container .content-box .btn-box #btn-hire {
+    color: var(--blue);
+    background-color: white;
 }
 
-
-.main .calender .container .calender .rows .first-row {
-    display: inline;
+main .first-page .container .content-box .btn-box #btn-hire:hover {
+    color: var(--blue);
+    background-color: var(--light_blue);
 }
 
-.main .calender .container .right {
+main .first-page .container .circle-container {
     display: flex;
     flex-direction: column;
-    flex: 0.33;
-    gap: 50px;
+    justify-content: center;
+    align-items: center;
+    gap: 20vh;
+    transition: var(--load-transition-speed) ease;
+    opacity: 0;
+    position: relative;
+    right: 200px;
 }
 
-.main .calender .container .right .add,
-.main .calender .right .information {
-    height: 350px;
-    background-color: rgb(34, 36, 55);
+main .first-page .container .circle-container .row {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 250%;
+}
+
+main .first-page .container .circle-container .circle {
+    min-width: 15px;
+    min-height: 15px;
+    max-width: 15px;
+    max-height: 15px;
+    border: 2.5px solid var(--darker_blue);
+    border-radius: 50%;
+}
+
+main .first-page .container img {
+    width: 25%;
+    mix-blend-mode: multiply;
+    transform: scaleX(-1);
+    transition: var(--load-transition-speed) ease, 0s scaleX;
+    opacity: 0;
+    position: relative;
+    left: 200px;
+}
+
+/* Second Page */
+
+main .second-page {
+    height: 100vh;
+    background-color: var(--dark_blue);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+/* Second Page: Left Side */
+
+main .second-page .left-side {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    min-width: 570px;
+    max-width: 570px;
+    transition: var(--load-transition-speed) ease;
+    position: relative;
+    right: 200px;
+    opacity: 0;
+}
+
+main .second-page .left-side .skills-box {
+    min-width: 426px;
+    padding: 30px 25px;
+    border: 1px solid white;
+    transform: translateY(80px);
+    position: relative;
+    left: -150px;
+    background-color: rgba(1,3,18,0.75);
+    letter-spacing: 2px;
+    box-shadow: 0 0 30px -17.5px white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+main .second-page .left-side .skills-box .html-content,
+main .second-page .left-side .skills-box .css-content,
+main .second-page .left-side .skills-box .javascript-content {
+    width: 100%;
+}
+
+main .second-page .left-side .skills-box .row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+main .second-page .left-side .skills-box .row .percent-box {
+    font-size: 11px;
+    border: 1px solid white;
+    padding: 5px;
     border-radius: 5px;
     display: flex;
     justify-content: center;
+    align-items: center;
+    transform: translateY(-7.5px);
 }
 
-.main .calender .container .right .add .search-box {
-    background-color: rgb(69, 84, 165);
-    height: 35px;
-    width: 200px;
-    border: none;
-    border-radius: 36px;
-    outline: none;
-    color: white;
-    padding-left: 15px;
-    zoom: none;
+main .second-page .left-side .skills-box .row .skill-name {
+    margin-bottom: 4px;
+    font-size: 13px;
 }
 
-.main .calender .container .right .add .search-box::placeholder {
-    color: white;
-    opacity: 0.7;
+main .second-page .left-side .skills-box #title {
+    font-size: 17.5px;
 }
 
-@media screen and (max-width: 1000px) {
+main .second-page .left-side .skills-box .percent-line {
+    min-height: 4px;
+    max-height: 4px;
+    background-color: var(--blue);
+    border-radius: 100px;
+}
 
-    body,
-    html {
-        overflow-x: hidden;
+main .second-page .left-side .skills-box .html-content #html-line {
+    min-width: 300px;
+    max-width: 300px;
+}
+
+main .second-page .left-side .skills-box .css-content #css-line {
+    min-width: 225px;
+    max-width: 225px;
+}
+
+main .second-page .left-side .skills-box .javascript-content #javascript-line {
+    min-width: 37.5px;
+    max-width: 37.5px;
+}
+
+main .second-page .left-side img {
+    width: 375px;
+}
+
+/* Second Page: Right Side */
+
+main .second-page .right-side {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 30px;
+    letter-spacing: 1.5px;
+    transition: var(--load-transition-speed) ease;
+    position: relative;
+    left: 200px;
+    opacity: 0;
+}
+
+main .second-page .right-side #about-title {
+    font-size: 20px;
+    padding: 10px;
+    border: 2px solid white;
+    border-radius: 5px;
+}
+
+main .second-page .right-side #about-paragraph {
+    line-height: 30px;
+    font-size: 15px;
+}
+
+main .second-page .right-side .contact-container {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+main .second-page .right-side .contact-container .column {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 12px;
+}
+
+main .second-page .right-side .contact-container .column .inner-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 2px;
+}
+
+main .second-page .right-side .contact-container .column .inner-column .label {
+    color: var(--blue);
+}
+
+@media (max-width: 768px) {
+    header, header .navbar {
+        flex-direction: column;
     }
 
-    html {
-        min-height: 100%;
-        background: none;
-        background: rgb(26, 28, 42);
+    header .navbar .name_box {
+        width: 100%;
     }
 
-    header {
+    header .navbar .nav_elements_box {
         width: 100%;
         display: flex;
         justify-content: center;
+        align-items: center;
     }
 
-    header * {
-        margin: 10px !important;
+    header .navbar .nav_elements_box ul li {
+        cursor: pointer;
+        font-size: 13px;
     }
 
-    header .first-part,
-    header .second-part {
-        margin: 0 !important;
+    header .navbar .nav_elements_box ul .box {
+        height: 30px;
     }
 
-    header .second-part,
-    header .second-part #profile {
-        margin: 0 !important;
-        margin-left: -20px !important;
+    main .second-page {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 160px;
+        height: calc(100vh + 540px);
     }
 
-    header .first-part #name,
-    header .first-part .fa-code,
-    header .first-part .fa-grip-lines {
-        font-size: 14px;
+    main .second-page .left-side, main .second-page .left-side .skills-box {
+        max-width: calc(100% - 200px);
     }
 
-    header .first-part .fa-search {
-        transform: translateX(-50px);
-    }
-
-    header .first-part .search-box {
-        width: 50px;
-    }
-
-    header .first-part .search-box::placeholder {
-        color: transparent;
-    }
-
-    header .second-part #notification-count {
-        transform: translate(-27px, -7px);
-    }
-
-    .main {
-        position: absolute;
-        bottom: 0;
-        right: 0;
-        width: 100%;
-        height: calc(120% - 70px);
-    }
-
-    .left-sidebar {
-        min-width: 100%;
-        max-height: 0;
-        padding: 0;
+    main .second-page .left-side, main .second-page .right-side {
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
     }
 
-    .left-sidebar .list,
-    .left-sidebar .title {
-        display: none;
-    }
-
-    .left-sidebar .list {
-        margin: 0;
-    }
-
-    .left-sidebar .list li {
-        margin-top: 20px;
-    }
-
-    .left-sidebar .x-list,
-    .left-sidebar .x-list-title {
-        display: none;
-    }
-
-    .left-sidebar .list .right .fa-caret-right {
-        margin-left: 10px;
-    }
-
-    .left-sidebar .menu-list-title {
-        padding-bottom: 2px;
-        border-bottom: 2px solid white;
-    }
-
-    .main .boxen .first-row,
-    .main .boxen .second-row {
-        flex-wrap: wrap;
-    }
-
-    .main .dashboard .boxen .first-row,
-    .main .dashboard .boxen .second-row {
-        margin-left: 0;
-        display: flex;
-        justify-content: center;
-    }
-
-    .main .about .boxen {
-        gap: 30px;
-    }
-
-    .main .dashboard .boxen .box {
-        min-width: calc(100% - 60px);
-    }
-
-    .main .about .boxen .box {
-        min-width: calc(100% - 32px);
-    }
-
-    .main .dashboard .boxen .second-row .box:nth-child(2),
-    .main .about .boxen .second-row .box:nth-child(2),
-    .main .calender .container .right .add,
-    .main .calender .right .information {
-        margin-bottom: 20px;
-    }
-
-    .main .about .boxen .first-row .box {
-        flex: calc(1 / 3 - 0.02 / 2.8);
-    }
-
-    .main .about .boxen .second-row .box {
-        flex: calc(1 / 2 - 0.02 / 1.8);
-    }
-
-    .main .calender .container {
+    main .second-page .right-side .contact-container {
         flex-direction: column;
-        margin: 0 20px;
+        justify-content: center;
+        align-items: center;
+        gap: 12px;
     }
 
-    .main .calender .container .calender .header {
-        padding: 20px;
+    main .second-page .right-side .contact-container .column {
+        justify-content: center;
+        align-items: center;
     }
 
-    .main .calender .container .calender .header .left-side p,
-    .main .calender .container .calender .header .left-side i {
-        font-size: 20px !important;
-        margin: 0 10px;
+    .second-page .right-side #about-paragraph {
+        width: 85%;
     }
 
-    .main .calender .container .calender .header .left-side #date-seperator {
-        margin: 0;
+    main .second-page .left-side img {
+        width: 200px;
     }
 
-    .main .calender .container .calender .header .left-side .date {
-        gap: 0;
+    main .second-page .left-side .skills-box {
+        left: 0;
+        min-width: 0;
+        /* problem */
+        flex: 0.5;
+        width: 90%;
     }
 
-    .main .calender .container .calender .header .fa-pipe {
-        height: 60px !important;
+    header .navbar {
+       display: flex;
+       justify-content: center;
+       align-items: center;
     }
 
-    .main .calender .container .calender {
-        min-width: 100%;
-        max-width: 100%;
+    main .first-page .container .circle-container, main .first-page .container img {
+        display: none;
+    }
+
+    main .first-page .container .content-box {
+        flex: 0.9;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
     }
 }
