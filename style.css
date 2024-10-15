@@ -425,6 +425,8 @@ main .second-page .right-side .contact-container div .column {
 }
 
 main .second-page .right-side .contact-container div .column .inner-column {
+    color: inherit;
+    text-decoration: none;
     display: flex;
     flex-direction: column;
     justify-content: center;
