@@ -206,7 +206,16 @@ main .first-page .container .content-box .btn-box #btn-work {
 }
 
 main .first-page .container .content-box .btn-box #btn-work:hover {
-    background-color: var(--darker_blue);
+    background-color: var(--blue);
+}
+
+main .first-page .container .content-box .btn-box #btn-work:active {
+    background-color: var(--blue);
+}
+
+main .first-page .container .content-box .btn-box #btn-work:focus {
+    background-color: var(--blue);
+    outline: none;  
 }
 
 main .first-page .container .content-box .btn-box #btn-work:active {
@@ -219,7 +228,16 @@ main .first-page .container .content-box .btn-box #btn-hire {
 }
 
 main .first-page .container .content-box .btn-box #btn-hire:hover {
-    background-color: var(--light_blue);
+    background-color: white;
+}
+
+main .first-page .container .content-box .btn-box #btn-hire:active {
+    background-color: white;
+}
+
+main .first-page .container .content-box .btn-box #btn-hire:focus {
+    background-color: white;
+    outline: none; 
 }
 
 main .first-page .container .content-box .btn-box #btn-hire:active {
