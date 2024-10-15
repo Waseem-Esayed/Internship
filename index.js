@@ -44,8 +44,8 @@ document.addEventListener('DOMContentLoaded', function () {
         // Der Bildschirm ist größer als 768px
         window.onscroll = function () {
             if (window.scrollY <= window.innerHeight) {
-                secondPageLeftSide.style.right = (0 - (window.scrollY - 20)) + window.innerHeight + 'px';
-                secondPageRightSide.style.left = (0 - (window.scrollY - 20)) + window.innerHeight + 'px';
+                secondPageLeftSide.style.right = 0 - window.scrollY + window.innerHeight + 'px';
+                secondPageRightSide.style.left = 0 - window.scrollY + window.innerHeight + 'px';
 
                 secondPageLeftSide.style.opacity = 1;
                 secondPageRightSide.style.opacity = 1;
@@ -57,13 +57,13 @@ document.addEventListener('DOMContentLoaded', function () {
     } else {
         window.onscroll = function () {
             if (window.scrollY - window.innerHeight + 1000 <= window.innerHeight) {
-                secondPageLeftSide.style.right = (0 - (window.scrollY - window.innerHeight + 1000 - 20)) + window.innerHeight + 'px';
+                secondPageLeftSide.style.right = (0 - (window.scrollY - window.innerHeight + 1000)) + window.innerHeight + 'px';
                 secondPageLeftSide.style.opacity = 1;
             } else {
                 secondPageLeftSide.style.right = 0;
             }
             if (window.scrollY - window.innerHeight + 500 <= window.innerHeight) {
-                secondPageRightSide.style.left = (0 - (window.scrollY - window.innerHeight + 500 - 20)) + window.innerHeight + 'px';
+                secondPageRightSide.style.left = (0 - (window.scrollY - window.innerHeight + 500)) + window.innerHeight + 'px';
                 secondPageRightSide.style.opacity = 1;
             } else {
                 secondPageRightSide.style.left = 0;
