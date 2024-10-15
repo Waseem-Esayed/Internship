@@ -431,9 +431,26 @@ main .second-page .right-side .contact-container div .column .inner-column {
     min-width: 200px;
 }
 
-main .second-page .right-side .contact-container div .column .inner-column p {
+main .second-page .right-side .contact-container div .column .inner-column p a {
     white-space: nowrap;
-    pointer-events: none;
+    text-decoration: none;
+    color: white;
+}
+
+main .second-page .right-side .contact-container div .column .inner-column p a:visited {
+    color: white;
+}
+
+main .second-page .right-side .contact-container div .column .inner-column p a:hover {
+    color: white;
+}
+
+main .second-page .right-side .contact-container div .column .inner-column p a:active {
+    color: white;
+}
+
+main .second-page .right-side .contact-container div .column .inner-column p a:focus {
+    outline: none;
 }
 
 main .second-page .right-side .contact-container div .column .inner-column .label {
