@@ -292,8 +292,6 @@ main .second-page .left-side {
     max-width: 570px;
     transition: var(--load-transition-speed) linear;
     position: relative;
-    right: 200px;
-    opacity: 0;
 }
 
 main .second-page .left-side .skills-box {
@@ -383,8 +381,6 @@ main .second-page .right-side {
     letter-spacing: 1.5px;
     transition: var(--load-transition-speed) linear, background-color 0.8s linear;
     position: relative;
-    left: 200px;
-    opacity: 0;
 }
 
 main .second-page .right-side #about-title {
@@ -504,10 +500,6 @@ main .second-page .right-side .contact-container div .column .inner-column .labe
         align-items: center;
         padding: 40px 0;
         gap: 40px;
-    }
-
-    main .second-page .left-side {
-        right: 0;
     }
 
     main .second-page .left-side {
