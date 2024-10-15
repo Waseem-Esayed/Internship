@@ -475,7 +475,7 @@ main .second-page .right-side .contact-container div .column .inner-column .labe
     color: var(--blue);
 }
 
-@media (max-width: 768px) {
+@media (max-width: 768px), (orientation: landscape) {
     body {
         height: 100%;
     }
