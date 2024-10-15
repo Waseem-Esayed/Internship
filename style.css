@@ -427,14 +427,14 @@ main .second-page .right-side .contact-container div .column .inner-column {
     gap: 2px;
     flex-wrap: wrap;
     white-space: nowrap;
-    flex: 1 1; /* Gibt jedem inner-column eine flexible Breite und Mindestbreite */
-    min-width: 200px; /* Mindestbreite für jede Spalte */
+    flex: 1 1;
+    min-width: 200px;
 }
 
 main .second-page .right-side .contact-container div .column .inner-column p {
-    white-space: nowrap;
-    color: inherit;
+    color: white;
     text-decoration: none;
+    white-space: nowrap;
 }
 
 main .second-page .right-side .contact-container div .column .inner-column .label {
