@@ -44,8 +44,8 @@ document.addEventListener('DOMContentLoaded', function () {
         // Der Bildschirm ist größer als 768px
         window.onscroll = function () {
             if (window.scrollY <= window.innerHeight) {
-                secondPageLeftSide.style.right = 0 - window.scrollY + window.innerHeight + 'px';
-                secondPageRightSide.style.left = 0 - window.scrollY + window.innerHeight + 'px';
+                secondPageLeftSide.style.right = 0 - window.scrollY + window.innerHeight - 60 + 'px';
+                secondPageRightSide.style.left = 0 - window.scrollY + window.innerHeight - 60 + 'px';
 
                 secondPageLeftSide.style.opacity = 1;
                 secondPageRightSide.style.opacity = 1;
