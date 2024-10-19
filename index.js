@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function () {
-    let navElements = document.querySelectorAll('header .nav_elements_box ul li a');
+    let navElements = document.querySelectorAll('header .nav_elements_box ul div li a');
     let navLine = document.getElementById('home-line');
     let main = document.querySelector("body > main");
     let firstPage = document.querySelector("body > main > div.first-page");
@@ -24,7 +24,6 @@ document.addEventListener('DOMContentLoaded', function () {
             })
             element.style.color = 'rgb(16, 124, 243)';
             element.appendChild(navLine);
-            console.log('selected!');
         }
     })
 
@@ -43,9 +42,10 @@ document.addEventListener('DOMContentLoaded', function () {
     if (window.matchMedia("(min-width: 769px)").matches) {
         // Der Bildschirm ist größer als 768px
         window.onscroll = function () {
+
             if (window.scrollY <= window.innerHeight) {
-                secondPageLeftSide.style.right = 0 - window.scrollY + window.innerHeight - 60 + 'px';
-                secondPageRightSide.style.left = 0 - window.scrollY + window.innerHeight - 60 + 'px';
+                secondPageLeftSide.style.right = 0 - window.scrollY + window.innerHeight + 10 + 'px';
+                secondPageRightSide.style.left = 0 - window.scrollY + window.innerHeight + 10 + 'px';
 
                 secondPageLeftSide.style.opacity = 1;
                 secondPageRightSide.style.opacity = 1;
