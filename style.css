@@ -30,16 +30,16 @@
     --small-screen-header-size: 60px;
 }
 
-html, body, main {
-    overflow-x: hidden;
-}
-
 html {
     scroll-behavior: smooth;
 }
 
 body {
     height: auto;
+}
+
+.first-page, .second-page {
+    overflow-x: hidden;
 }
 
 main .page {
@@ -107,6 +107,7 @@ header #navbar .nav_elements_box ul li {
 }
 
 header #navbar .nav_elements_box ul li a {
+    color: white;
     text-decoration: none;
 }
 
