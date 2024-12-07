@@ -1,0 +1,43 @@
+* {
+  margin: 0;
+  padding: 0;
+  outline: none;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+body {
+  background: rgb(33,39,55);
+  color: rgb(113,119,135);
+  font-family: sans-serif;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+div.container {
+  width: 500px;
+  height: 500px;
+  background-color: rgb(24,24,36);
+  border: 1px solid rgb(24,24,36);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+div.container .box {
+  min-width: 5%;
+  min-height: 5%;
+  border: 1px solid rgb(33,39,55);
+}
+
+div.container .food-element {
+  background-color: yellow;
+  box-shadow: 0 0 10px -1px yellow;
+}
+
+div.container .snake-head {
+  background-color: darkgreen;
+}
