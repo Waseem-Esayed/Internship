@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Islam Quiz</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/668ebba5a9.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <p class="title">Quiz Application</p>
+        <div class="time-box">
+          <p>Time Left</p>
+          <div id="time-counter"></div>
+        </div>
+      </header>
+      <main>
+        <div class="question-container">
+          <span class="current-question-number"></span>
+          <p id="question"></p>
+        </div>
+        <div class="answer-options">
+          <button id="first-option"></button>
+          <button id="second-option"></button>
+          <button id="third-option"></button>
+          <button id="fourth-option"></button>
+        </div>
+      </main>
+      <footer>
+        <p>
+          <span class="current-question-number" id="question-number"></span
+          >of<span id="total-questions"></span>Questions
+        </p>
+        <button class="disabled" id="next-btn">Next Que</button>
+      </footer>
+    </div>
+
+    <script src="script.js" defer></script>
+  </body>
+</html>
