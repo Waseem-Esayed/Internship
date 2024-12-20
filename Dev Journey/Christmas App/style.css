@@ -196,6 +196,7 @@ section.second-section {
 }
 
 .demos-container .demo .shadow {
+  width: 0;
   background-color: rgba(49, 49, 49, 0.5);
   position: absolute;
   top: 50%;
