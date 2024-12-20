@@ -213,7 +213,7 @@ section.third-section {
   justify-content: flex-start;
   align-items: center;
   background-color: rgb(247, 249, 248);
-  margin-bottom: 0;
+  margin-bottom: -44px;
   padding-bottom: 30px;
 }
 
