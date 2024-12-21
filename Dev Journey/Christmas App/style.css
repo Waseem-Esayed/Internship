@@ -41,6 +41,7 @@ section.first-section {
 }
 
 .first-section .content {
+  max-width: 90%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -126,7 +127,7 @@ section.second-section {
 .demos-container .demo {
   min-width: 470px;
   max-width: 600px;
-  background-image: url("Images/banner.png");
+  background-image: url("images/banner.png");
   background-repeat: no-repeat;
   background-size: cover;
   border-radius: 0 10px 10px 0;
