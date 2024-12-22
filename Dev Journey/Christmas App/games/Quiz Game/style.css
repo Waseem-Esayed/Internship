@@ -184,6 +184,7 @@ main .question-container span {
   padding: 8px 20px 8px 10px;
   text-align: left;
   background-color: var(--lighter-plus-main-color);
+  color: black;
   display: flex;
   justify-content: space-between;
   border: 1px solid var(--lighter-main-color);
