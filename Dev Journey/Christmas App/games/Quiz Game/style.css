@@ -180,7 +180,7 @@ main .question-container span {
 
 .answer-options button {
   width: 100%;
-  max-height: 34px;
+  max-height: 33px;
   padding: 8px 20px 8px 10px;
   text-align: left;
   background-color: var(--lighter-plus-main-color);
