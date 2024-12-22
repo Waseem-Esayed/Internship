@@ -19,6 +19,35 @@ body {
   overflow: visible;
 }
 
+.countdown-section {
+  text-align: center;
+  padding: 50px;
+  background-color: #f7f9f8;
+  margin-bottom: auto;
+}
+.countdown-section h2 {
+  margin-bottom: 20px;
+}
+#countdown-timer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  font-size: 1rem;
+}
+#countdown-timer div {
+  background: #234;
+  color: white;
+  padding: 10px;
+  border-radius: 10px;
+  min-width: 100px;
+}
+#countdown-timer span {
+  display: block;
+  font-size: 3rem;
+}
+
 .snowflake {
   position: absolute;
   top: 0;
