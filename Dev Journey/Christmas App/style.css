@@ -368,20 +368,6 @@ section.third-section {
   inherits: false;
 }
 
-.third-section .feature::after,
-.third-section .feature::before {
-  content: "";
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  border-radius: 10px;
-  z-index: -1;
-  animation: 5s spin linear infinite;
-}
-
 @keyframes spin {
   from {
     --angle: 0deg;
@@ -391,17 +377,10 @@ section.third-section {
   }
 }
 
-.third-section .feature::before {
-  filter: blur(1.5rem);
-  opacity: 0.5;
-}
-
-.third-section .feature:hover {
-  transform: translateY(-8px);
-}
-
-.third-section .feature:hover::before,
-.third-section .feature:hover::after {
+.third-section .feature:hover,
+.third-section .feature:hover,
+.third-section .feature:focus,
+.third-section .feature:focus {
   background-image: conic-gradient(
     from var(--angle),
     rgba(255, 69, 69, 0.5),
@@ -410,6 +389,7 @@ section.third-section {
     rgba(255, 0, 149, 0.5),
     rgba(255, 69, 69, 0.5)
   );
+  transform: translateY(-8px);
 }
 
 .third-section .feature:hover figcaption {
@@ -482,6 +462,17 @@ footer {
   }
 }
 
+@media (max-width: 576px) {
+  .demos-container .demo .new-label {
+    font-size: 0.8rem;
+    padding: 4px 12px;
+  }
+  .third-section .feature {
+    flex: 1 1 calc((100% / 1) - 40px);
+    max-width: 80%;
+  }
+}
+
 @media (hover: none) and (pointer: coarse) {
   .second-section .demos-container .demo {
     background-position: center;
@@ -493,25 +484,5 @@ footer {
     transform: translate(-50%, -50%);
     opacity: 1;
   }
-  .third-section .feature:hover,
-  .third-section .feature:focus,
-  .third-section .feature:active {
-    transform: translateY(-8px);
-  }
-
-  .third-section .feature:hover::before,
-  .third-section .feature:hover::after,
-  .third-section .feature:focus::before,
-  .third-section .feature:focus::after,
-  .third-section .feature:active::before,
-  .third-section .feature:active::after {
-    background-image: conic-gradient(
-      from var(--angle),
-      rgba(255, 69, 69, 0.5),
-      rgba(0, 255, 153, 0.5),
-      rgba(0, 106, 255, 0.5),
-      rgba(255, 0, 149, 0.5),
-      rgba(255, 69, 69, 0.5)
-    );
-  }
 }
+
