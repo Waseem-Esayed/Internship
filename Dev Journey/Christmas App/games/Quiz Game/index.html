@@ -4,11 +4,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
-    <title>Dev Journey | Christmas Quiz</title>
+    <title>Dev Journey | Christmas App</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
       rel="stylesheet"
     />
     <script
@@ -17,34 +17,116 @@
     ></script>
   </head>
   <body>
-    <div class="container">
-      <header>
-        <p class="title">Quiz Application</p>
-        <div class="time-box">
-          <p>Time Left</p>
-          <div id="time-counter"></div>
+    <main>
+      <section class="first-section">
+        <div class="content">
+          <h1>
+            Get Memorable Impressions <br />
+            from this Year
+          </h1>
+          <p id="description">
+            Feel the magic of Christmas with <br />
+            Christmas-based games
+          </p>
+          <a href="#" id="buy-now-btn">Buy Now</a>
         </div>
-      </header>
-      <main>
-        <div class="question-container">
-          <span class="current-question-number"></span>
-          <p id="question"></p>
+      </section>
+      <section class="second-section">
+        <h2 id="title">Main Demos</h2>
+        <div class="demos-container">
+          <div class="row">
+            <div class="demo first-demo">
+              <div class="new-label">New</div>
+              <div class="shadow"></div>
+              <a class="button">View</a>
+            </div>
+            <div class="demo second-demo">
+              <div class="new-label">New</div>
+              <div class="shadow"></div>
+              <a class="button">View</a>
+            </div>
+          </div>
+          <div class="row">
+            <div class="demo third-demo">
+              <div class="shadow"></div>
+              <a class="button">View</a>
+            </div>
+            <div class="demo fourth-demo">
+              <div class="shadow"></div>
+              <a class="button">View</a>
+            </div>
+          </div>
         </div>
-        <div class="answer-options">
-          <button id="first-option"></button>
-          <button id="second-option"></button>
-          <button id="third-option"></button>
-          <button id="fourth-option"></button>
+      </section>
+      <section class="third-section">
+        <h2 id="title">Template Features</h2>
+        <div class="feature-container">
+          <div class="feature">
+            <figure>
+              <img src="images/responsive.png" />
+              <figcaption>Responsive</figcaption>
+            </figure>
+          </div>
+          <div class="feature">
+            <figure>
+              <img src="images/support.png" />
+              <figcaption>Dedicated Support</figcaption>
+            </figure>
+          </div>
+          <div class="feature">
+            <figure>
+              <img src="images/seo.png" />
+              <figcaption>SEO Optimized</figcaption>
+            </figure>
+          </div>
+          <div class="feature">
+            <figure>
+              <img src="images/smooth.png" />
+              <figcaption>Smooth Effects</figcaption>
+            </figure>
+          </div>
+          <div class="feature">
+            <figure>
+              <img src="images/bootstrap.png" />
+              <figcaption>Bootstrap</figcaption>
+            </figure>
+          </div>
+          <div class="feature">
+            <figure>
+              <img src="images/compatibility.png" />
+              <figcaption>Broswer Compatibility</figcaption>
+            </figure>
+          </div>
+          <div class="feature">
+            <figure>
+              <img src="images/frontend.png" />
+              <figcaption>Complete Frontend</figcaption>
+            </figure>
+          </div>
+          <div class="feature">
+            <figure>
+              <img src="images/backend.png" />
+              <figcaption>Complete Backend</figcaption>
+            </figure>
+          </div>
         </div>
-      </main>
-      <footer>
-        <p>
-          <span class="current-question-number" id="question-number"></span
-          >of<span id="total-questions"></span>Questions
-        </p>
-        <button class="disabled" id="next-btn">Next Que</button>
-      </footer>
-    </div>
+      </section>
+    </main>
+
+    <section class="countdown-section">
+      <h2>Countdown to Christmas</h2>
+      <div id="countdown-timer">
+        <div><span id="days"></span>Days</div>
+        <div><span id="hours"></span>Hours</div>
+        <div><span id="minutes"></span>Minutes</div>
+        <div><span id="seconds"></span>Seconds</div>
+      </div>
+    </section>
+
+    <footer>
+      <p>Copyrights &copy; 2024 Design by Waseem</p>
+      <!-- <a href="https://www.freepik.com/search">Icon by surang</a> -->
+    </footer>
 
     <script src="script.js" defer></script>
   </body>
