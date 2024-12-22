@@ -19,6 +19,21 @@ body {
   overflow: visible;
 }
 
+.snowflake {
+  position: absolute;
+  top: 0;
+  color: white;
+  font-size: 1em;
+  opacity: 0.8;
+  animation: fall linear infinite;
+}
+
+@keyframes fall {
+  to {
+    transform: translateY(100vh);
+  }
+}
+
 section {
   height: auto;
   margin-bottom: 30px;
@@ -58,7 +73,7 @@ section.first-section {
   font-size: 1.2rem;
 }
 
-.first-section button {
+.first-section a {
   color: white;
   background-color: rgb(234, 4, 4);
   padding: 15px 60px;
@@ -68,15 +83,16 @@ section.first-section {
   cursor: pointer;
   position: relative;
   z-index: 1;
+  text-decoration: none;
 }
 
-.first-section button::before {
+.first-section a::before {
   content: "";
   position: absolute;
-  top: -5px;
-  bottom: -5px;
-  left: -5px;
-  right: -5px;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
   background: linear-gradient(to top right, rgb(60, 60, 60), rgb(47, 42, 42));
   transform: scaleX(0);
   transform-origin: right;
@@ -84,8 +100,8 @@ section.first-section {
   z-index: -1;
 }
 
-.first-section button:hover::before,
-.first-section button:focus::before {
+.first-section a:hover::before,
+.first-section a:focus::before {
   transform: scaleX(1);
   transform-origin: left;
 }
@@ -113,7 +129,7 @@ section.second-section {
 .demos-container .row {
   width: 100%;
   display: flex;
-  flex: row;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
@@ -127,16 +143,48 @@ section.second-section {
 .demos-container .demo {
   min-width: 470px;
   max-width: 600px;
-  background-image: url("images/banner.png");
   background-repeat: no-repeat;
   background-size: cover;
   border-radius: 0 10px 10px 0;
   position: relative;
-  transition: 200ms border-radius ease-in-out;
+  transition: 200ms border-radius ease-in-out,
+    200ms background-position ease-in-out;
 }
 
 .demos-container .demo:hover {
   border-radius: 0;
+}
+
+.demos-container .first-demo {
+  background-image: url("images/connect\ four\ banner.jpg");
+  background-position: top;
+}
+.demos-container .second-demo {
+  background-image: url("images/snake\ banner.png");
+  background-position: 50% 70%;
+  background-size: 70%;
+}
+.demos-container .third-demo {
+  background-image: url("images/quiz\ banner.png");
+  background-position: 50% 20px;
+}
+.demos-container .fourth-demo {
+  background-image: url("images/memory\ card\ banner.png");
+  background-position: 50% 70%;
+  background-size: 70%;
+}
+
+.demos-container .first-demo:hover {
+  background-position: center;
+}
+.demos-container .second-demo:hover {
+  background-position: 50% 50%;
+}
+.demos-container .third-demo:hover {
+  background-position: 50% 50%;
+}
+.demos-container .fourth-demo:hover {
+  background-position: 50% 50%;
 }
 
 .demos-container .demo .shadow {
@@ -194,7 +242,7 @@ section.second-section {
   }
 }
 
-.demos-container .demo:hover button {
+.demos-container .demo:hover a {
   transform: translate(-50%, -50%);
   opacity: 1;
 }
@@ -212,14 +260,14 @@ section.second-section {
   border-bottom-right-radius: 10px;
 }
 
-.demos-container .demo button {
+.demos-container .demo a {
   font-size: 1rem;
   color: white;
   background-color: rgb(234, 4, 4);
   padding: 13px 24px;
   border-radius: 50px;
   cursor: pointer;
-  position: relative;
+  position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, 50%);
@@ -228,7 +276,7 @@ section.second-section {
   z-index: 1;
 }
 
-.demos-container .demo button::before {
+.demos-container .demo a::before {
   content: "";
   position: absolute;
   top: 0;
@@ -242,8 +290,8 @@ section.second-section {
   z-index: -1;
 }
 
-.demos-container .demo button:hover::before,
-.demos-container .demo button:hover::before {
+.demos-container .demo a:hover::before,
+.demos-container .demo a:focus::before {
   transform: scaleX(1);
 }
 
@@ -280,10 +328,58 @@ section.third-section {
   border-radius: 7.5px;
   transition: 200ms transform ease-in-out;
   cursor: default;
+  position: relative;
+  overflow: visible;
+}
+
+@property --angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+
+.third-section .feature::after,
+.third-section .feature::before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 10px;
+  z-index: -1;
+  animation: 5s spin linear infinite;
+}
+
+@keyframes spin {
+  from {
+    --angle: 0deg;
+  }
+  to {
+    --angle: 360deg;
+  }
+}
+
+.third-section .feature::before {
+  filter: blur(1.5rem);
+  opacity: 0.5;
 }
 
 .third-section .feature:hover {
   transform: translateY(-8px);
+}
+
+.third-section .feature:hover::before,
+.third-section .feature:hover::after {
+  background-image: conic-gradient(
+    from var(--angle),
+    rgba(255, 69, 69, 0.5),
+    rgba(0, 255, 153, 0.5),
+    rgba(0, 106, 255, 0.5),
+    rgba(255, 0, 149, 0.5),
+    rgba(255, 69, 69, 0.5)
+  );
 }
 
 .third-section .feature:hover figcaption {
@@ -364,5 +460,18 @@ footer {
   .third-section .feature {
     flex: 1 1 calc((100% / 1) - 40px);
     max-width: 80%;
+  }
+}
+
+@media (hover: none) and (pointer: coarse) {
+  .demos-container .demo {
+    background-position: center;
+  }
+  .second-section .demo .shadow {
+    display: none;
+  }
+  .second-section .demos-container .demo a {
+    transform: translate(-50%, -50%);
+    opacity: 1;
   }
 }
