@@ -396,8 +396,7 @@ section.third-section {
   opacity: 0.5;
 }
 
-.third-section .feature:hover,
-.third-section .feature:focus {
+.third-section .feature:hover {
   transform: translateY(-8px);
 }
 
@@ -483,19 +482,8 @@ footer {
   }
 }
 
-@media (max-width: 576px) {
-  .demos-container .demo .new-label {
-    font-size: 0.8rem;
-    padding: 4px 12px;
-  }
-  .third-section .feature {
-    flex: 1 1 calc((100% / 1) - 40px);
-    max-width: 80%;
-  }
-}
-
 @media (hover: none) and (pointer: coarse) {
-  .demos-container .demo {
+  .second-section .demos-container .demo {
     background-position: center;
   }
   .second-section .demo .shadow {
@@ -504,5 +492,25 @@ footer {
   .second-section .demos-container .demo a {
     transform: translate(-50%, -50%);
     opacity: 1;
+  }
+  .third-section .feature:focus,
+  .third-section .feature:active {
+    transform: translateY(-8px);
+  }
+
+  .third-section .feature:hover::before,
+  .third-section .feature:hover::after,
+  .third-section .feature:focus::before,
+  .third-section .feature:active::after,
+  .third-section .feature:active::before,
+  .third-section .feature:active::after {
+    background-image: conic-gradient(
+      from var(--angle),
+      rgba(255, 69, 69, 0.5),
+      rgba(0, 255, 153, 0.5),
+      rgba(0, 106, 255, 0.5),
+      rgba(255, 0, 149, 0.5),
+      rgba(255, 69, 69, 0.5)
+    );
   }
 }
