@@ -9,6 +9,12 @@ demos.forEach((element) => {
     element.style.height =
       parseFloat(window.getComputedStyle(element).width) - 70 + "px";
   };
+  element.onmouseleave = function () {
+    element.classList.add("leave");
+  };
+  element.onmouseenter = function () {
+    element.classList.remove("leave");
+  };
 });
 
 shadows.forEach((element) => {
@@ -46,3 +52,20 @@ function setFeatureWidth() {
 setFeatureWidth();
 
 window.onresize = setFeatureWidth;
+
+function createSnowflake() {
+  const snowflake = document.createElement("i");
+  snowflake.classList.add("fas", "fa-snowflake", "snowflake");
+  snowflake.style.left = Math.random() * window.innerWidth + "px";
+  snowflake.style.animationDuration = Math.random() * 3 + 2 + "s";
+  snowflake.style.opacity = Math.random();
+  snowflake.style.fontSize = Math.random() * 10 + 10 + "px";
+
+  document.body.appendChild(snowflake);
+
+  setTimeout(() => {
+    snowflake.remove();
+  }, Math.random() * 3000 + 2000);
+}
+
+setInterval(createSnowflake, 200);
