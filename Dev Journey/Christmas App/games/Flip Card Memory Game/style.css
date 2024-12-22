@@ -9,7 +9,7 @@
 }
 
 body {
-  background-color: white;
+  background-color: hsl(245, 40%, 85%);
   font-family: Arial, Helvetica, sans-serif;
   height: 100vh;
   display: flex;
