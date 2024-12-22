@@ -239,6 +239,33 @@ const startGame = () => {
       location.reload();
     }
   }
+
+  let startX, startY, endX, endY;
+  gameContainer.addEventListener("touchstart", function (e) {
+    startX = e.touches[0].clientX;
+    startY = e.touches[0].clientY;
+  });
+  gameContainer.addEventListener("touchmove", function (e) {
+    endX = e.touches[0].clientX;
+    endY = e.touches[0].clientY;
+  });
+  gameContainer.addEventListener("touchend", function () {
+    let deltaX = endX - startX;
+    let deltaY = endY - startY;
+    if (Math.abs(deltaX) > Math.abs(deltaY)) {
+      if (deltaX > 0 && !moveRight && !moveLeft) {
+        moveByKey("right", false, false, false, true);
+      } else if (deltaX < 0 && !moveLeft && !moveRight) {
+        moveByKey("left", false, false, true, false);
+      }
+    } else {
+      if (deltaY > 0 && !moveDown && !moveUp) {
+        moveByKey("down", false, true, false, false);
+      } else if (deltaY < 0 && !moveUp && !moveDown) {
+        moveByKey("up", true, false, false, false);
+      }
+    }
+  });
 };
 
 playBtn.onclick = startGame;
