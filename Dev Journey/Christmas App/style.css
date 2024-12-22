@@ -493,6 +493,7 @@ footer {
     transform: translate(-50%, -50%);
     opacity: 1;
   }
+  .third-section .feature:hover,
   .third-section .feature:focus,
   .third-section .feature:active {
     transform: translateY(-8px);
@@ -501,7 +502,7 @@ footer {
   .third-section .feature:hover::before,
   .third-section .feature:hover::after,
   .third-section .feature:focus::before,
-  .third-section .feature:active::after,
+  .third-section .feature:focus::after,
   .third-section .feature:active::before,
   .third-section .feature:active::after {
     background-image: conic-gradient(
