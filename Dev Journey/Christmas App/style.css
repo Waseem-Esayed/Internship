@@ -395,7 +395,8 @@ section.third-section {
   opacity: 0.5;
 }
 
-.third-section .feature:hover {
+.third-section .feature:hover,
+.third-section .feature:focus {
   transform: translateY(-8px);
 }
 
