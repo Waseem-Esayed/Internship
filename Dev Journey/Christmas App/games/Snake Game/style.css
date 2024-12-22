@@ -1,0 +1,141 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: none;
+  outline: none;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+body {
+  background-color: rgb(33, 39, 55);
+  color: rgb(113, 119, 135);
+  font-family: sans-serif;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.snowflake {
+  position: absolute;
+  top: 0;
+  z-index: 1000;
+  color: white;
+  font-size: 1em;
+  opacity: 0.8;
+  animation: fall linear infinite;
+}
+
+@keyframes fall {
+  to {
+    transform: translateY(100vh);
+  }
+}
+
+div.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+
+header {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+button {
+  background-color: rgb(24, 24, 36);
+  color: white;
+  font-size: 1rem;
+  padding: 7.5px 15px;
+  border: none;
+  border-radius: 500px;
+  letter-spacing: 1px;
+  cursor: pointer;
+  position: relative;
+}
+
+button:disabled {
+  background-color: #ccc;
+  color: #666;
+  cursor: default;
+  opacity: 0.7;
+}
+
+#points-label {
+  font-weight: bold;
+  color: white;
+  font-size: 1.25rem;
+}
+
+#points-count {
+  font-weight: initial;
+  letter-spacing: 2px;
+  margin-left: 7.5px;
+}
+
+form {
+  color: white;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+form select {
+  padding: 5px 7.5px;
+  border-radius: 2px;
+}
+
+div.game-container {
+  width: 500px;
+  height: 500px;
+  background-color: rgb(24, 24, 36);
+  border: 1px solid rgb(24, 24, 36);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+div.game-container .box {
+  min-width: 5%;
+  min-height: 5%;
+  /* border: 1px solid rgb(33, 39, 55); */
+}
+
+div.game-container .food-element {
+  background-color: yellow;
+  box-shadow: 0 0 10px -1px yellow;
+}
+
+div.game-container .snake-head {
+  background-color: red;
+}
+
+@media screen and (max-width: 550px) {
+  div.container {
+    width: 100%;
+  }
+  div.game-container {
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  header {
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+  }
+  div.container {
+    gap: 10px;
+  }
+}
