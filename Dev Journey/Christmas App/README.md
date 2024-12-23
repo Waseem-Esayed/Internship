@@ -1,35 +1,31 @@
 # Quest of Legends
 
-**Live Demo:** [Quest of Legends](https://waseem-esayed.github.io/Internship/Dev%20Journey/Christmas%20App/index.html)  
-**GitHub Repository:** [questofleg](https://github.com/AmnaAs1f/questofleg)
+**Live Demo:** [Dev Journey | Christmas Website](https://waseem-esayed.github.io/Internship/Dev%20Journey/Christmas%20App/index.html)  
+**GitHub Repository:** [Christmas App]([https://github.com/AmnaAs1f/questofleg](https://github.com/Waseem-Esayed/Internship/tree/main/Dev%20Journey/Christmas%20App))
 
 ---
 
-Welcome to the official website for **Quest of Legends**, an immersive adventure game. This site serves as a comprehensive hub for game enthusiasts, offering insights into characters, gameplay features, trailers, and exclusive preorder offers.
+Welcome to the official website for **Dev Journey | Christmas Website**, a festive and interactive web application designed to bring the magic of Christmas to life. This site serves as a hub for users to enjoy Christmas-themed features and games.
 
-This project was built in collaboration between [Amna Asif](https://github.com/AmnaAs1f) and [Jefferson](https://github.com/robbyjhay), who contributed to the design, structure, and overall development of the website.
+games. This project was built by [Waseem Esayed](https://github.com/Waseem-Esayed), who contributed to the design, structure, and overall development of the website.
 
 ## Features
 
-- **Navigation & Responsiveness:** A responsive navigation bar with a burger menu for mobile devices.
+- **Responsiveness:** A responsive website for all devices.
 
-- **Hero Section:** Highlighting the core concept of the game with a compelling headline, visuals, and a call-to-action.
+- **Header:** An introduction to the website.
 
-- **Game Elements:** Showcasing the primary features like Weaponry Arsenal, Legendary Heroes, and Global Domination.
+- **Christmas-based Games:** Enjoyable games designed to capture the festive spirit of Christmas.
 
-- **Device Availability:** Information about platform compatibility (Windows, Mac, PlayStation, Xbox, etc.).
+- **Main Demos:** Showcasing the main demos with engaging visual effects and hover animations.
 
-- **Trailer:** An embedded trailer for players to preview the game action.
+- **Template Features:** Presenting the key template features like responsive design, dedicated support, SEO
 
-- **Gallery:** Interactive gallery with a lightbox modal for showcasing in-game images.
+- **Countdown Timer:** A dynamic countdown to Christmas, enhancing the anticipation.
 
-- **Character Profiles:** Introduction to the main characters of the game with stunning visuals.
+- **Footer Section:** Copyright information.
 
-- **Preorder Section:** Options for pre-ordering the game in both Standard and Collector's editions.
-
-- **Countdown Timer:** A dynamic countdown to the official game launch.
-
-- **Footer Section:** Links to important pages such as About, Help, and Social Media platforms.
+- **Snow Animations:** Falling snow animations over the introduction
 
 ## Technologies Used
 
