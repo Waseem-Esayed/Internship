@@ -3,21 +3,32 @@
 **Live Demo:** [Quest of Legends](https://waseem-esayed.github.io/Internship/Dev%20Journey/Christmas%20App/index.html)  
 **GitHub Repository:** [questofleg](https://github.com/AmnaAs1f/questofleg)
 
-Welcome to the official website for Quest of Legends, an immersive adventure game. This site serves as a comprehensive hub for game enthusiasts, offering insights into characters, gameplay features, trailers, and exclusive preorder offers.
+---
+
+Welcome to the official website for **Quest of Legends**, an immersive adventure game. This site serves as a comprehensive hub for game enthusiasts, offering insights into characters, gameplay features, trailers, and exclusive preorder offers.
 
 This project was built in collaboration between [Amna Asif](https://github.com/AmnaAs1f) and [Jefferson](https://github.com/robbyjhay), who contributed to the design, structure, and overall development of the website.
 
 ## Features
 
 - **Navigation & Responsiveness:** A responsive navigation bar with a burger menu for mobile devices.
+
 - **Hero Section:** Highlighting the core concept of the game with a compelling headline, visuals, and a call-to-action.
+
 - **Game Elements:** Showcasing the primary features like Weaponry Arsenal, Legendary Heroes, and Global Domination.
+
 - **Device Availability:** Information about platform compatibility (Windows, Mac, PlayStation, Xbox, etc.).
+
 - **Trailer:** An embedded trailer for players to preview the game action.
+
 - **Gallery:** Interactive gallery with a lightbox modal for showcasing in-game images.
+
 - **Character Profiles:** Introduction to the main characters of the game with stunning visuals.
+
 - **Preorder Section:** Options for pre-ordering the game in both Standard and Collector's editions.
+
 - **Countdown Timer:** A dynamic countdown to the official game launch.
+
 - **Footer Section:** Links to important pages such as About, Help, and Social Media platforms.
 
 ## Technologies Used
