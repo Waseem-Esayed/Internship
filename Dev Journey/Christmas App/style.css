@@ -381,6 +381,10 @@ section.third-section {
 .third-section .feature:hover,
 .third-section .feature:focus,
 .third-section .feature:focus {
+  animation-name: spin;
+  animation-duration: 5s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
   background-image: conic-gradient(
     from var(--angle),
     rgba(255, 69, 69, 0.5),
@@ -485,4 +489,3 @@ footer {
     opacity: 1;
   }
 }
-
