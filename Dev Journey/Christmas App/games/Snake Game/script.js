@@ -8,6 +8,14 @@ window.onresize = function () {
   gameContainer.style.height = window.getComputedStyle(gameContainer).width;
 };
 
+if (window.innerWidth >= window.innerHeight) {
+  gameContainer.style.width = window.innerWidth / 2.4 + "px";
+  gameContainer.style.height = window.innerWidth / 2.4 + "px";
+} else {
+  gameContainer.style.width = window.innerHeight / 2.4 + "px";
+  gameContainer.style.height = window.innerHeight / 2.4 + "px";
+}
+
 const startGame = () => {
   playBtn.disabled = true;
   dropdown.disabled = true;
@@ -26,24 +34,24 @@ const startGame = () => {
       speed = 90;
   }
 
-  for (let i = 1; i <= 400; i++) {
+  for (let i = 1; i <= 900; i++) {
     let innerBox = document.createElement("div");
     innerBox.classList.add("box");
     innerBox.id = `box-${i}`;
     // innerBox.setAttribute("title", innerBox.id);
-    if (i % 20 === 1) {
+    if (i % 30 === 1) {
       innerBox.classList.add("edge-box");
       innerBox.style.borderLeftWidth = "0";
     }
-    if (i % 20 === 0) {
+    if (i % 30 === 0) {
       innerBox.classList.add("edge-box");
       innerBox.style.borderRightWidth = "0";
     }
-    if (i <= 20) {
+    if (i <= 30) {
       innerBox.classList.add("edge-box");
       innerBox.style.borderTopWidth = "0";
     }
-    if (i >= 381) {
+    if (i >= 871) {
       innerBox.classList.add("edge-box");
       innerBox.style.borderBottomWidth = "0";
     }
@@ -63,27 +71,44 @@ const startGame = () => {
 
   function setMark() {
     if (randFoodPos) foodElement.classList.remove("food-element");
-    do {
-      randFoodPos = Math.floor(Math.random() * 400) + 1;
-    } while (
-      document
-        .getElementById(`box-${randFoodPos}`)
-        .classList.contains("edge-box") ||
-      document
-        .getElementById(`box-${randFoodPos}`)
-        .classList.contains("snake-head") ||
-      document
-        .getElementById(`box-${randFoodPos}`)
-        .classList.contains("snake-body")
-    );
+    if (snakeHeadPos) {
+      do {
+        randFoodPos = Math.floor(Math.random() * 900) + 1;
+      } while (
+        snakeHeadPos === randFoodPos ||
+        document
+          .getElementById(`box-${randFoodPos}`)
+          .classList.contains("edge-box") ||
+        document
+          .getElementById(`box-${randFoodPos}`)
+          .classList.contains("snake-head") ||
+        document
+          .getElementById(`box-${randFoodPos}`)
+          .classList.contains("snake-body")
+      );
+    } else {
+      do {
+        randFoodPos = Math.floor(Math.random() * 900) + 1;
+      } while (
+        document
+          .getElementById(`box-${randFoodPos}`)
+          .classList.contains("edge-box") ||
+        document
+          .getElementById(`box-${randFoodPos}`)
+          .classList.contains("snake-head") ||
+        document
+          .getElementById(`box-${randFoodPos}`)
+          .classList.contains("snake-body")
+      );
+    }
     foodElement = document.getElementById(`box-${randFoodPos}`);
     foodElement.classList.add("food-element");
   }
 
   function SnakeStart() {
-    snakeHeadPos = Math.floor(Math.random() * 400) + 1;
+    snakeHeadPos = Math.floor(Math.random() * 900) + 1;
     while (snakeHeadPos === randFoodPos) {
-      snakeHeadPos = Math.floor(Math.random() * 400) + 1;
+      snakeHeadPos = Math.floor(Math.random() * 900) + 1;
     }
     snakeBody.push(snakeHeadPos);
     snakeHead = document.getElementById(`box-${snakeHeadPos}`);
@@ -141,28 +166,28 @@ const startGame = () => {
       }
 
       if (direction === "left") {
-        if (snakeHeadPos % 20 === 1) {
-          snakeHeadPos += 19;
+        if (snakeHeadPos % 30 === 1) {
+          snakeHeadPos += 29;
         } else {
           snakeHeadPos -= 1;
         }
       } else if (direction === "right") {
-        if (snakeHeadPos % 20 === 0) {
-          snakeHeadPos -= 19;
+        if (snakeHeadPos % 30 === 0) {
+          snakeHeadPos -= 29;
         } else {
           snakeHeadPos += 1;
         }
       } else if (direction === "up") {
-        if (snakeHeadPos <= 20) {
-          snakeHeadPos += 380;
+        if (snakeHeadPos <= 30) {
+          snakeHeadPos += 870;
         } else {
-          snakeHeadPos -= 20;
+          snakeHeadPos -= 30;
         }
       } else if (direction === "down") {
-        if (snakeHeadPos >= 381) {
-          snakeHeadPos -= 380;
+        if (snakeHeadPos >= 871) {
+          snakeHeadPos -= 870;
         } else {
-          snakeHeadPos += 20;
+          snakeHeadPos += 30;
         }
       }
 
@@ -210,13 +235,13 @@ const startGame = () => {
       } else if (direction === "right") {
         newSegmentPos = snakeBody[snakeBody.length - 1] - 1;
       } else if (direction === "up") {
-        newSegmentPos = snakeBody[snakeBody.length - 1] + 20;
+        newSegmentPos = snakeBody[snakeBody.length - 1] + 30;
       } else if (direction === "down") {
-        newSegmentPos = snakeBody[snakeBody.length - 1] - 20;
+        newSegmentPos = snakeBody[snakeBody.length - 1] - 30;
       }
 
       if (snakeBody.includes(newSegmentPos)) {
-        for (let i = 1; i <= 400; i++) {
+        for (let i = 1; i <= 900; i++) {
           if (!snakeBody.includes(i)) {
             newSegmentPos = i;
             break;
@@ -224,7 +249,7 @@ const startGame = () => {
         }
       }
 
-      speed -= 4;
+      speed -= 3;
       points++;
       DOMPointsCount.innerHTML = points;
       snakeBody.push(newSegmentPos);
