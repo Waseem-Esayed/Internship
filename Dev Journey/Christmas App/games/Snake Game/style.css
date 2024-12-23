@@ -4,7 +4,6 @@
   border: none;
   outline: none;
   box-sizing: border-box;
-  overflow: hidden;
 }
 
 body {
@@ -95,8 +94,6 @@ form select {
 }
 
 div.game-container {
-  width: 500px;
-  height: 500px;
   background-color: rgb(24, 24, 36);
   border: 1px solid rgb(24, 24, 36);
   display: flex;
@@ -106,8 +103,8 @@ div.game-container {
 }
 
 div.game-container .box {
-  min-width: 5%;
-  min-height: 5%;
+  min-width: calc(100% / 30);
+  min-height: calc(100% / 30);
   /* border: 1px solid rgb(33, 39, 55); */
 }
 
