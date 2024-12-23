@@ -1,7 +1,7 @@
 # Quest of Legends
 
 **Live Demo:** [Dev Journey | Christmas Website](https://waseem-esayed.github.io/Internship/Dev%20Journey/Christmas%20App/index.html)  
-**GitHub Repository:** [Christmas App]([https://github.com/AmnaAs1f/questofleg](https://github.com/Waseem-Esayed/Internship/tree/main/Dev%20Journey/Christmas%20App))
+**GitHub Repository:** [Christmas App](https://github.com/Waseem-Esayed/Internship/tree/main/Dev%20Journey/Christmas%20App)
 
 ---
 
