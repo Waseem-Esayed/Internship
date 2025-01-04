@@ -2,7 +2,6 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  overflow: hidden;
 }
 
 body {
@@ -17,12 +16,12 @@ body {
 }
 
 body .all-page-content-container {
-  max-width: 85%;
   display: flex;
   flex-direction: row-reverse;
   justify-content: center;
   align-items: flex-start;
   gap: 50px;
+  margin: 25px 0;
 }
 
 /* Themes */
@@ -32,7 +31,6 @@ body .all-page-content-container {
   align-items: center;
   align-items: center;
   gap: 15px;
-  padding: 15px;
   border-radius: 1rem;
 }
 
@@ -63,7 +61,6 @@ body .all-page-content-container {
   transition: 200ms opacity ease-in-out;
   opacity: 0.7;
   position: relative;
-  overflow: visible;
   margin-bottom: 20px;
 }
 
@@ -314,20 +311,16 @@ header {
 
 main {
   width: 100%;
-  height: calc(100vh - 188px);
   padding: 0 20px;
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
   align-items: flex-start;
   gap: 20px;
+  overflow-y: hidden;
   overflow-x: scroll;
   scroll-snap-type: x mandatory;
   scrollbar-width: none;
-}
-
-main * {
-  overflow: visible;
 }
 
 main section {
@@ -344,7 +337,6 @@ main section {
   justify-content: center;
   align-items: center;
   gap: 15px;
-  overflow: visible;
 }
 
 .boxes-container .box {
@@ -667,12 +659,10 @@ footer .main-app-4 {
   html,
   body {
     height: auto;
-    overflow-y: visible;
   }
   body .all-page-content-container {
     flex-direction: column-reverse;
     align-items: center;
-    overflow-y: visible;
   }
   .themes-container {
     grid-template-columns: 1fr 1fr;
@@ -680,6 +670,9 @@ footer .main-app-4 {
 }
 
 @media screen and (max-width: 330px) {
+  .all-page-content-container {
+    max-width: 85%;
+  }
   .iphone-themes {
     max-width: 100%;
   }
