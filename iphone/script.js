@@ -93,3 +93,7 @@ DOMIphoneThemes.forEach((element) => {
       element.getAttribute("data-background");
   };
 });
+
+DOMIphoneContainer.style.height =
+  parseFloat(window.getComputedStyle(DOMIphoneContainer).width) * (38.5 / 19) +
+  "px";
