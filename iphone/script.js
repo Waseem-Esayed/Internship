@@ -97,3 +97,10 @@ DOMIphoneThemes.forEach((element) => {
 DOMIphoneContainer.style.height =
   parseFloat(window.getComputedStyle(DOMIphoneContainer).width) * (38.5 / 19) +
   "px";
+
+window.onresize = function () {
+  DOMIphoneContainer.style.height =
+    parseFloat(window.getComputedStyle(DOMIphoneContainer).width) *
+      (38.5 / 19) +
+    "px";
+};
