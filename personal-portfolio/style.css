@@ -1089,6 +1089,9 @@ footer nav:focus i {
   }
 }
 @media screen and (max-width: 510px) {
+  main section#home img {
+    display: none;
+  }
   main section#home .text-content {
     align-items: center;
   }
@@ -1106,9 +1109,6 @@ footer nav:focus i {
   }
 }
 @media screen and (max-width: 425px) {
-  main section#home img {
-    display: none;
-  }
   main section#home div.skill {
     font-size: 1.5rem;
   }
