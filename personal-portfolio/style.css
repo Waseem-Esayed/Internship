@@ -406,11 +406,12 @@ main section#home div.contact-icons a::before {
 main section#home img {
   width: 400px;
   mix-blend-mode: hue;
+  backface-visibility: visible;
+  -webkit-backface-visibility: visible;
+  transform: transalte3d(0, 0, 0);
   position: absolute;
   right: 7.5%;
   z-index: -100;
-  transform: translateZ(0);
-  will-change: mix-blend-mode;
 }
 
 main section#about {
