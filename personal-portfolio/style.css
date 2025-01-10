@@ -14,8 +14,11 @@ html {
   scroll-behavior: smooth;
   color: white;
   font-family: Poppins;
-  height: auto;
-  position: relative;
+}
+
+html,
+body {
+  overscroll-behavior: none;
 }
 
 body {
