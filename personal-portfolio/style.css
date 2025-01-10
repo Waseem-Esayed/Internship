@@ -191,7 +191,7 @@ main section#home div.skill {
   font-size: 1.75rem;
   font-weight: bold;
   color: var(--primary-color);
-  background-color: transparent;
+  background: transparent;
   text-shadow: -1px -1px 0 var(--secondary-darker-color),
     1px -1px 0 var(--secondary-darker-color),
     -1px 1px 0 var(--secondary-darker-color),
@@ -297,15 +297,17 @@ main section#home button {
 }
 
 main section#home button:nth-child(1) {
-  background-color: var(--secondary-color);
+  background: var(--secondary-color);
   color: var(--primary-color);
 }
 
-main section#home button:nth-child(1):hover {
+main section#home button:nth-child(1):hover,
+main section#home button:nth-child(1):focus {
   color: var(--secondary-color);
 }
 
-main section#home button:nth-child(1):hover::before {
+main section#home button:nth-child(1):hover::before,
+main section#home button:nth-child(1):focus::before {
   transform: scaleX(1);
 }
 
@@ -324,15 +326,17 @@ main section#home button:nth-child(1)::before {
 }
 
 main section#home button:nth-child(2) {
-  background-color: transparent;
+  background: transparent;
   color: var(--secondary-color);
 }
 
-main section#home button:nth-child(2):hover {
+main section#home button:nth-child(2):hover,
+main section#home button:nth-child(2):focus {
   color: var(--primary-color);
 }
 
-main section#home button:nth-child(2):hover::before {
+main section#home button:nth-child(2):hover::before,
+main section#home button:nth-child(2):focus::before {
   transform: scaleX(1);
 }
 
@@ -375,11 +379,13 @@ main section#home div.contact-icons a {
   transition: 200ms color ease-in-out;
 }
 
-main section#home div.contact-icons a:hover {
+main section#home div.contact-icons a:hover,
+main section#home div.contact-icons a:focus {
   color: var(--primary-color);
 }
 
-main section#home div.contact-icons a:hover::before {
+main section#home div.contact-icons a:hover::before,
+main section#home div.contact-icons a:focus::before {
   transform: scaleX(1);
 }
 
@@ -403,6 +409,8 @@ main section#home img {
   position: absolute;
   right: 7.5%;
   z-index: -100;
+  transform: translateZ(0);
+  will-change: mix-blend-mode;
 }
 
 main section#about {
@@ -455,16 +463,19 @@ section#about button {
   position: relative;
   transition: 250ms color ease-in-out;
   z-index: 1;
+  color: var(--primary-color);
   background-color: var(--secondary-color);
   border: 1.5px solid var(--secondary-color);
   overflow: hidden;
 }
 
-section#about button:hover {
+section#about button:hover,
+section#about button:focus {
   color: var(--secondary-color);
 }
 
-section#about button:hover::before {
+section#about button:hover::before,
+section#about button:focus::before {
   transform: scaleX(1);
 }
 
@@ -582,7 +593,8 @@ section#education div.box-container .box {
   overflow: hidden;
 }
 
-section#education div.box-container .box:hover::before {
+section#education div.box-container .box:hover::before,
+section#education div.box-container .box:focus::before {
   transform: scaleX(1);
 }
 
@@ -671,7 +683,8 @@ section#skills .design-container {
   overflow: hidden;
 }
 
-section#skills div .design-container:hover::before {
+section#skills div .design-container:hover::before,
+section#skills div .design-container:focus::before {
   transform: scaleX(1);
 }
 
@@ -866,7 +879,6 @@ section#contact form button {
   padding: 8px 24px;
   max-height: 36px;
   border-radius: 0.3rem;
-  border: none;
   cursor: pointer;
   letter-spacing: 1px;
   display: flex;
@@ -875,16 +887,19 @@ section#contact form button {
   position: relative;
   transition: 250ms color ease-in-out;
   z-index: 1;
+  color: var(--primary-color);
   background-color: var(--secondary-color);
   border: 1.5px solid var(--secondary-color);
   overflow: hidden;
 }
 
-section#contact form button:hover {
+section#contact form button:hover,
+section#contact form button:focus {
   color: var(--secondary-color);
 }
 
-section#contact form button:hover::before {
+section#contact form button:hover::before,
+section#contact form button:focus::before {
   transform: scaleX(1);
 }
 
@@ -963,11 +978,13 @@ footer nav::before {
   z-index: -1;
 }
 
-footer nav:hover::before {
+footer nav:hover::before,
+footer nav:focus::before {
   transform: scaleX(1);
 }
 
-footer nav:hover i {
+footer nav:hover i,
+footer nav:focus i {
   color: var(--primary-color);
 }
 
@@ -1017,7 +1034,6 @@ footer nav:hover i {
   }
   header .top {
     width: 100%;
-    /* transition: 300ms margin-bottom ease-in-out; */
   }
   header .top {
     margin-bottom: 25px;
