@@ -195,10 +195,8 @@ main section#home div.skill {
   font-weight: bold;
   color: var(--primary-color);
   background: transparent;
-  text-shadow: -1px -1px 0 var(--secondary-darker-color),
-    1px -1px 0 var(--secondary-darker-color),
-    -1px 1px 0 var(--secondary-darker-color),
-    1px 1px 0 var(--secondary-darker-color);
+  -webkit-text-stroke: 1px var(--secondary-darker-color);
+  text-stroke: 1px var(--secondary-darker-color);
   margin-bottom: 20px;
   position: relative;
   user-select: none;
@@ -214,8 +212,8 @@ main section#home div.skill div.overlayer {
   right: 0;
   width: 2px;
   color: var(--secondary-color);
-  text-shadow: -2px -2px 0 var(--primary-color), 2px -2px 0 var(--primary-color),
-    -2px 2px 0 var(--primary-color), 2px 2px 0 var(--primary-color);
+  -webkit-text-stroke: 1px var(--secondary-color);
+  text-stroke: 1px var(--secondary-color);
   overflow: hidden;
   animation-name: animate-overlayer;
   animation-duration: 10s;
