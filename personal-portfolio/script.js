@@ -4,7 +4,7 @@ const DOMElements = {
   header: document.querySelector("header"),
   navs: document.querySelectorAll("header nav li a"),
   menuTogglerButton: document.getElementById("button"),
-  menuTogglerIcon: document.getElementById("icon"),
+  menuTogglerButtonLines: document.querySelectorAll("#button .line"),
 };
 
 DOMElements.navs.forEach((element) => {
@@ -26,5 +26,5 @@ DOMElements.bodyOverlayer.addEventListener("click", () => {
 function toggleSidebar() {
   DOMElements.body.classList.toggle("show");
   DOMElements.header.classList.toggle("show");
-  DOMElements.menuTogglerIcon.classList.toggle("close");
+  DOMElements.menuTogglerButton.classList.toggle("close");
 }
