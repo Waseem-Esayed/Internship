@@ -2,6 +2,7 @@
   --primary-color: rgb(8, 28, 41);
   --secondary-color: rgb(0, 173, 244);
   --secondary-darker-color: rgb(14, 44, 67);
+  --overlayer-color: rgba(0, 0, 0, 0.2);
 }
 
 * {
@@ -14,6 +15,7 @@ html {
   scroll-behavior: smooth;
   color: white;
   font-family: Poppins;
+  font-size: 16px;
 }
 
 html,
@@ -49,52 +51,30 @@ header .top {
 
 header #button {
   display: none;
-  cursor: pointer;
-  height: 100%;
   padding: 5px;
-  width: 50px;
-  transition: 300ms all ease-in-out;
-}
-
-header #button #icon {
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 5px;
-  position: relative;
+  height: 26px;
+  cursor: pointer;
 }
 
 header #button .line {
   width: 25px;
   height: 2px;
   background-color: white;
-  transition: 200ms transform ease-in-out, 150ms opacity ease-in-out;
   opacity: 1;
+  transition: 250ms transform cubic-bezier(0.68, -0.55, 0.27, 1.55),
+    100ms opacity ease-in-out;
 }
 
-header #button #icon.close .line {
-  position: absolute;
+header #button.close .line:nth-child(1) {
+  transform-origin: center;
+  transform: rotate(45deg) translate(5px, 5px);
 }
-
-header #button #icon .line:nth-child(1) {
-  transform-origin: top left;
-}
-header #button #icon .line:nth-child(3) {
-  transform-origin: bottom left;
-}
-
-header #button #icon.close .line:nth-child(1) {
-  top: 0;
-  transform: rotate(45deg);
-}
-header #button #icon.close .line:nth-child(2) {
+header #button.close .line:nth-child(2) {
   opacity: 0;
 }
-header #button #icon.close .line:nth-child(3) {
-  bottom: 0;
-  transform: rotate(-45deg);
+header #button.close .line:nth-child(3) {
+  transform-origin: center;
+  transform: rotate(-45deg) translate(5px, -5px);
 }
 
 header p {
@@ -195,8 +175,7 @@ main section#home div.skill {
   font-weight: bold;
   color: var(--primary-color);
   background: transparent;
-  -webkit-text-stroke: 1px var(--secondary-darker-color);
-  text-stroke: 1px var(--secondary-darker-color);
+  -webkit-text-stroke: 0.5px var(--secondary-color);
   margin-bottom: 20px;
   position: relative;
   user-select: none;
@@ -212,8 +191,6 @@ main section#home div.skill div.overlayer {
   right: 0;
   width: 2px;
   color: var(--secondary-color);
-  -webkit-text-stroke: 1px var(--secondary-color);
-  text-stroke: 1px var(--secondary-color);
   overflow: hidden;
   animation-name: animate-overlayer;
   animation-duration: 10s;
@@ -377,7 +354,7 @@ main section#home div.contact-icons a {
   overflow: hidden;
   z-index: 1;
   color: var(--secondary-color);
-  transition: 200ms color ease-in-out;
+  transition: 200ms all ease-in-out;
 }
 
 main section#home div.contact-icons a:hover,
@@ -407,12 +384,10 @@ main section#home div.contact-icons a::before {
 main section#home img {
   width: 400px;
   mix-blend-mode: hue;
-  backface-visibility: visible;
-  -webkit-backface-visibility: visible;
-  transform: transalte3d(0, 0, 0);
   position: absolute;
   right: 7.5%;
   z-index: -100;
+  stroke: 10px red;
 }
 
 main section#about {
@@ -527,7 +502,6 @@ section#education .content .container {
 
 section#education .content .container h3 {
   font-size: 1.3rem;
-  transform: translateX(20px);
 }
 
 section#education .content .container .design-container {
@@ -585,7 +559,7 @@ section#education div.box-container .box {
   flex: 1;
   border: 1.5px solid var(--secondary-color);
   border-radius: 0.3rem;
-  padding: 10px 10px;
+  padding: 10px 15px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -746,7 +720,7 @@ section#skills
   .container:nth-child(1)
   .skill:nth-child(1)
   .percentage-line::before {
-  transform: scaleX(90%);
+  transform: scaleX(70%);
 }
 section#skills
   .container:nth-child(1)
@@ -758,38 +732,38 @@ section#skills
   .container:nth-child(1)
   .skill:nth-child(3)
   .percentage-line::before {
-  transform: scaleX(65%);
+  transform: scaleX(50%);
 }
 section#skills
   .container:nth-child(1)
   .skill:nth-child(4)
   .percentage-line::before {
-  transform: scaleX(75%);
+  transform: scaleX(15%);
 }
 
 section#skills
   .container:nth-child(2)
   .skill:nth-child(1)
   .percentage-line::before {
-  transform: scaleX(95%);
+  transform: scaleX(65%);
 }
 section#skills
   .container:nth-child(2)
   .skill:nth-child(2)
   .percentage-line::before {
-  transform: scaleX(67%);
+  transform: scaleX(60%);
 }
 section#skills
   .container:nth-child(2)
   .skill:nth-child(3)
   .percentage-line::before {
-  transform: scaleX(85%);
+  transform: scaleX(50%);
 }
 section#skills
   .container:nth-child(2)
   .skill:nth-child(4)
   .percentage-line::before {
-  transform: scaleX(60%);
+  transform: scaleX(10%);
 }
 
 section#contact {
@@ -844,7 +818,6 @@ section#contact textarea {
   position: relative;
   z-index: 1;
 }
-
 section#contact textarea {
   resize: none;
 }
@@ -944,50 +917,56 @@ footer nav {
   display: flex;
   justify-content: center;
   align-items: center;
-  color: var(--secondary-color);
-  font-size: 1rem;
+  background-color: var(--secondary-color);
   border: 1.5px solid var(--secondary-color);
-  border-radius: 0.7rem;
-  cursor: pointer;
-  position: relative;
+  border-radius: 0.5rem;
   overflow: hidden;
-  min-width: 39px;
-  min-height: 35px;
+  min-width: 30px;
+  min-height: 30px;
+  max-width: 30px;
+  max-height: 30px;
+  cursor: default;
 }
 
 footer nav a {
-  color: var(--secondary-color);
+  font-size: 0.85rem;
+  color: var(--secondary-darker-color);
   display: flex;
   justify-content: center;
   align-items: center;
   text-decoration: none;
   transition: 250ms color ease-in-out;
-  min-width: 35px;
-  min-height: 35px;
+  min-height: 30px;
+  min-width: 30px;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
 }
 
-footer nav::before {
+footer nav a::before {
   content: "";
+  display: flex;
+  justify-content: center;
+  align-items: center;
   position: absolute;
   left: 0;
   top: 0;
   right: 0;
   bottom: 0;
-  background-color: var(--secondary-color);
+  background-color: var(--secondary-darker-color);
   transform-origin: left;
   transition: 250ms transform ease-in-out;
   transform: scaleX(0);
   z-index: -1;
 }
 
-footer nav:hover::before,
-footer nav:focus::before {
+footer nav a:hover::before {
   transform: scaleX(1);
 }
 
-footer nav:hover i,
-footer nav:focus i {
-  color: var(--primary-color);
+footer nav a:hover {
+  color: var(--secondary-color);
 }
 
 @media screen and (max-width: 815px) {
@@ -1042,8 +1021,10 @@ footer nav:focus i {
   }
   header #button {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    justify-content: space-between;
     align-items: center;
+    gap: 6px;
   }
   header nav {
     width: 100%;
@@ -1062,7 +1043,7 @@ footer nav:focus i {
     left: 0;
     bottom: 0;
     right: 0;
-    background-color: rgba(0, 0, 0, 0.2);
+    background-color: var(--overlayer-color);
     z-index: 10000;
   }
   section#about p {
@@ -1107,6 +1088,10 @@ footer nav:focus i {
   main section#home p.description {
     text-align: center;
     margin-bottom: 20px;
+  }
+  header,
+  footer {
+    padding: 0.8em 5%;
   }
 }
 @media screen and (max-width: 425px) {
