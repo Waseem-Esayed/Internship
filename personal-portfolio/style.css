@@ -1024,7 +1024,6 @@ footer nav a:hover {
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    gap: 6px;
   }
   header nav {
     width: 100%;
